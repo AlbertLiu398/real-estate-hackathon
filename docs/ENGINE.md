@@ -18,8 +18,8 @@ Next.js app can import it directly (`import { rate } from "@floorqi/engine"` or 
 node packages/engine/src/cli.ts data/samples/demo-2bed.json            # readable report
 node packages/engine/src/cli.ts data/samples/demo-2bed.json --north 0  # supply north when the plan has none
 node packages/engine/src/cli.ts plan.json --json                       # ScoreResult JSON
-node packages/engine/src/merino-cli.ts --out data/merino-court/feng-shui   # Merino Court ranking
-cd packages/engine && npm test                                          # tests: compass model, demo, frames, Merino
+node packages/engine/src/development-cli.ts --out data/sample-development/feng-shui   # Sample Development ranking
+cd packages/engine && npm test                                          # tests: compass model, demo, frames, Development
 ```
 
 ```ts
@@ -92,7 +92,7 @@ A plan vector (dx, dy) has plan bearing `atan2(dx, −dy)` (0 = up, clockwise) a
   corner) −2 −2 (two door clashes) +5 (command position) = 58 from the PLAN.md rules, +2 (3-aspect glazing).
   The second door clash (d_living / d_master, 0.2 m offset) was missing from `_expected_findings`, and PLAN.md's
   demo script said 62; both are fixed, and `_expected_score` is now in the sample.
-- **Merino Court**: `data/merino-court/feng-shui/ranking.md`: 12 single-storey flats (4 layouts × 3 floors).
+- **Sample Development**: `data/sample-development/feng-shui/ranking.md`: 12 single-storey flats (4 layouts × 3 floors).
 
 ## Robustness
 - A flat with no glazing doesn't crash: facing → null, compass skipped, flag `NO_GLAZING`.
@@ -106,12 +106,12 @@ A plan vector (dx, dy) has plan bearing `atan2(dx, −dy)` (0 = up, clockwise) a
 - Rooms are axis-aligned rectangles; FloorQi has no fixtures yet, so the hob is the kitchen centre and WCs are wet-room centres (flags `HOB_APPROX`).
 - "Nothing in between" for facing doors is approximated by "both open onto the same room".
 - Outlook (garden/street) needs `opening.view`; ground-floor needs `plan.level`. Both are optional schema extensions.
-- Multi-storey units are scored per floor only by the generic engine; the Merino adapter skips them (floors aren't registered to each other).
-- Merino Court rooms are the brochure's label boxes, so they overlap or leave gaps; treat its ranking as indicative.
+- Multi-storey units are scored per floor only by the generic engine; the Development adapter skips them (floors aren't registered to each other).
+- Sample Development rooms are the brochure's label boxes, so they overlap or leave gaps; treat its ranking as indicative.
 - Flying Star uses the current period (9, 2024-2043), not the building's construction period.
 
-## Surroundings (`environment.ts`, `merino-site-cli.ts`)
-The building's 3D scene (`data/merino-court/building/ifc/render/scene.json`: the block, 82 neighbouring buildings with
+## Surroundings (`environment.ts`, `site-cli.ts`)
+The building's 3D scene (`data/sample-development/building/ifc/render/scene.json`: the block, 82 neighbouring buildings with
 heights, streets, garden trees, per-floor cutaways; metres, x = east, y = north) adds the site to the score.
 
 - **Registration:** each flat's floorplan is rotated by `north_deg` and placed on its floor in the scene by centroid
@@ -130,5 +130,5 @@ heights, streets, garden trees, per-floor cutaways; metres, x = east, y = north)
 | ENV-LUCHONG 路冲 | a street within 60 m in front running within 20° of the facing direction | −6 |
 
 Score = clamp(80 + PLAN.md deltas + 4 × compass raw (now with views) + surroundings). Run
-`node packages/engine/src/merino-site-cli.ts --out data/merino-court/feng-shui` → `results-site.json`
+`node packages/engine/src/site-cli.ts --out data/sample-development/feng-shui` → `results-site.json`
 (the app reads this; `results.json` stays the plan-only result).

@@ -1,15 +1,15 @@
 // Builds the app's data from the repo's data/ folder so the app runs without symlinks.
-// Run from app/: `npm run sync`. Outputs src/data/merino.json, public/plans/**, public/brochure/*.jpg
+// Run from app/: `npm run sync`. Outputs src/data/development.json, public/plans/**, public/brochure/*.jpg
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
 const root = path.resolve(import.meta.dirname, "../..");
-const data = path.join(root, "data/merino-court");
+const data = path.join(root, "data/sample-development");
 const out = path.resolve(import.meta.dirname, "..");
 const read = (p) => JSON.parse(fs.readFileSync(path.join(data, p), "utf8"));
 
-// The brochure's schedule (data/merino-court/building/building.yaml), the address register and brochure page.
+// The brochure's schedule (data/sample-development/building/building.yaml), the address register and brochure page.
 const U = (key, name, kind, beds, sqft, m2, access, levels, page, address) => ({ key, name, kind, beds, sqft, m2, access, levels, page, address });
 const units = [
   U("MZ1", "Mezzanine Apartment 1", "flat", 2, 942, 87.51, "Via lift or stairs", [1], 2, "Flat 5"),
@@ -114,7 +114,7 @@ for (const u of units) {
 
 fs.mkdirSync(path.join(out, "src/data"), { recursive: true });
 fs.writeFileSync(
-  path.join(out, "src/data/merino.json"),
+  path.join(out, "src/data/development.json"),
   JSON.stringify({ building: { name: "Aldermoor Court", address: "Clerkenwell, London EC1V", area: "Clerkenwell / Old Street", northDeg: 80.5 }, units })
 );
 
@@ -131,6 +131,6 @@ for (const sub of ["", "zh"]) {
 const bro = path.join(out, "public/brochure");
 if (!fs.existsSync(path.join(bro, "p-01.jpg"))) {
   fs.mkdirSync(bro, { recursive: true });
-  execFileSync("pdftoppm", ["-r", "55", "-jpeg", "-jpegopt", "quality=72", path.join(data, "MerinoCourt.pdf"), path.join(bro, "p")]);
+  execFileSync("pdftoppm", ["-r", "55", "-jpeg", "-jpegopt", "quality=72", path.join(data, "brochure.pdf"), path.join(bro, "p")]);
 }
 console.log(`synced ${units.length} units (${units.filter((u) => u.fengshui).length} scored)`);

@@ -1,5 +1,5 @@
 // Site and surroundings (形峦) for a unit, measured from the building's 3D scene
-// (data/merino-court/building/ifc/render/scene.json: metres, x = east, y = north, z = up).
+// (data/sample-development/building/ifc/render/scene.json: metres, x = east, y = north, z = up).
 //
 // 1. Registers the unit's floorplan (plan frame: +y down, page-up = north_deg true) onto its floor in the scene,
 //    so each window can be classified as looking onto the garden, the street or a neighbour. The engine's

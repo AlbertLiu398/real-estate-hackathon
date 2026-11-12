@@ -1,12 +1,12 @@
 # FloorQi app
 
-The Merino Court product: every home from the sales brochure (`data/merino-court/MerinoCourt.pdf`) with its plan, a 3D model and the FloorQi Feng Shui score from `packages/engine`, in English and Chinese.
+The Sample Development product: every home from the sales brochure (`data/sample-development/brochure.pdf`) with its plan, a 3D model and the FloorQi Feng Shui score from `packages/engine`, in English and Chinese.
 
 ```bash
 cd app
 npm install
 npm run dev          # http://localhost:3000
-npm run sync         # rebuild src/data/merino.json, public/plans and public/brochure from ../data
+npm run sync         # rebuild src/data/development.json, public/plans and public/brochure from ../data
 ```
 
 - `/` development overview, filters, all 22 homes

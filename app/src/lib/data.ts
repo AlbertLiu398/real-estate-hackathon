@@ -1,4 +1,4 @@
-import raw from "@/data/merino.json";
+import raw from "@/data/development.json";
 
 export type Room = { id: string; type: string; label: string; x: number; y: number; w: number; h: number };
 export type Opening = { id: string; type: "window" | "door" | "entrance" | "balcony_door"; x: number; y: number; axis: "h" | "v"; width: number; rooms: string[] };

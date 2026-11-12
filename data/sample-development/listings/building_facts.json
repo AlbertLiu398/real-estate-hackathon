@@ -1,0 +1,163 @@
+{
+ "building": "Sample Development, 152-154 Lever Street, London EC1V 8BG",
+ "retrieved": "2026-11-09",
+ "notes": "Agent listings and aggregator sites are secondary sources. Aggregator floor levels and age bands are probably derived from EPC open data. They are not on the certificate pages, so they could not be checked against the register.",
+ "facts": [
+  {
+   "topic": "addresses",
+   "fact": "The postcode has 23 UPRNs and 22 known addresses: Flat 1 to Flat 21, Sample Development, 154 Lever Street, plus 152 Lever Street.",
+   "quote": "Number of UPRNs | 23",
+   "source": "https://www.doogal.co.uk/ShowMap?postcode=EC1V+8BG",
+   "kind": "aggregator"
+  },
+  {
+   "topic": "addresses",
+   "fact": "Flat 21 also appears in the EPC register as '21 SAMPLE DEVELOPMENT, 154 LEVER STREET'. The 2010 'Flat 21' certificate and the 2020 '21 Sample Development' certificate are both 108 m2, so they are treated as one dwelling.",
+   "quote": "21 SAMPLE DEVELOPMENT, 154 LEVER STREET, ISLINGTON, LONDON, EC1V 8BG",
+   "source": "https://find-energy-certificate.service.gov.uk/energy-certificate/9924-0209-4600-6627-0614",
+   "kind": "official"
+  },
+  {
+   "topic": "management",
+   "fact": "The management company is Sample Development Management Company Limited (06085530). It is a private company limited by guarantee, incorporated on 6 February 2007. Its registered office is c/o Islington Properties Limited, which has been company secretary since 15 September 2015.",
+   "quote": "Private company limited by guarantee without share capital | Incorporated on | 6 February 2007",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/06085530",
+   "kind": "official"
+  },
+  {
+   "topic": "penthouses",
+   "fact": "Officer correspondence addresses on Companies House describe Flats 19 and 20 as penthouses.",
+   "quote": "Flat 19 Penthouse Sample Development 154, Lever Street, Clerkenwell, London, EC1V 8BG; Flat 20 Penthouse Sample Development 154, Lever Street, Clerkenwell, London, EC1V 8BG",
+   "source": "https://find-and-update.company-information.service.gov.uk/company/06085530/officers",
+   "kind": "official"
+  },
+  {
+   "topic": "tenure",
+   "fact": "All 36 recorded sales, 2007 to 2025, are leasehold (estate type L). That includes the houses at Flats 2, 3 and 4.",
+   "quote": "estate_type L on every row",
+   "source": "https://landregistry.data.gov.uk/app/ppd/ppd_data.csv?header=true&limit=all&postcode=EC1V+8BG",
+   "kind": "official"
+  },
+  {
+   "topic": "lease_length",
+   "fact": "A December 2021 letting of a duplex penthouse (matched to Flat 18) stated about 108 years remaining. That suggests a lease of about 125 years granted around 2004-2007 (an inference).",
+   "quote": "Leasehold with approximately 108 years remaining.",
+   "source": "https://www.onthemarket.com/details/13251682/",
+   "kind": "listing"
+  },
+  {
+   "topic": "completion",
+   "fact": "The first sales completed between 23 March and 26 July 2007. Most are flagged new build, but the first recorded sales of Flat 6 (29 Mar 2007), Flat 12 (5 Apr 2007) and 152 Lever Street (6 Jun 2007) are flagged not new build. Flat 21 has no 2007 sale; its only sale is 19 Apr 2018, category B (additional price paid). This puts completion in early 2007.",
+   "quote": "2007-03-23 FLAT 15 ... new_build Y; 2007-03-29 FLAT 6 ... new_build N",
+   "source": "https://landregistry.data.gov.uk/app/ppd/ppd_data.csv?header=true&limit=all&postcode=EC1V+8BG",
+   "kind": "official"
+  },
+  {
+   "topic": "warehouse_conversion",
+   "fact": "An agent describes Sample Development as a converted warehouse.",
+   "quote": "Sample Development—a converted warehouse building near Old Street and Clerkenwell",
+   "source": "https://www.yopa.co.uk/properties/details/363942",
+   "kind": "listing"
+  },
+  {
+   "topic": "construction_age",
+   "fact": "Construction age bands on aggregator sites (probably from EPC data) are mixed. Flats 6, 9 and 14 are 1900-1929, which fits retained warehouse fabric. Flats 16, 17 and 18 are 2003-2006, and Flats 2, 3 and 4 are 2007 or later, which fits new build. EPC wall types are noisy: different certificates for the same flat disagree, as for Flats 9, 12, 13 and 21. Broadly, the latest certificates give solid brick for Flats 5-12, 14, 19 and 20; cavity wall for Flats 3, 4, 13, 15, 16 and 17; and 'System built' for 152, 18 and 21 (2020). This is evidence for a conversion plus new build, but it is not proof.",
+   "quote": "Flat 9 ... Flat Leasehold Built 1900-1929; Flat 17 ... was built between 2003 and 2006; Flat 4 ... was built between 2007 and 2011",
+   "source": "https://themovemarket.com/tools/propertyprices/flat-9-sample-development-154-lever-street-london-ec1v-8bg ; https://www.chimnie.co.uk/uk/greater-london/islington/flat-17-sample-development-154-lever-street-be45676ab928d81cab2cee0fbdc062cc ; https://www.chimnie.co.uk/uk/greater-london/islington/flat-4-sample-development-154-lever-street-72f39c7ce51d3ba3ed2a4c34eed9aa39",
+   "kind": "aggregator"
+  },
+  {
+   "topic": "planning_possible",
+   "fact": "UNCONFIRMED. Islington's UDP housing schedule (progress as at 31/3/03) lists a scheme that matches the brochure mix minus the MZ flats: 12 flats, 2 live/work, 1 four-storey house (H1) and 3 mews houses. Matching addresses to proposals by their order in the schedule puts it at H103 '6 Bath Street EC1', but the extracted text does not tie that row to Sample Development.",
+   "quote": "Redevelopment to provide 12 residential units within the upper floors of the frontage building and 2 live/work units on the ground floor and basement, along with provision of a four storey single dwelling and three mews houses and nine parking spaces.",
+   "source": "https://www.yumpu.com/en/document/view/23545525/schedule-1-housing-development-islington-council",
+   "kind": "official (third-party copy); address link inferred"
+  },
+  {
+   "topic": "planning_possible",
+   "fact": "UNCONFIRMED link to Sample Development. In 2001 Islington granted P012109 and P012108 at 6 Bath Street for a five-storey building: offices on the basement, ground, mezzanine and first floors, and 14 flats above, with a loading bay to Lever Street. So that site fronted Lever Street. In 1999 Construction News named Anglo Oriental Manufacturing Company Ltd as client for 6 Bath Street, probably the landowner rather than the developer.",
+   "quote": "Erection of five storey building to provide B1 office accommodation at basement, ground, mezzanine and first floor level with 10 x two bedroom and 4 x three bedroom flats at upper level, including roof terraces at fifth floor and loading bay to Lever Street.",
+   "source": "https://planindex.co.uk/planning-applications/islington/archive/2001/09 ; https://www.constructionnews.co.uk/sections/news/business-leads-3-of-4-24-29-07-1999/",
+   "kind": "official (third-party index)"
+  },
+  {
+   "topic": "developer",
+   "fact": "NOT FOUND. No source names the developer. The management company's first officers (Feb 2007 to Mar 2008, at Surrey and Hertfordshire addresses) were probably the developer's nominees, but no company is named.",
+   "quote": null,
+   "source": "https://find-and-update.company-information.service.gov.uk/company/06085530/officers",
+   "kind": "gap"
+  },
+  {
+   "topic": "service_charge",
+   "fact": "NOT FOUND. No listing seen states a service charge or ground rent for Sample Development.",
+   "quote": null,
+   "source": null,
+   "kind": "gap"
+  },
+  {
+   "topic": "parking",
+   "fact": "There is secure underground parking with allocated spaces, mentioned in two penthouse listings.",
+   "quote": "an allocated space in the secure underground parking",
+   "source": "https://www.yopa.co.uk/properties/details/363942",
+   "kind": "listing"
+  },
+  {
+   "topic": "parking",
+   "fact": "A December 2021 letting of the penthouse matched to Flat 18 lists a parking space and secure parking.",
+   "quote": "Parking space ... Further benefits include superfast broadband, air conditioning and secure parking.",
+   "source": "https://www.onthemarket.com/details/13251682/",
+   "kind": "listing"
+  }
+ ],
+ "flat_listings": [
+  {
+   "flat": "18 (inferred)",
+   "fact": "Savills Shoreditch let a 2-bed, 2-bath duplex penthouse on the 'fourth and fifth floor', 1,119 sq ft / 104 sq m, EPC C, Band F, let agreed Dec 2021. The front balcony faces due south; a rear balcony comes off the kitchen. The flat number isn't given. 104 m2, rating C and 'Top-floor maisonette' match Flat 18's 2014 EPC exactly, and AcreSights lists Flat 18 at 1,119 sq ft, maisonette.",
+   "quote": "The duplex apartment sits on the fourth and fifth floor of a handsome brick fronted block. The lower of the floors has two well proportioned bedrooms two bathrooms ... The upper floor is a bright, open-plan lounge and kitchen ... The main balcony to the front faces due south",
+   "source": "https://www.onthemarket.com/details/13251682/"
+  },
+  {
+   "flat": "unknown (17 or 20?)",
+   "fact": "Yopa marketed a 3-bed penthouse at £2,000,000, 1,880 sq ft, over the 4th and 5th floors, with two private terraces and an underground parking space. It is now not available and undated. Its 1,880 sq ft (175 m2) matches no EPC area: the nearest are Flat 20 (143-155 m2, top-floor maisonette) and Flat 17 (148 m2).",
+   "quote": "Spread over the fourth and fifth floors, this bright and airy apartment features floor-to-ceiling windows, two private terraces",
+   "source": "https://www.yopa.co.uk/properties/details/363942"
+  },
+  {
+   "flat": "unknown",
+   "fact": "Rentberry has a 2-bed, 2-bath flat 'on the third floor', listed 02/09/25, £3,400 pcm. It has a second bedroom to the front, a living/dining room to the rear with a balcony, and a utility room.",
+   "quote": "Situated on the third floor, the property offers bright, well-proportioned accommodation ... a second good sized double bedroom to the front of the flat ... a lovely living/dining room to the rear with access to a balcony",
+   "source": "https://rentberry.com/gb/apartments/140400458-two-br-sample-development-152-154-lever-street-london-ec1v-8bg-united-kingdom"
+  },
+  {
+   "flat": "various",
+   "fact": "AcreSights (aggregator, probably EPC floor level plus area) gives floors and areas for: Flat 6, 1st floor, 517 sq ft; Flat 9, 1st floor, 969 sq ft; Flat 15, 2nd floor, 624 sq ft; Flat 17, 2nd floor, top, maisonette, 1,593 sq ft; Flat 18, 3rd floor, top, maisonette, 1,119 sq ft; Flat 20, 3rd floor, top, 1,668 sq ft; 152 Lever Street, ground floor, maisonette, 2,228 sq ft; Flat 4, terraced house, 581 sq ft, 'garden ~1,900 sq ft'.",
+   "quote": "152 Lever Street ... Flat, leasehold · 2,228 sq ft · 3 rooms · ground floor · maisonette · EPC E",
+   "source": "https://acresights.com/london/street/ec1v/lever-street"
+  },
+  {
+   "flat": "6, 14, 17",
+   "fact": "Chimnie (aggregator) calls Flats 6, 14 and 17 '2nd floor apartment'. For Flat 6 this conflicts with AcreSights, which says 1st floor.",
+   "quote": "516 sqft | 2nd floor apartment (Flat 6); 523 sqft | 2nd floor apartment (Flat 14); 1636 sqft | 2nd floor apartment (Flat 17)",
+   "source": "https://www.chimnie.co.uk/uk/greater-london/islington/flat-6-sample-development-154-lever-street-ea209d52dd3338eddcbc3617e61ddd6d ; https://www.chimnie.co.uk/uk/greater-london/islington/flat-14-sample-development-154-lever-street-fa829c6929610ced7593cc2bb9e5b006 ; https://www.chimnie.co.uk/uk/greater-london/islington/flat-17-sample-development-154-lever-street-be45676ab928d81cab2cee0fbdc062cc"
+  },
+  {
+   "flat": "floor numbering",
+   "fact": "Agents call the duplex penthouses 'fourth and fifth floor'. The brochure puts the penthouses on the 3rd and 4th floors, and the EPC-derived floor level for Flats 18 and 20 is '3rd floor'. Agents probably count one level higher, for example counting the mezzanine or ground as a floor. Treat agents' floor numbers with care.",
+   "quote": "sits on the fourth and fifth floor",
+   "source": "https://www.onthemarket.com/details/13251682/"
+  }
+ ],
+ "not_found": [
+  "any listing that names a brochure label (F1-F12, MZ1-4, LW1-2, M1-3, H1)",
+  "service charge or ground rent",
+  "developer name",
+  "an EPC for Flat 1"
+ ],
+ "blocked_or_failed": {
+  "rightmove.co.uk/properties/149342465, 149049113, 152997179": "HTTP 404/410 (listings removed); exa had no cached copy",
+  "primelocation.com/for-sale/details/67578916": "HTTP 403 to WebFetch; exa returned a generic search page",
+  "zoopla.co.uk (property history and to-rent pages)": "WebFetch returned only boilerplate; exa CRAWL_UNEXPECTED_CONTENT_TYPE / timeout",
+  "kfh.co.uk/.../2284916": "HTTP 404",
+  "bricksandlogic.co.uk": "HTTP 403"
+ }
+}

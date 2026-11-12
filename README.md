@@ -34,6 +34,6 @@ cp .env.example .env.local   # add your LLM key(s); never commit .env*
 
 ## Data
 - `data/samples/demo-2bed.json`: hand-labelled test floor plan with expected findings
-- `data/merino-court/`: sample development source data (listings, building model, IFC, floor plan SVGs); see its README
-- `data/merino-court/feng-shui/`: engine output for the sample development (ranking, results, converted floor plans)
+- `data/sample-development/`: sample development source data (listings, building model, IFC, floor plan SVGs); see its README
+- `data/sample-development/feng-shui/`: engine output for the sample development (ranking, results, converted floor plans)
 

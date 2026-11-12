@@ -34,3 +34,8 @@ body {
 .hairline { border-color: var(--line); }
 .plan-svg svg { width: 100%; height: 100%; }
 ::selection { background: var(--jade-soft); }
+
+/* the explore map: OpenStreetMap tiles muted to a quiet, paper-toned basemap */
+.quiet-tiles { filter: grayscale(1) sepia(0.12) brightness(1.06) contrast(0.88); }
+/* Tailwind's preflight (img max-width/height:auto) breaks Leaflet tiles */
+.leaflet-container img { max-width: none !important; max-height: none !important; }

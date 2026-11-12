@@ -1,0 +1,8 @@
+{
+  "_note": "Flat 15 (L0:Plot 3) is not in courtyard_rooms.json; rank.py hardcoded these hand-measured values (rank.py:195-199). Moved here as data.",
+  "flats": [
+    {"flat": 15, "uid": "L0:Plot 3", "level": 0, "source": "manual (rank.py:195)",
+     "features": {"face": 337.7, "door_b": 323.6, "master_b": 269.2, "hob_b": [132], "wc_b": [215], "wc_centre": 3.0,
+                  "aspects": 1, "views": {"garden": 1.0}, "regular": 0.97, "area": 58.4}}
+  ]
+}

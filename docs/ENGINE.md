@@ -109,3 +109,26 @@ A plan vector (dx, dy) has plan bearing `atan2(dx, −dy)` (0 = up, clockwise) a
 - Multi-storey units are scored per floor only by the generic engine; the Merino adapter skips them (floors aren't registered to each other).
 - Merino Court rooms are the brochure's label boxes, so they overlap or leave gaps; treat its ranking as indicative.
 - Flying Star uses the current period (9, 2024-2043), not the building's construction period.
+
+## Surroundings (`environment.ts`, `merino-site-cli.ts`)
+The building's 3D scene (`data/merino-court/building/ifc/render/scene.json`: the block, 82 neighbouring buildings with
+heights, streets, garden trees, per-floor cutaways; metres, x = east, y = north) adds the site to the score.
+
+- **Registration:** each flat's floorplan is rotated by `north_deg` and placed on its floor in the scene by centroid
+  (mean outline error 0.2-0.4 m; MZ2 1.2 m).
+- **Views → compass model:** every window's outward ray is classified as garden (reaches the courtyard trees), street
+  (reaches a road) or neighbour, and written to `opening.view`, so the compass model's outlook factor
+  (+1 × garden share − 0.5 × street share, ×4) now runs instead of being skipped.
+- **Form-school checks** (points on the 0-100 scale), measured with rays from the flat's centre at eye height
+  (floor level + 1.6 m), starting where the ray leaves the block:
+
+| ID | Check | Points |
+|---|---|---|
+| ENV-MINGTANG 明堂 | nothing taller than eye height within 25 m in front of the facing direction | +4 |
+| | a taller building within 15 m in front (压迫) | −6 |
+| ENV-KAOSHAN 靠山 | a taller building within 40 m behind, or the block itself running on ≥ 8 m behind | +4, else −3 |
+| ENV-LUCHONG 路冲 | a street within 60 m in front running within 20° of the facing direction | −6 |
+
+Score = clamp(80 + PLAN.md deltas + 4 × compass raw (now with views) + surroundings). Run
+`node packages/engine/src/merino-site-cli.ts --out data/merino-court/feng-shui` → `results-site.json`
+(the app reads this; `results.json` stays the plan-only result).

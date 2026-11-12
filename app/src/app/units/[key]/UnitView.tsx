@@ -7,9 +7,10 @@ import { useLang } from "@/components/I18n";
 import { PlanMap } from "@/components/PlanMap";
 import { Delta, Grade, ScoreRing } from "@/components/bits";
 
+const Building3D = dynamic(() => import("@/components/Building3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading the building…</div> });
 const Plan3D = dynamic(() => import("@/components/Plan3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading 3D…</div> });
 
-type View = "map" | "3d" | "plan" | "source";
+type View = "map" | "3d" | "building" | "plan" | "source";
 
 export default function UnitView({ unitKey }: { unitKey: string }) {
   const u = unitByKey(unitKey)!;
@@ -33,17 +34,18 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
 
   const views: { id: View; label: string }[] = [
     ...(fs ? [{ id: "map" as View, label: t("Feng Shui map", "风水图") }, { id: "3d" as View, label: "3D" }] : []),
+    { id: "building", label: t("In the building", "楼宇环境") },
     { id: "plan", label: t("Floor plan", "户型图") },
     { id: "source", label: t("Brochure page", "售楼书原页") },
   ];
 
   const groups = fs
-    ? (["layout", "compass", "form"] as const).map((g) => ({
+    ? (["layout", "compass", "form", "environment"] as const).map((g) => ({
         g,
-        items: fs.findings.map((x, i) => ({ x, i })).filter(({ x }) => (ruleLabel[x.rule_id]?.group ?? (x.method === "plan" ? "layout" : "compass")) === g),
+        items: fs.findings.map((x, i) => ({ x, i })).filter(({ x }) => (ruleLabel[x.rule_id]?.group ?? (x.method === "plan" ? "layout" : x.method === "environment" ? "environment" : "compass")) === g),
       }))
     : [];
-  const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态") };
+  const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态"), environment: t("Surroundings · from the building model", "周边环境 · 来自楼宇模型") };
 
   return (
     <div className="pt-8">
@@ -129,6 +131,18 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
               </div>
             )}
             {view === "3d" && fs && <Plan3D unit={u} highlight={highlight} zh={zh} />}
+            {view === "building" && (
+              <Building3D
+                level={u.levels[u.levels.length - 1]}
+                zh={zh}
+                focus={{
+                  unit: u.key,
+                  level: u.levels[u.levels.length - 1],
+                  rays: fs?.site?.rays,
+                  highlightRay: f?.rule_id === "ENV-MINGTANG" || f?.rule_id === "ENV-LUCHONG" ? "facing" : f?.rule_id === "ENV-KAOSHAN" ? "sitting" : null,
+                }}
+              />
+            )}
             {view === "plan" && (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={`/plans/${zh ? "zh/" : ""}${u.plans[floor]}.svg`} alt={`${u.key} floor plan`} className="h-full w-full object-contain p-6" />
@@ -137,7 +151,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
               // eslint-disable-next-line @next/next/no-img-element
               <img src={`/brochure/p-${String(u.pages[page]).padStart(2, "0")}.jpg`} alt={`Brochure page ${u.pages[page]}`} className="h-full w-full object-contain bg-[var(--paper-2)]" />
             )}
-            {(view === "map" || view === "3d") && f && (
+            {(view === "map" || view === "3d" || view === "building") && f && (
               <div className="absolute inset-x-3 bottom-3 rounded-xl border hairline bg-[var(--card)]/95 p-3.5 text-[13.5px] shadow-lg backdrop-blur sm:inset-x-auto sm:left-3 sm:max-w-[440px]">
                 <div className="flex items-start justify-between gap-3">
                   <div className="font-medium">{findingText(f, zh)}</div>
@@ -194,7 +208,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                     <div className="mt-2 font-serif text-[15px] text-[var(--ink-2)]">{fs.compass.labels[0]}</div>
                   </div>
                 </div>
-                <div className="mt-5 grid grid-cols-3 gap-2 border-t hairline pt-4 text-center text-[12px] text-[var(--muted)]">
+                <div className="mt-5 grid grid-cols-4 gap-2 border-t hairline pt-4 text-center text-[12px] text-[var(--muted)]">
                   <div>
                     <div className="tabular text-[18px] text-[var(--ink)]">{fs.raw.base}</div>
                     {t("Base", "基础分")}
@@ -210,6 +224,12 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                       <Delta v={fs.raw.compass_points} />
                     </div>
                     {t("Compass ×4", "罗盘 ×4")}
+                  </div>
+                  <div>
+                    <div className="text-[18px]">
+                      <Delta v={fs.raw.environment ?? 0} />
+                    </div>
+                    {t("Surroundings", "环境")}
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
@@ -238,7 +258,10 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                           {items.map(({ x, i }) => (
                             <li key={i}>
                               <button
-                                onClick={() => setSel(sel === i ? null : i)}
+                                onClick={() => {
+                                  setSel(sel === i ? null : i);
+                                  if (x.method === "environment" && x.rule_id.startsWith("ENV") && view !== "building") setView("building");
+                                }}
                                 className={`flex w-full items-start gap-3 rounded-lg px-2.5 py-2 text-left text-[13.5px] transition ${sel === i ? "bg-[var(--paper-2)]" : "hover:bg-[var(--paper)]"}`}
                               >
                                 <span

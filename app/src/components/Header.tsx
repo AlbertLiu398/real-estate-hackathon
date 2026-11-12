@@ -20,6 +20,7 @@ export function Header() {
   const path = usePathname();
   const nav = [
     { href: "/", label: t("Development", "楼盘总览") },
+    { href: "/building", label: t("Building 3D", "楼宇 3D") },
     { href: "/ranking", label: t("Feng Shui ranking", "风水排名") },
     { href: "/compare", label: t("Compare", "对比") },
     { href: "/brochure", label: t("Brochure", "售楼书") },

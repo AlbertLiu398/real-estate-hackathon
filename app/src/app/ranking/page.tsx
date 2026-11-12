@@ -14,8 +14,8 @@ export default function Ranking() {
       <h1 className="font-serif text-[42px] leading-tight tracking-tight">{t("Feng Shui ranking", "风水排名")}</h1>
       <p className="mt-3 max-w-[720px] text-[15px] leading-relaxed text-[var(--ink-2)]">
         {t(
-          "Score = 80 + layout rules (Black Hat Bagua, doors, light) + 4 × the compass model (Eight Mansions, Flying Star period 9, form). Same plan in, same score out; every point links to its evidence.",
-          "评分 = 80 + 格局规则（八卦、门、采光）+ 4 × 罗盘模型（八宅、玄空九运、形态）。同一户型永远得到同一分数，每一分都有依据。"
+          "Score = 80 + layout rules (Black Hat Bagua, doors, light) + 4 × the compass model (Eight Mansions, Flying Star period 9, form, garden/street outlook) + the surroundings measured on the 3D building model (open space in front, backing behind, roads aimed at the flat). Same inputs, same score; every point links to its evidence.",
+          "评分 = 80 + 格局规则（八卦、门、采光）+ 4 × 罗盘模型（八宅、玄空九运、形态、花园/街景）+ 基于楼宇三维模型测得的周边环境（明堂、靠山、路冲）。输入相同则分数相同，每一分都有依据。"
         )}
       </p>
 

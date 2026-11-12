@@ -12,18 +12,17 @@ export default function Ranking() {
     <div className="pt-5">
 
       <div className="card overflow-hidden">
-        <div className="hidden grid-cols-[48px_110px_1fr_140px_100px] gap-4 border-b hairline px-5 py-3 text-[12px] uppercase tracking-[0.12em] text-[var(--muted)] md:grid">
+        <div className="hidden grid-cols-[48px_110px_1fr_100px] gap-4 border-b hairline px-5 py-3 text-[12px] uppercase tracking-[0.12em] text-[var(--muted)] md:grid">
           <span>#</span>
           <span>{t("Plan", "户型")}</span>
           <span>{t("Unit and main findings", "户号与主要因素")}</span>
-          <span>{t("Chart", "飞星格局")}</span>
           <span className="text-right">{t("Score", "评分")}</span>
         </div>
         {scored.map((u, i) => {
           const fs = u.fengshui!;
           const top = [...fs.findings].filter((f) => f.delta !== 0).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)).slice(0, 3);
           return (
-            <Link key={u.key} href={`/units/${u.key}`} className="grid grid-cols-[36px_80px_1fr_auto] items-center gap-4 border-b hairline px-5 py-4 transition last:border-0 hover:bg-white md:grid-cols-[48px_110px_1fr_140px_100px]">
+            <Link key={u.key} href={`/units/${u.key}`} className="grid grid-cols-[36px_80px_1fr_auto] items-center gap-4 border-b hairline px-5 py-4 transition last:border-0 hover:bg-white md:grid-cols-[48px_110px_1fr_100px]">
               <span className="font-serif text-[22px] text-[var(--muted)] tabular">{i + 1}</span>
               <div className="h-[70px] md:h-[90px]">
                 <PlanMap unit={u} compact showBagua={false} />
@@ -43,7 +42,6 @@ export default function Ranking() {
                   ))}
                 </div>
               </div>
-              <span className="hidden font-serif text-[13px] text-[var(--ink-2)] md:block">{fs.compass.labels[0]}</span>
               <span className="flex items-center justify-end gap-2">
                 <span className="font-serif text-[28px] tabular">{fs.score}</span>
                 <Grade grade={fs.grade} />

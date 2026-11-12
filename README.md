@@ -36,3 +36,7 @@ cp .env.example .env.local   # add your LLM key(s); never commit .env*
 - `data/samples/demo-2bed.json`: hand-labelled test floor plan with expected findings
 - `data/merino-court/`: Merino Court source data (listings, building model, IFC, floor plan SVGs); see its README
 - `data/merino-court/feng-shui/`: engine output for Merino Court (ranking, results, converted floor plans)
+
+## Legacy
+
+[`legacy/`](legacy/) holds **legacy code**: the earlier Merino Court sales brochure / 3D viewer app (Next.js frontend + Python backend tools) this project grew out of, kept for reference and reuse (Merino data pipeline, IFC/3D rendering, floor plan tracing). It is not maintained, not part of the FloorQi build/CI, and may not run as-is.

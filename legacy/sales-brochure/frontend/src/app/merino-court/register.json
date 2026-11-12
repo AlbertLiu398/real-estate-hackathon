@@ -1,0 +1,1900 @@
+{
+ "meta": {
+  "data_retrieved": "2026-11-09",
+  "sources": [
+   "Floor plans, areas and key plans: the developer's sales brochure (redrawn; the brochure's images are not published)",
+   "Footprint: © OpenStreetMap contributors (ODbL)",
+   "Heights: Environment Agency LiDAR composite DSM/DTM 1 m (Open Government Licence)",
+   "Energy certificates: the EPC register, find-energy-certificate.service.gov.uk (Open Government Licence)",
+   "Sold prices: HM Land Registry Price Paid Data (Open Government Licence)",
+   "Checked against: agents' floor plans and photographs on Rightmove's sold-price pages (not reproduced)",
+   "Schools: Department for Education, Get Information about Schools"
+  ]
+ },
+ "building": {
+  "name": "Merino Court",
+  "address": "152-154 Lever Street, London EC1V 8BG",
+  "area": "Clerkenwell / Old Street, London EC1V",
+  "units": 22,
+  "mix": {
+   "Live/work studios": 2,
+   "Mews houses": 3,
+   "Town house": 1,
+   "Apartments": 12,
+   "Duplex penthouses": 4
+  },
+  "beds": {
+   "2 bed": 12,
+   "1 bed": 7,
+   "3 bed": 3
+  },
+  "facts": {
+   "completed": {
+    "text": "2007: the first sales completed between March and July 2007",
+    "source": "HM Land Registry Price Paid Data"
+   },
+   "conversion": {
+    "text": "a converted warehouse with new mews houses, a town house and penthouses",
+    "source": "an agent's description (Yopa); the EPCs give 1900-1929 for some flats and 2003-2007 for others",
+    "confidence": "likely"
+   },
+   "tenure": {
+    "text": "Leasehold (about 108 years were left in December 2021)",
+    "source": "HM Land Registry; Savills' 2021 letting"
+   },
+   "management": {
+    "text": "Merino Court Management Company Limited (06085530), managed by Islington Properties",
+    "source": "Companies House"
+   },
+   "parking": {
+    "text": "secure underground parking (spaces allocated to some homes)",
+    "source": "agents' listings"
+   }
+  },
+  "storeys": "Lower ground, ground and five floors above (the block); two-storey mews houses",
+  "epc_range": "B–E",
+  "epc_count": 21,
+  "stations": [
+   {
+    "name": "Old Street",
+    "lines": "Northern, Great Northern",
+    "m": 340
+   },
+   {
+    "name": "Barbican",
+    "lines": "Circle, Hammersmith & City, Metropolitan",
+    "m": 920
+   },
+   {
+    "name": "Moorgate",
+    "lines": "Elizabeth line, Northern, Circle, H&C, Metropolitan",
+    "m": 1040
+   },
+   {
+    "name": "Angel",
+    "lines": "Northern",
+    "m": 1100
+   }
+  ],
+  "primary_schools": [
+   {
+    "name": "St Luke's CofE Primary School",
+    "m": 140,
+    "faith": "Church of England",
+    "ks2_expected": 59.0
+   },
+   {
+    "name": "Moreland Primary School",
+    "m": 540,
+    "faith": null,
+    "ks2_expected": 61.0
+   },
+   {
+    "name": "Thomas Fairchild Community School",
+    "m": 590,
+    "faith": null,
+    "ks2_expected": 79.0
+   },
+   {
+    "name": "City of London Primary Academy, Islington",
+    "m": 600,
+    "faith": null,
+    "ks2_expected": 80.0
+   },
+   {
+    "name": "St John the Baptist Voluntary Aided Church of England Primary School",
+    "m": 630,
+    "faith": "Church of England",
+    "ks2_expected": 82.0
+   }
+  ],
+  "sales": [
+   {
+    "date": "2025-01-31",
+    "price": 493000,
+    "address": "Flat 6",
+    "unit": "MZ2",
+    "new_build": false
+   },
+   {
+    "date": "2023-03-17",
+    "price": 640000,
+    "address": "Flat 15",
+    "unit": "F7",
+    "new_build": false
+   },
+   {
+    "date": "2022-07-29",
+    "price": 1150000,
+    "address": "Flat 18",
+    "unit": "F10",
+    "new_build": false
+   },
+   {
+    "date": "2021-02-12",
+    "price": 1255000,
+    "address": "Flat 20",
+    "unit": "F12",
+    "new_build": false
+   },
+   {
+    "date": "2020-03-06",
+    "price": 765000,
+    "address": "Flat 9",
+    "unit": "F1",
+    "new_build": false
+   },
+   {
+    "date": "2018-04-19",
+    "price": 690000,
+    "address": "Flat 21",
+    "unit": "LW2",
+    "new_build": false
+   },
+   {
+    "date": "2017-07-19",
+    "price": 1060000,
+    "address": "152 Lever Street",
+    "unit": "LW1",
+    "new_build": false
+   },
+   {
+    "date": "2014-09-19",
+    "price": 1620000,
+    "address": "Flat 17",
+    "unit": "F9",
+    "new_build": false
+   },
+   {
+    "date": "2014-07-11",
+    "price": 1100000,
+    "address": "Flat 18",
+    "unit": "F10",
+    "new_build": false
+   },
+   {
+    "date": "2014-05-30",
+    "price": 600000,
+    "address": "Flat 4",
+    "unit": "M3",
+    "new_build": false
+   },
+   {
+    "date": "2014-04-16",
+    "price": 780000,
+    "address": "Flat 2",
+    "unit": "M1",
+    "new_build": false
+   },
+   {
+    "date": "2014-02-07",
+    "price": 470000,
+    "address": "Flat 6",
+    "unit": "MZ2",
+    "new_build": false
+   },
+   {
+    "date": "2013-12-16",
+    "price": 730000,
+    "address": "Flat 16",
+    "unit": "F8",
+    "new_build": false
+   },
+   {
+    "date": "2012-10-19",
+    "price": 370000,
+    "address": "Flat 6",
+    "unit": "MZ2",
+    "new_build": false
+   },
+   {
+    "date": "2010-03-30",
+    "price": 640000,
+    "address": "Flat 19",
+    "unit": "F11",
+    "new_build": false
+   },
+   {
+    "date": "2007-07-26",
+    "price": 775000,
+    "address": "Flat 1",
+    "unit": "H1",
+    "new_build": true
+   },
+   {
+    "date": "2007-06-06",
+    "price": 695000,
+    "address": "152 Lever Street",
+    "unit": "LW1",
+    "new_build": false
+   },
+   {
+    "date": "2007-06-05",
+    "price": 498000,
+    "address": "Flat 2",
+    "unit": "M1",
+    "new_build": true
+   },
+   {
+    "date": "2007-06-01",
+    "price": 520000,
+    "address": "Flat 5",
+    "unit": "MZ1",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-25",
+    "price": 530000,
+    "address": "Flat 9",
+    "unit": "F1",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-24",
+    "price": 530000,
+    "address": "Flat 13",
+    "unit": "F5",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-20",
+    "price": 445000,
+    "address": "Flat 3",
+    "unit": "M2",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-20",
+    "price": 324000,
+    "address": "Flat 4",
+    "unit": "M3",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-20",
+    "price": 499000,
+    "address": "Flat 8",
+    "unit": "MZ4",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-13",
+    "price": 515000,
+    "address": "Flat 16",
+    "unit": "F8",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-10",
+    "price": 343000,
+    "address": "Flat 7",
+    "unit": "MZ3",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-10",
+    "price": 325000,
+    "address": "Flat 14",
+    "unit": "F6",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-10",
+    "price": 580000,
+    "address": "Flat 19",
+    "unit": "F11",
+    "new_build": true
+   },
+   {
+    "date": "2007-04-05",
+    "price": 500000,
+    "address": "Flat 12",
+    "unit": "F4",
+    "new_build": false
+   },
+   {
+    "date": "2007-03-30",
+    "price": 310000,
+    "address": "Flat 10",
+    "unit": "F2",
+    "new_build": true
+   },
+   {
+    "date": "2007-03-29",
+    "price": 323000,
+    "address": "Flat 6",
+    "unit": "MZ2",
+    "new_build": false
+   },
+   {
+    "date": "2007-03-28",
+    "price": 565000,
+    "address": "Flat 18",
+    "unit": "F10",
+    "new_build": true
+   },
+   {
+    "date": "2007-03-28",
+    "price": 745000,
+    "address": "Flat 20",
+    "unit": "F12",
+    "new_build": true
+   },
+   {
+    "date": "2007-03-27",
+    "price": 335000,
+    "address": "Flat 11",
+    "unit": "F3",
+    "new_build": true
+   },
+   {
+    "date": "2007-03-26",
+    "price": 780000,
+    "address": "Flat 17",
+    "unit": "F9",
+    "new_build": true
+   },
+   {
+    "date": "2007-03-23",
+    "price": 335000,
+    "address": "Flat 15",
+    "unit": "F7",
+    "new_build": true
+   }
+  ],
+  "page_up_bearing": 80.53
+ },
+ "units": [
+  {
+   "key": "LW1",
+   "name": "Live/Work Studio 1",
+   "kind": "live_work",
+   "beds": 2,
+   "access": "Via main pedestrian entrance",
+   "gross_m2": 262.53,
+   "gross_sqft": 2826,
+   "floors": [
+    {
+     "level": -1,
+     "name": "Lower ground floor",
+     "short": "LG",
+     "own_name": null,
+     "area_m2": 138.4
+    },
+    {
+     "level": 0,
+     "name": "Ground floor",
+     "short": "G",
+     "own_name": null,
+     "area_m2": 110.62
+    }
+   ],
+   "levels": [
+    -1,
+    0
+   ],
+   "plan_svg": "/merino-court/plans/LW1.svg",
+   "postal": {
+    "address": "152 Lever Street",
+    "confidence": "confirmed",
+    "evidence": "the user: \"confirmed 152 Lever Street is LW1\", 2026-11-09 (C-0008); EPC ground-floor flat 207 m2 with a dwelling above and a solid floor (a live/work unit with its lower ground floor: 252-263 m2); which of LW1 and LW2 is not known"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "E",
+    "area_m2": 207.0,
+    "type": "Ground-floor flat",
+    "certified": "10 May 2015",
+    "valid_until": "9 May 2025",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/0736-2858-7157-9805-8775"
+   },
+   "sales": [
+    {
+     "date": "2017-07-19",
+     "price": 1060000,
+     "new_build": false
+    },
+    {
+     "date": "2007-06-06",
+     "price": 695000,
+     "new_build": false
+    }
+   ]
+  },
+  {
+   "key": "LW2",
+   "name": "Live/Work Studio 2",
+   "kind": "live_work",
+   "beds": 2,
+   "access": "Via main pedestrian entrance",
+   "gross_m2": 251.66,
+   "gross_sqft": 2709,
+   "floors": [
+    {
+     "level": -1,
+     "name": "Lower ground floor",
+     "short": "LG",
+     "own_name": null,
+     "area_m2": 157.48
+    },
+    {
+     "level": 0,
+     "name": "Ground floor",
+     "short": "G",
+     "own_name": null,
+     "area_m2": 137.75
+    }
+   ],
+   "levels": [
+    -1,
+    0
+   ],
+   "plan_svg": "/merino-court/plans/LW2.svg",
+   "postal": {
+    "address": "Flat 21",
+    "confidence": "confirmed",
+    "evidence": "the user: Flat 21 is LW2, 2026-11-09 (C-0003); EPC 108 m2 (2010, 2020), a flat with dwellings above; one sale, April 2018: a live/work unit's residential ground floor is 120-124 m2 on the brochure's plans; which of LW1 and LW2 is not known"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 108.0,
+    "type": "Mid-floor flat",
+    "certified": "17 December 2020",
+    "valid_until": "16 December 2030",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/9924-0209-4600-6627-0614"
+   },
+   "sales": [
+    {
+     "date": "2018-04-19",
+     "price": 690000,
+     "new_build": false
+    }
+   ]
+  },
+  {
+   "key": "M1",
+   "name": "Mews House 1",
+   "kind": "mews",
+   "beds": 2,
+   "access": "Via courtyard",
+   "gross_m2": 80.82,
+   "gross_sqft": 870,
+   "floors": [
+    {
+     "level": 0,
+     "name": "Ground floor",
+     "short": "G",
+     "own_name": "Ground floor",
+     "area_m2": 50.87
+    },
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": "First floor",
+     "area_m2": 50.87
+    }
+   ],
+   "levels": [
+    0,
+    1
+   ],
+   "plan_svg": "/merino-court/plans/M1.svg",
+   "postal": {
+    "address": "Flat 2",
+    "confidence": "strong",
+    "evidence": "EPC: end-terrace house, 85 m2 (M1: 80.8 m2, the end of the mews by the garden's south end); the Land Registry: terraced"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 85.0,
+    "type": "End-terrace house",
+    "certified": "22 June 2010",
+    "valid_until": "21 June 2020",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8330-6126-7210-9761-6992"
+   },
+   "sales": [
+    {
+     "date": "2014-04-16",
+     "price": 780000,
+     "new_build": false
+    },
+    {
+     "date": "2007-06-05",
+     "price": 498000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "M2",
+   "name": "Mews House 2",
+   "kind": "mews",
+   "beds": 2,
+   "access": "Via courtyard",
+   "gross_m2": 78.96,
+   "gross_sqft": 850,
+   "floors": [
+    {
+     "level": 0,
+     "name": "Ground floor",
+     "short": "G",
+     "own_name": "Ground floor",
+     "area_m2": 46.05
+    },
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": "First floor",
+     "area_m2": 46.05
+    }
+   ],
+   "levels": [
+    0,
+    1
+   ],
+   "plan_svg": "/merino-court/plans/M2.svg",
+   "postal": {
+    "address": "Flat 3",
+    "confidence": "strong",
+    "evidence": "EPC: mid-terrace house, 82 m2 (M2: 79.0 m2, the middle house)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 82.0,
+    "type": "Mid-terrace house",
+    "certified": "19 October 2026",
+    "valid_until": "18 October 2036",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8836-0021-1600-0770-7272"
+   },
+   "sales": [
+    {
+     "date": "2007-04-20",
+     "price": 445000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "M3",
+   "name": "Mews House 3",
+   "kind": "mews",
+   "beds": 1,
+   "access": "Via courtyard",
+   "gross_m2": 51.28,
+   "gross_sqft": 552,
+   "floors": [
+    {
+     "level": 0,
+     "name": "Ground floor",
+     "short": "G",
+     "own_name": "Ground floor",
+     "area_m2": 40.2
+    },
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": "First floor",
+     "area_m2": 18.81
+    }
+   ],
+   "levels": [
+    0,
+    1
+   ],
+   "plan_svg": "/merino-court/plans/M3.svg",
+   "postal": {
+    "address": "Flat 4",
+    "confidence": "strong",
+    "evidence": "Rightmove plan: bedroom, bath and a void over the reception upstairs, 547 sq ft; EPC: end-terrace house, 53 m2 (M3: 51.3 m2, the one-bed); an aggregator gives it a garden"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 53.0,
+    "type": "End-terrace house",
+    "certified": "28 November 2023",
+    "valid_until": "27 November 2033",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/2335-3932-9209-7487-6200"
+   },
+   "sales": [
+    {
+     "date": "2014-05-30",
+     "price": 600000,
+     "new_build": false
+    },
+    {
+     "date": "2007-04-20",
+     "price": 324000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "H1",
+   "name": "Town House",
+   "kind": "town_house",
+   "beds": 3,
+   "access": "Via courtyard",
+   "gross_m2": 148.36,
+   "gross_sqft": 1579,
+   "floors": [
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": "Ground floor",
+     "area_m2": 43.06
+    },
+    {
+     "level": 2,
+     "name": "First floor",
+     "short": "1",
+     "own_name": "First floor",
+     "area_m2": 43.15
+    },
+    {
+     "level": 3,
+     "name": "Second floor",
+     "short": "2",
+     "own_name": "Second floor",
+     "area_m2": 43.15
+    },
+    {
+     "level": 4,
+     "name": "Third floor",
+     "short": "3",
+     "own_name": "Third floor",
+     "area_m2": 37.47
+    }
+   ],
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "plan_svg": "/merino-court/plans/H1.svg",
+   "postal": {
+    "address": "Flat 1",
+    "confidence": "likely",
+    "evidence": "with Flat 17 = F9 (C-0002), H1 is Flat 1, 21 or 152 Lever Street, and both 21 and 152 have EPCs with a dwelling above, which H1 has not; no EPC; sold new in July 2007 for £775,000 (a flat or maisonette to the Land Registry): of the units left, the town house fits the numbers starting by the garden (H1, then the mews 2-4)"
+   },
+   "shown": true,
+   "epc": null,
+   "sales": [
+    {
+     "date": "2007-07-26",
+     "price": 775000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "MZ1",
+   "name": "Mezzanine Apartment 1",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 87.51,
+   "gross_sqft": 942,
+   "floors": [
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": null,
+     "area_m2": 93.75
+    }
+   ],
+   "levels": [
+    1
+   ],
+   "plan_svg": "/merino-court/plans/MZ1.svg",
+   "postal": {
+    "address": "Flat 5",
+    "confidence": "confirmed",
+    "evidence": "the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 91 m2 (MZ1 87.5 m2): first of the mezzanine's large-small-small-large run"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 91.0,
+    "type": "Mid-floor flat",
+    "certified": "28 June 2020",
+    "valid_until": "27 June 2030",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8000-6826-5790-7835-5226"
+   },
+   "sales": [
+    {
+     "date": "2007-06-01",
+     "price": 520000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "MZ2",
+   "name": "Mezzanine Apartment 2",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 48.02,
+   "gross_sqft": 517,
+   "floors": [
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": null,
+     "area_m2": 50.88
+    }
+   ],
+   "levels": [
+    1
+   ],
+   "plan_svg": "/merino-court/plans/MZ2.svg",
+   "postal": {
+    "address": "Flat 6",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the MZ2/F2/F6 type, 538 sq ft, 'First Floor' (the mezzanine, as some agents count); the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 48 m2 (MZ2 48.0 m2); an aggregator puts it on the 1st floor (the mezzanine, as agents count)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 48.0,
+    "type": "Mid-floor flat",
+    "certified": "4 August 2020",
+    "valid_until": "3 August 2030",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/0148-9095-6248-7020-3270"
+   },
+   "sales": [
+    {
+     "date": "2025-01-31",
+     "price": 493000,
+     "new_build": false
+    },
+    {
+     "date": "2014-02-07",
+     "price": 470000,
+     "new_build": false
+    },
+    {
+     "date": "2012-10-19",
+     "price": 370000,
+     "new_build": false
+    },
+    {
+     "date": "2007-03-29",
+     "price": 323000,
+     "new_build": false
+    }
+   ]
+  },
+  {
+   "key": "MZ3",
+   "name": "Mezzanine Apartment 3",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 54.25,
+   "gross_sqft": 584,
+   "floors": [
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": null,
+     "area_m2": 57.91
+    }
+   ],
+   "levels": [
+    1
+   ],
+   "plan_svg": "/merino-court/plans/MZ3.svg",
+   "postal": {
+    "address": "Flat 7",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the MZ3/F3/F7 type, 611 sq ft; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 59 m2 (MZ3 54.3 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 59.0,
+    "type": "Mid-floor flat",
+    "certified": "8 September 2023",
+    "valid_until": "7 September 2033",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/0332-0027-6211-1617-9204"
+   },
+   "sales": [
+    {
+     "date": "2007-04-10",
+     "price": 343000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "MZ4",
+   "name": "Mezzanine Apartment 4",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 86.39,
+   "gross_sqft": 930,
+   "floors": [
+    {
+     "level": 1,
+     "name": "Mezzanine floor",
+     "short": "M",
+     "own_name": null,
+     "area_m2": 89.76
+    }
+   ],
+   "levels": [
+    1
+   ],
+   "plan_svg": "/merino-court/plans/MZ4.svg",
+   "postal": {
+    "address": "Flat 8",
+    "confidence": "confirmed",
+    "evidence": "the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 95 m2 (MZ4 86.4 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "B",
+    "area_m2": 95.0,
+    "type": "Mid-floor flat",
+    "certified": "30 June 2015",
+    "valid_until": "29 June 2025",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/2458-4031-7216-3775-2980"
+   },
+   "sales": [
+    {
+     "date": "2007-04-20",
+     "price": 499000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F1",
+   "name": "First Floor Apartment 1",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 87.97,
+   "gross_sqft": 947,
+   "floors": [
+    {
+     "level": 2,
+     "name": "First floor",
+     "short": "1",
+     "own_name": null,
+     "area_m2": 93.75
+    }
+   ],
+   "levels": [
+    2
+   ],
+   "plan_svg": "/merino-court/plans/F1.svg",
+   "postal": {
+    "address": "Flat 9",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the chamfered MZ1/F1/F5 type, 978 sq ft, 'First Floor'; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 90 m2 (F1 88.0 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 90.0,
+    "type": "Mid-floor flat",
+    "certified": "27 October 2015",
+    "valid_until": "26 October 2025",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/2838-8998-6240-8715-3950"
+   },
+   "sales": [
+    {
+     "date": "2020-03-06",
+     "price": 765000,
+     "new_build": false
+    },
+    {
+     "date": "2007-04-25",
+     "price": 530000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F2",
+   "name": "First Floor Apartment 2",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 48.21,
+   "gross_sqft": 519,
+   "floors": [
+    {
+     "level": 2,
+     "name": "First floor",
+     "short": "1",
+     "own_name": null,
+     "area_m2": 50.88
+    }
+   ],
+   "levels": [
+    2
+   ],
+   "plan_svg": "/merino-court/plans/F2.svg",
+   "postal": {
+    "address": "Flat 10",
+    "confidence": "confirmed",
+    "evidence": "the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 47 m2 (F2 48.2 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 47.0,
+    "type": "Mid-floor flat",
+    "certified": "28 June 2026",
+    "valid_until": "27 June 2036",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/1205-1276-9002-1726-1602"
+   },
+   "sales": [
+    {
+     "date": "2007-03-30",
+     "price": 310000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F3",
+   "name": "First Floor Apartment 3",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 54.53,
+   "gross_sqft": 587,
+   "floors": [
+    {
+     "level": 2,
+     "name": "First floor",
+     "short": "1",
+     "own_name": null,
+     "area_m2": 57.28
+    }
+   ],
+   "levels": [
+    2
+   ],
+   "plan_svg": "/merino-court/plans/F3.svg",
+   "postal": {
+    "address": "Flat 11",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the MZ3/F3/F7 type, 597 sq ft, 'First Floor'; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 57 m2 (F3 54.5 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 57.0,
+    "type": "Mid-floor flat",
+    "certified": "6 April 2018",
+    "valid_until": "5 April 2028",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/2268-7037-7237-5878-2950"
+   },
+   "sales": [
+    {
+     "date": "2007-03-27",
+     "price": 335000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F4",
+   "name": "First Floor Apartment 4",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 86.11,
+   "gross_sqft": 927,
+   "floors": [
+    {
+     "level": 2,
+     "name": "First floor",
+     "short": "1",
+     "own_name": null,
+     "area_m2": 87.58
+    }
+   ],
+   "levels": [
+    2
+   ],
+   "plan_svg": "/merino-court/plans/F4.svg",
+   "postal": {
+    "address": "Flat 12",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the MZ4/F4/F8 type, 940 sq ft, 'First Floor'; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 87 m2 (F4 86.1 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 87.0,
+    "type": "Mid-floor flat",
+    "certified": "16 May 2024",
+    "valid_until": "15 May 2034",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/9800-4063-0822-0397-3543"
+   },
+   "sales": [
+    {
+     "date": "2007-04-05",
+     "price": 500000,
+     "new_build": false
+    }
+   ]
+  },
+  {
+   "key": "F5",
+   "name": "Second Floor Apartment 5",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 87.97,
+   "gross_sqft": 947,
+   "floors": [
+    {
+     "level": 3,
+     "name": "Second floor",
+     "short": "2",
+     "own_name": null,
+     "area_m2": 93.75
+    }
+   ],
+   "levels": [
+    3
+   ],
+   "plan_svg": "/merino-court/plans/F5.svg",
+   "postal": {
+    "address": "Flat 13",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the chamfered MZ1/F1/F5 type, 1014 sq ft, 'Second Floor'; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 92 m2 (F5 88.0 m2); its 2011 EPC said top floor, its 2026 one mid floor"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 92.0,
+    "type": "Mid-floor flat",
+    "certified": "14 May 2026",
+    "valid_until": "13 May 2036",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/4236-9425-5600-0323-2202"
+   },
+   "sales": [
+    {
+     "date": "2007-04-24",
+     "price": 530000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F6",
+   "name": "Second Floor Apartment 6",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 48.21,
+   "gross_sqft": 519,
+   "floors": [
+    {
+     "level": 3,
+     "name": "Second floor",
+     "short": "2",
+     "own_name": null,
+     "area_m2": 50.88
+    }
+   ],
+   "levels": [
+    3
+   ],
+   "plan_svg": "/merino-court/plans/F6.svg",
+   "postal": {
+    "address": "Flat 14",
+    "confidence": "confirmed",
+    "evidence": "the user, 2026-11-09: \"Flat 14 is in the 2nd floor\" (the brochure's Second Floor, F5-F8: as C-0001 has it); Rightmove plan: the MZ2/F2/F6 type, 523 sq ft, labelled 'First Floor' by Islington Properties, which the user's answer shows is wrong; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 49 m2 (F6 48.2 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 49.0,
+    "type": "Mid-floor flat",
+    "certified": "13 August 2019",
+    "valid_until": "12 August 2029",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8241-6928-6120-6542-9992"
+   },
+   "sales": [
+    {
+     "date": "2007-04-10",
+     "price": 325000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F7",
+   "name": "Second Floor Apartment 7",
+   "kind": "flat",
+   "beds": 1,
+   "access": "Via lift or stairs",
+   "gross_m2": 54.53,
+   "gross_sqft": 587,
+   "floors": [
+    {
+     "level": 3,
+     "name": "Second floor",
+     "short": "2",
+     "own_name": null,
+     "area_m2": 58.1
+    }
+   ],
+   "levels": [
+    3
+   ],
+   "plan_svg": "/merino-court/plans/F7.svg",
+   "postal": {
+    "address": "Flat 15",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: the MZ3/F3/F7 type, 598 sq ft, 'Second Floor'; the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC mid-floor flat 58 m2 (F7 54.5 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "B",
+    "area_m2": 58.0,
+    "type": "Mid-floor flat",
+    "certified": "20 August 2022",
+    "valid_until": "19 August 2032",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/1800-1252-9002-1722-1702"
+   },
+   "sales": [
+    {
+     "date": "2023-03-17",
+     "price": 640000,
+     "new_build": false
+    },
+    {
+     "date": "2007-03-23",
+     "price": 335000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F8",
+   "name": "Second Floor Apartment 8",
+   "kind": "flat",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 86.39,
+   "gross_sqft": 930,
+   "floors": [
+    {
+     "level": 3,
+     "name": "Second floor",
+     "short": "2",
+     "own_name": null,
+     "area_m2": 90.08
+    }
+   ],
+   "levels": [
+    3
+   ],
+   "plan_svg": "/merino-court/plans/F8.svg",
+   "postal": {
+    "address": "Flat 16",
+    "confidence": "confirmed",
+    "evidence": "the user confirmed Flats 5-8 on the mezzanine, 2026-11-09 (C-0001); EPC 84 m2, another dwelling above (F8 86.4 m2)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 84.0,
+    "type": null,
+    "certified": "2 February 2009",
+    "valid_until": "1 February 2019",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8371-6322-5470-4782-0006"
+   },
+   "sales": [
+    {
+     "date": "2013-12-16",
+     "price": 730000,
+     "new_build": false
+    },
+    {
+     "date": "2007-04-13",
+     "price": 515000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F9",
+   "name": "Penthouse 9",
+   "kind": "penthouse",
+   "beds": 3,
+   "access": "Via lift or stairs",
+   "gross_m2": 146.31,
+   "gross_sqft": 1575,
+   "floors": [
+    {
+     "level": 4,
+     "name": "Third floor",
+     "short": "3",
+     "own_name": null,
+     "area_m2": 93.75
+    },
+    {
+     "level": 5,
+     "name": "Fourth floor",
+     "short": "4",
+     "own_name": null,
+     "area_m2": 67.27
+    }
+   ],
+   "levels": [
+    4,
+    5
+   ],
+   "plan_svg": "/merino-court/plans/F9.svg",
+   "postal": {
+    "address": "Flat 17",
+    "confidence": "confirmed",
+    "evidence": "Rightmove plan: F9's plan, chamfered corners and a wrap-around terrace, 1636 sq ft; the user: Flat 17 is F9, 2026-11-09 (C-0002); EPC top floor flat, 148 m2 (F9 146.3 m2; but H1 is 148.4 m2): the next number after the second floor's 13-16"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "E",
+    "area_m2": 148.0,
+    "type": "Top floor flat",
+    "certified": "18 February 2010",
+    "valid_until": "17 February 2020",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/0978-2823-6521-9890-7215"
+   },
+   "sales": [
+    {
+     "date": "2014-09-19",
+     "price": 1620000,
+     "new_build": false
+    },
+    {
+     "date": "2007-03-26",
+     "price": 780000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F10",
+   "name": "Penthouse 10",
+   "kind": "penthouse",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 91.78,
+   "gross_sqft": 988,
+   "floors": [
+    {
+     "level": 4,
+     "name": "Third floor",
+     "short": "3",
+     "own_name": null,
+     "area_m2": 53.99
+    },
+    {
+     "level": 5,
+     "name": "Fourth floor",
+     "short": "4",
+     "own_name": null,
+     "area_m2": 43.76
+    }
+   ],
+   "levels": [
+    4,
+    5
+   ],
+   "plan_svg": "/merino-court/plans/F10.svg",
+   "postal": {
+    "address": "Flat 18",
+    "confidence": "strong",
+    "evidence": "Rightmove plan (2021): F10's plan turned 90 degrees, 1154 sq ft (the brochure: 988); after Flat 17 = F9 (C-0002) the order of the numbers says so, but the EPC areas fit F10 and F11 the other way round; EPC top-floor maisonette 104 m2; let by Savills in 2021 as a 2-bed duplex penthouse, bedrooms below, living above, its main balcony to the front facing due south (F10 91.8 m2 and F11 98.0 m2 both fit; F10 by the order of the numbers)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 104.0,
+    "type": "Top-floor maisonette",
+    "certified": "23 May 2014",
+    "valid_until": "22 May 2024",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8314-7425-2840-3382-1926"
+   },
+   "sales": [
+    {
+     "date": "2022-07-29",
+     "price": 1150000,
+     "new_build": false
+    },
+    {
+     "date": "2014-07-11",
+     "price": 1100000,
+     "new_build": false
+    },
+    {
+     "date": "2007-03-28",
+     "price": 565000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F11",
+   "name": "Penthouse 11",
+   "kind": "penthouse",
+   "beds": 2,
+   "access": "Via lift or stairs",
+   "gross_m2": 98.0,
+   "gross_sqft": 1055,
+   "floors": [
+    {
+     "level": 4,
+     "name": "Third floor",
+     "short": "3",
+     "own_name": null,
+     "area_m2": 57.28
+    },
+    {
+     "level": 5,
+     "name": "Fourth floor",
+     "short": "4",
+     "own_name": null,
+     "area_m2": 47.36
+    }
+   ],
+   "levels": [
+    4,
+    5
+   ],
+   "plan_svg": "/merino-court/plans/F11.svg",
+   "postal": {
+    "address": "Flat 19",
+    "confidence": "strong",
+    "evidence": "Rightmove plan (2009): F11's plan, 1072 sq ft; after Flat 17 = F9 (C-0002) the order of the numbers says so, but the EPC areas fit F10 and F11 the other way round; EPC top-floor maisonette 86 m2; \"Flat 19 Penthouse\" at Companies House (F11 98.0 m2, or F10 91.8 m2 by area)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "C",
+    "area_m2": 86.0,
+    "type": "Top-floor maisonette",
+    "certified": "6 December 2009",
+    "valid_until": "5 December 2019",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/8591-6322-7809-7025-9006"
+   },
+   "sales": [
+    {
+     "date": "2010-03-30",
+     "price": 640000,
+     "new_build": false
+    },
+    {
+     "date": "2007-04-10",
+     "price": 580000,
+     "new_build": true
+    }
+   ]
+  },
+  {
+   "key": "F12",
+   "name": "Penthouse 12",
+   "kind": "penthouse",
+   "beds": 3,
+   "access": "Via lift or stairs",
+   "gross_m2": 142.22,
+   "gross_sqft": 1531,
+   "floors": [
+    {
+     "level": 4,
+     "name": "Third floor",
+     "short": "3",
+     "own_name": null,
+     "area_m2": 90.13
+    },
+    {
+     "level": 5,
+     "name": "Fourth floor",
+     "short": "4",
+     "own_name": null,
+     "area_m2": 60.74
+    }
+   ],
+   "levels": [
+    4,
+    5
+   ],
+   "plan_svg": "/merino-court/plans/F12.svg",
+   "postal": {
+    "address": "Flat 20",
+    "confidence": "strong",
+    "evidence": "Rightmove plan: F12's plan turned 180 degrees, 1594 sq ft; after Flat 17 = F9 (C-0002), the order of the numbers; EPC top-floor maisonette 143 m2 (155 m2 in 2018); \"Flat 20 Penthouse\" at Companies House (F12 142.2 m2 by the order of the numbers; F9, 146.3 m2, fits as well)"
+   },
+   "shown": true,
+   "epc": {
+    "rating": "D",
+    "area_m2": 143.0,
+    "type": "Top-floor maisonette",
+    "certified": "11 June 2024",
+    "valid_until": "10 June 2034",
+    "url": "https://find-energy-certificate.service.gov.uk/energy-certificate/7800-4293-0122-2398-3643"
+   },
+   "sales": [
+    {
+     "date": "2021-02-12",
+     "price": 1255000,
+     "new_build": false
+    },
+    {
+     "date": "2007-03-28",
+     "price": 745000,
+     "new_build": true
+    }
+   ]
+  }
+ ],
+ "checks": [
+  {
+   "status": "PASS",
+   "check": "each postal address is one unit, each unit one address",
+   "basis": "derived",
+   "detail": ""
+  },
+  {
+   "status": "PASS",
+   "check": "every unit has a postal address",
+   "basis": "derived",
+   "detail": ""
+  },
+  {
+   "status": "PASS",
+   "check": "postal addresses matched at least `likely`",
+   "basis": "independent",
+   "detail": "1 likely, 6 strong, 15 confirmed; possible: "
+  },
+  {
+   "status": "WARN",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "LW1 = 152 Lever Street: EPC 207 m², brochure 262.53 m² (0.79; allowed 0.88-1.12)",
+   "subject": "LW1"
+  },
+  {
+   "status": "WARN",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "LW2 = Flat 21: EPC 108 m², brochure 251.66 m² (0.43; allowed 0.88-1.12)",
+   "subject": "LW2"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "M1 = Flat 2: EPC 85 m², brochure 80.82 m² (1.05; allowed 0.88-1.12)",
+   "subject": "M1"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "M2 = Flat 3: EPC 82 m², brochure 78.96 m² (1.04; allowed 0.88-1.12)",
+   "subject": "M2"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "M3 = Flat 4: EPC 53 m², brochure 51.28 m² (1.03; allowed 0.88-1.12)",
+   "subject": "M3"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "MZ1 = Flat 5: EPC 91 m², brochure 87.51 m² (1.04; allowed 0.88-1.12)",
+   "subject": "MZ1"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "MZ2 = Flat 6: EPC 48 m², brochure 48.02 m² (1.00; allowed 0.88-1.12)",
+   "subject": "MZ2"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "MZ3 = Flat 7: EPC 59 m², brochure 54.25 m² (1.09; allowed 0.88-1.12)",
+   "subject": "MZ3"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "MZ4 = Flat 8: EPC 95 m², brochure 86.39 m² (1.10; allowed 0.88-1.12)",
+   "subject": "MZ4"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F1 = Flat 9: EPC 90 m², brochure 87.97 m² (1.02; allowed 0.88-1.12)",
+   "subject": "F1"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F2 = Flat 10: EPC 47 m², brochure 48.21 m² (0.97; allowed 0.88-1.12)",
+   "subject": "F2"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F3 = Flat 11: EPC 57 m², brochure 54.53 m² (1.05; allowed 0.88-1.12)",
+   "subject": "F3"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F4 = Flat 12: EPC 87 m², brochure 86.11 m² (1.01; allowed 0.88-1.12)",
+   "subject": "F4"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F5 = Flat 13: EPC 92 m², brochure 87.97 m² (1.05; allowed 0.88-1.12)",
+   "subject": "F5"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F6 = Flat 14: EPC 49 m², brochure 48.21 m² (1.02; allowed 0.88-1.12)",
+   "subject": "F6"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F7 = Flat 15: EPC 58 m², brochure 54.53 m² (1.06; allowed 0.88-1.12)",
+   "subject": "F7"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F8 = Flat 16: EPC 84 m², brochure 86.39 m² (0.97; allowed 0.88-1.12)",
+   "subject": "F8"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F9 = Flat 17: EPC 148 m², brochure 146.31 m² (1.01; allowed 0.88-1.12)",
+   "subject": "F9"
+  },
+  {
+   "status": "WARN",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F10 = Flat 18: EPC 104 m², brochure 91.78 m² (1.13; allowed 0.88-1.12)",
+   "subject": "F10"
+  },
+  {
+   "status": "WARN",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F11 = Flat 19: EPC 86 m², brochure 98.0 m² (0.88; allowed 0.88-1.12)",
+   "subject": "F11"
+  },
+  {
+   "status": "PASS",
+   "check": "a matched unit's EPC area is its brochure area",
+   "basis": "derived",
+   "detail": "F12 = Flat 20: EPC 143 m², brochure 142.22 m² (1.01; allowed 0.88-1.12)",
+   "subject": "F12"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "M3",
+   "detail": "Flat 4: the plan is M3's, matched to M3 (strong)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "M3",
+   "detail": "Flat 4 = M3: 547 sq ft measured, 552 printed (0.99; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "MZ2",
+   "detail": "Flat 6: the plan is MZ2's, matched to MZ2 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "MZ2",
+   "detail": "Flat 6 = MZ2: 538 sq ft measured, 517 printed (1.04; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "MZ2",
+   "detail": "Flat 6 = MZ2: labelled First Floor; MZ2 is on the brochure's Mezzanine (counting the mezzanine: First Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "MZ3",
+   "detail": "Flat 7: the plan is MZ3's, matched to MZ3 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "MZ3",
+   "detail": "Flat 7 = MZ3: 611 sq ft measured, 584 printed (1.05; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F1",
+   "detail": "Flat 9: the plan is F1's, matched to F1 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F1",
+   "detail": "Flat 9 = F1: 978 sq ft measured, 947 printed (1.03; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F1",
+   "detail": "Flat 9 = F1: labelled First Floor; F1 is on the brochure's First Floor (counting the mezzanine: Second Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F3",
+   "detail": "Flat 11: the plan is F3's, matched to F3 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F3",
+   "detail": "Flat 11 = F3: 597.5 sq ft measured, 587 printed (1.02; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F3",
+   "detail": "Flat 11 = F3: labelled First Floor; F3 is on the brochure's First Floor (counting the mezzanine: Second Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F4",
+   "detail": "Flat 12: the plan is F4's, matched to F4 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F4",
+   "detail": "Flat 12 = F4: 940 sq ft measured, 927 printed (1.01; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F4",
+   "detail": "Flat 12 = F4: labelled First Floor; F4 is on the brochure's First Floor (counting the mezzanine: Second Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F5",
+   "detail": "Flat 13: the plan is F5's, matched to F5 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F5",
+   "detail": "Flat 13 = F5: 1014 sq ft measured, 947 printed (1.07; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F5",
+   "detail": "Flat 13 = F5: labelled Second Floor; F5 is on the brochure's Second Floor (counting the mezzanine: Third Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F6",
+   "detail": "Flat 14: the plan is F6's, matched to F6 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F6",
+   "detail": "Flat 14 = F6: 523 sq ft measured, 519 printed (1.01; allowed 0.90-1.10)"
+  },
+  {
+   "status": "WARN",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F6",
+   "detail": "Flat 14 = F6: labelled First Floor; F6 is on the brochure's Second Floor (counting the mezzanine: Third Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F7",
+   "detail": "Flat 15: the plan is F7's, matched to F7 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F7",
+   "detail": "Flat 15 = F7: 598 sq ft measured, 587 printed (1.02; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F7",
+   "detail": "Flat 15 = F7: labelled Second Floor; F7 is on the brochure's Second Floor (counting the mezzanine: Third Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F9",
+   "detail": "Flat 17: the plan is F9's, matched to F9 (confirmed)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F9",
+   "detail": "Flat 17 = F9: 1636 sq ft measured, 1575 printed (1.04; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F9",
+   "detail": "Flat 17 = F9: labelled Third Floor, Fourth Floor; F9 is on the brochure's Third Floor and Fourth Floor (counting the mezzanine: Fourth Floor and Fifth Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F10",
+   "detail": "Flat 18: the plan is F10's, matched to F10 (strong)"
+  },
+  {
+   "status": "WARN",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F10",
+   "detail": "Flat 18 = F10: 1154 sq ft measured, 988 printed (1.17; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F10",
+   "detail": "Flat 18 = F10: labelled Fourth Floor, Fifth Floor; F10 is on the brochure's Third Floor and Fourth Floor (counting the mezzanine: Fourth Floor and Fifth Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F11",
+   "detail": "Flat 19: the plan is F11's, matched to F11 (strong)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F11",
+   "detail": "Flat 19 = F11: 1072 sq ft measured, 1055 printed (1.02; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F11",
+   "detail": "Flat 19 = F11: labelled Third Floor, Fourth Floor; F11 is on the brochure's Third Floor and Fourth Floor (counting the mezzanine: Fourth Floor and Fifth Floor)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor plan is the matched unit's plan",
+   "basis": "independent",
+   "subject": "F12",
+   "detail": "Flat 20: the plan is F12's, matched to F12 (strong)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's measured area is the brochure's",
+   "basis": "independent",
+   "subject": "F12",
+   "detail": "Flat 20 = F12: 1594 sq ft measured, 1531 printed (1.04; allowed 0.90-1.10)"
+  },
+  {
+   "status": "PASS",
+   "check": "an agent's floor label fits the matched floor",
+   "basis": "independent",
+   "subject": "F12",
+   "detail": "Flat 20 = F12: labelled Fourth Floor, Fifth Floor; F12 is on the brochure's Third Floor and Fourth Floor (counting the mezzanine: Fourth Floor and Fifth Floor)"
+  }
+ ]
+}

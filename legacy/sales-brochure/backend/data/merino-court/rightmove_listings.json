@@ -1,0 +1,446 @@
+{
+ "Flat 6": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/26ecb685-2724-4761-8728-095589006a19",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/71f89ba8a/150116072/71f89ba8a279bbd8b9224acc02e874fb.jpeg",
+   "https://media.rightmove.co.uk/property-photo/b1105b854/150116072/b1105b8548bf16e6e600ab871388899c.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7288ee239/150116072/7288ee2396d557ccf096f6fbda234842.jpeg",
+   "https://media.rightmove.co.uk/property-photo/3c38d7441/150116072/3c38d744150f413f2c0846d61a2343d9.jpeg",
+   "https://media.rightmove.co.uk/property-photo/147193839/150116072/147193839a9d37259af553ab16c617ce.jpeg",
+   "https://media.rightmove.co.uk/property-photo/71e84e265/150116072/71e84e26556e465473785ccbcd656181.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ec2ce368a/150116072/ec2ce368a53926451b56f2e6f25bb217.jpeg",
+   "https://media.rightmove.co.uk/property-photo/4f127e6c4/150116072/4f127e6c4403feaca36bf370402d97d7.jpeg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/2f62d1b1b/150116072/2f62d1b1b6cfb3a62dc2ba8345d3b533.jpeg"
+  ],
+  "texts": []
+ },
+ "Flat 15": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/02fa20b3-7f8a-4f0a-96ae-c67b79a86702",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/653b01a49/124655285/653b01a4970374e2486cb72b87d1ace2.jpg",
+   "https://media.rightmove.co.uk/property-photo/c0dd93de6/124655285/c0dd93de6077bc0314c35b81f8256270.jpg",
+   "https://media.rightmove.co.uk/property-photo/ad93ff861/124655285/ad93ff8612a1d519e304e4c04f0199f6.jpg",
+   "https://media.rightmove.co.uk/property-photo/1299769ec/124655285/1299769ec8f9e723aaade5553f931438.jpg",
+   "https://media.rightmove.co.uk/property-photo/e8a21bb04/124655285/e8a21bb04156a2d37dc988efb1b57fc5.jpg",
+   "https://media.rightmove.co.uk/property-photo/90405d6b6/124655285/90405d6b6dc603883def10dec83d38d2.jpg",
+   "https://media.rightmove.co.uk/property-photo/1713b9f4b/124655285/1713b9f4b84505930fd96c62c269eb25.jpg",
+   "https://media.rightmove.co.uk/property-photo/8fc872710/124655285/8fc87271011ea68517b1a01e08a84e1d.jpg",
+   "https://media.rightmove.co.uk/property-photo/17eae10c4/124655285/17eae10c49c20657ee5886a55c56ff49.jpg",
+   "https://media.rightmove.co.uk/property-photo/087c08ab4/124655285/087c08ab455099fc39b38bc442c1662c.jpg",
+   "https://media.rightmove.co.uk/property-photo/0c8038117/124655285/0c80381178052503d518013bb2effc6d.jpg",
+   "https://media.rightmove.co.uk/property-photo/a91b79ea3/124655285/a91b79ea31a79702303019d1a74227be.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/e7a061242/124655285/e7a0612429647274e18dcd6d18446cc7.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 18": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/34afccaa-464a-4261-9972-8c69184214f2",
+  "added": [
+   "06/11/2023"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/c3ef2d7da/141755519/c3ef2d7daa41aa438b233fd652a4545b.jpg",
+   "https://media.rightmove.co.uk/property-photo/98c57a373/141755519/98c57a373be6815d95c84a059fa0b7e7.jpg",
+   "https://media.rightmove.co.uk/property-photo/7310981c0/141755519/7310981c0055d4d1a542b4fa37ac190e.jpg",
+   "https://media.rightmove.co.uk/property-photo/ad0a42262/141755519/ad0a422620e584c5805b7c623cfad3d0.jpg",
+   "https://media.rightmove.co.uk/property-photo/6596ce1ee/141755519/6596ce1ee85db0388022d17be0f06c7e.jpg",
+   "https://media.rightmove.co.uk/property-photo/2498977b5/141755519/2498977b54deaab9235a5782047ec054.jpg",
+   "https://media.rightmove.co.uk/property-photo/7e2c558c2/141755519/7e2c558c25cf42ae475b26d9ca1b2be2.jpg",
+   "https://media.rightmove.co.uk/property-photo/28e108e1a/141755519/28e108e1adb371debc3d5f1327f94852.jpg",
+   "https://media.rightmove.co.uk/property-photo/840464b7f/141755519/840464b7f617b0c1a3577c163e7bf8bb.jpg",
+   "https://media.rightmove.co.uk/property-photo/c53886185/141755519/c53886185eb86a8fc5dd054e0ba05e41.jpg",
+   "https://media.rightmove.co.uk/property-photo/cc39de061/141755519/cc39de061f827d977c44d129f8bd7c3b.jpg",
+   "https://media.rightmove.co.uk/property-photo/d2963cc9e/141755519/d2963cc9e95368ea0755aaf921e15e3b.jpg",
+   "https://media.rightmove.co.uk/property-photo/076daee85/141755519/076daee85e74a60b5bda2071ab1d51c4.jpg",
+   "https://media.rightmove.co.uk/property-photo/83f75d2be/141755519/83f75d2be787d893402a48fa3aeffd5f.jpg",
+   "https://media.rightmove.co.uk/property-photo/60187a012/141755519/60187a01214fc02a7a3710306515cfb2.jpg",
+   "https://media.rightmove.co.uk/property-photo/76a9d7245/141755519/76a9d7245d85a79e6d25e3b6fd7d132c.jpg",
+   "https://media.rightmove.co.uk/property-photo/1b31947f6/141755519/1b31947f673b18ab03c3ae6d5fade640.jpg",
+   "https://media.rightmove.co.uk/property-photo/01e3e6233/141755519/01e3e6233d873d254d4cfdf51a348032.jpg",
+   "https://media.rightmove.co.uk/property-photo/ded95185a/141755519/ded95185a4849cb2dc0bba670a4cc407.jpg",
+   "https://media.rightmove.co.uk/property-photo/2e7977082/141755519/2e7977082091a9a23e3d83e4578df1e0.jpg",
+   "https://media.rightmove.co.uk/property-photo/1e77cd41c/141755519/1e77cd41c0c5a966288f67a11fb79d23.jpg",
+   "https://media.rightmove.co.uk/property-photo/e43913a00/141755519/e43913a000677b44423788fb9263aa1a.jpg",
+   "https://media.rightmove.co.uk/property-photo/1ba182fb8/141755519/1ba182fb8fabd54766fab10f753b60aa.jpg",
+   "https://media.rightmove.co.uk/property-photo/7f4bbbaa1/141755519/7f4bbbaa1fd33a46254c7e04eedb433a.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/45c06ee0c/141755519/45c06ee0cdea979c01973b1c228134bd.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 20": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/c8c23be4-1dd5-4009-b2da-b711ffb9c567",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/7fb1ee265/152997179/7fb1ee2655c4fe30b27930518e7da3c9.jpeg",
+   "https://media.rightmove.co.uk/property-photo/730767246/152997179/7307672461b31e86a92cb8cbbe05e9e0.jpeg",
+   "https://media.rightmove.co.uk/property-photo/1ed7d78ec/152997179/1ed7d78eccaee69c82bde84dae1d54ec.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7582f62c7/152997179/7582f62c7a78849347f80a6a07c37bee.jpeg",
+   "https://media.rightmove.co.uk/property-photo/d52676b34/152997179/d52676b3495e118af40ba0e06e976dff.jpeg",
+   "https://media.rightmove.co.uk/property-photo/434630a6d/152997179/434630a6d91988c9a4667a74d24b10ac.jpeg",
+   "https://media.rightmove.co.uk/property-photo/cf429e022/152997179/cf429e0226688bb7e6db8c801e803564.jpeg",
+   "https://media.rightmove.co.uk/property-photo/a70df52dc/152997179/a70df52dc2892ef31e9f72889383d9ec.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ee4137b92/152997179/ee4137b9202a8ab623cad52bdb35a5c3.jpeg",
+   "https://media.rightmove.co.uk/property-photo/80425ab5e/152997179/80425ab5e8a8ff769494bc3e1c23c075.jpeg",
+   "https://media.rightmove.co.uk/property-photo/f161c8687/152997179/f161c8687de2c5243b7203d529a65c8d.jpeg",
+   "https://media.rightmove.co.uk/property-photo/097c2a039/152997179/097c2a039bd52abf84ca5c7e12f4c20a.jpeg",
+   "https://media.rightmove.co.uk/property-photo/816508c97/152997179/816508c979230210ba6fa1c50ff1963b.jpeg",
+   "https://media.rightmove.co.uk/property-photo/8c9d0f30b/152997179/8c9d0f30b47e388e14d7075622aec2a5.jpeg",
+   "https://media.rightmove.co.uk/property-photo/312204a6b/152997179/312204a6bed566f1956c08ece9097881.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7e96d721c/152997179/7e96d721c77102c31ea15f1af9728aa6.jpeg",
+   "https://media.rightmove.co.uk/property-photo/79718047d/152997179/79718047d9068e9cb3e02fd77b7f8fb6.jpeg",
+   "https://media.rightmove.co.uk/property-photo/98a94de80/152997179/98a94de80c02cb68662b282b4d281a97.jpeg",
+   "https://media.rightmove.co.uk/property-photo/c95cf5725/152997179/c95cf572540e64a358216df3ba02fe78.jpeg",
+   "https://media.rightmove.co.uk/property-photo/80af0b075/152997179/80af0b07521379df5e6fe815da7e5b63.jpeg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/a31d61909/152997179/a31d619099dd60efb91a0c6dbf0d41c9.jpeg"
+  ],
+  "texts": []
+ },
+ "Flat 9": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/684350a1-27bb-4575-b26a-c42fec714848",
+  "added": [
+   "12/09/2019"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/219976e39/74134159/219976e39c86b7d082ef33de40dfd372.jpg",
+   "https://media.rightmove.co.uk/property-photo/7b0e05569/74134159/7b0e05569a5d215628b488932c3b469f.jpg",
+   "https://media.rightmove.co.uk/property-photo/06f391233/74134159/06f39123395b00211471aae7913ab6a2.jpg",
+   "https://media.rightmove.co.uk/property-photo/072ce1215/74134159/072ce1215f52855fbfd3b9732ae3d9b7.jpg",
+   "https://media.rightmove.co.uk/property-photo/2d8ce4bd3/74134159/2d8ce4bd39bf59e881cc8b130a32e688.jpg",
+   "https://media.rightmove.co.uk/property-photo/6491c69b9/74134159/6491c69b9ab47f5bae5e729b56c61be4.jpg",
+   "https://media.rightmove.co.uk/property-photo/49f682838/74134159/49f682838b84ab4a9c5c9955417ab19a.jpg",
+   "https://media.rightmove.co.uk/property-photo/184348bc8/74134159/184348bc81efaa2cafe5bfeccb057d24.jpg",
+   "https://media.rightmove.co.uk/property-photo/4559b11ca/74134159/4559b11cad43e9fb392d2462a5f1904f.jpg",
+   "https://media.rightmove.co.uk/property-photo/6aac1c032/74134159/6aac1c0325163b731821ffa8ffa18193.jpg",
+   "https://media.rightmove.co.uk/property-photo/7328eae5e/74134159/7328eae5e950c7d35707b349fba765b6.jpg",
+   "https://media.rightmove.co.uk/property-photo/733e1973d/74134159/733e1973dfda0882dcd18a43555068dd.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/8d2c8debf/74134159/8d2c8debfa359388b6c3aeb51c5fe2e9.jpg"
+  ],
+  "texts": []
+ },
+ "152 Lever Street": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/4eeee2b0-d8e7-434d-b3ca-f159e6fbdb38",
+  "added": [
+   "15/09/2015"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/750444f14/54700337/750444f14b8606f482b577fc7bc39d4a.jpg",
+   "https://media.rightmove.co.uk/property-photo/2bc7081b4/54700337/2bc7081b47835bba0acea23989439a56.jpg",
+   "https://media.rightmove.co.uk/property-photo/e54073e2f/54700337/e54073e2f35928a11c83d3abe756c0da.jpg",
+   "https://media.rightmove.co.uk/property-photo/181360114/54700337/1813601146d82a6b022d147914961c87.jpg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 17": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/a4376277-1e0b-4537-9e5c-a11b4c3238d0",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/58b63349e/43237249/58b63349eea8c3e6f78481a7fe5df924.jpg",
+   "https://media.rightmove.co.uk/property-photo/64ffd4879/43237249/64ffd48797fb829360a85c60eb9ba84e.jpg",
+   "https://media.rightmove.co.uk/property-photo/1ff230e6e/43237249/1ff230e6e86f05304a66a2f60bcc51e3.jpg",
+   "https://media.rightmove.co.uk/property-photo/07b2595ea/43237249/07b2595ea60a55d4549ce849ecc152a2.jpg",
+   "https://media.rightmove.co.uk/property-photo/0fc9d186e/43237249/0fc9d186ea77075779c67e698431f855.jpg",
+   "https://media.rightmove.co.uk/property-photo/03241673c/43237249/03241673c4e4624ed0deb62ca8bf4ca8.jpg",
+   "https://media.rightmove.co.uk/property-photo/9ec8b0b3a/43237249/9ec8b0b3a8b683877c307a10722cc8ee.jpg",
+   "https://media.rightmove.co.uk/property-photo/d6dff842d/43237249/d6dff842dffe16e6b8185fe7d359a85b.jpg",
+   "https://media.rightmove.co.uk/property-photo/64232889e/43237249/64232889ee7be4fbcdad151395705cc8.jpg",
+   "https://media.rightmove.co.uk/property-photo/796765ecf/43237249/796765ecfc5713aba295e0d55bfb6c6b.jpg",
+   "https://media.rightmove.co.uk/property-photo/abdc048f4/43237249/abdc048f4e58d081d2ab2e93b01d0d41.jpg",
+   "https://media.rightmove.co.uk/property-photo/d26d98d8e/43237249/d26d98d8e974eb4d106ebe1e2a0d3b77.jpg",
+   "https://media.rightmove.co.uk/property-photo/8104f5a36/43237249/8104f5a36b20f8c7b25bf6a7aaeebea5.jpg",
+   "https://media.rightmove.co.uk/property-photo/ee5cde23e/43237249/ee5cde23e2c9f914180c36bbabdaa760.jpg",
+   "https://media.rightmove.co.uk/property-photo/1a0c32161/43237249/1a0c32161fa3ae0a3ce098927a3ed117.jpg",
+   "https://media.rightmove.co.uk/property-photo/e030ee62e/43237249/e030ee62e934ac2310aa5872b0559c71.jpg",
+   "https://media.rightmove.co.uk/property-photo/1e7eb6e83/43237249/1e7eb6e8327d4519e51cf4da570f5bd0.jpg",
+   "https://media.rightmove.co.uk/property-photo/f8ec6d49f/43237249/f8ec6d49f2d4ac647149a0d55864b123.jpg",
+   "https://media.rightmove.co.uk/property-photo/c0cb6b976/43237249/c0cb6b97627fef84bce77dc62e86dd37.png"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/5a3ac8e57/43237249/5a3ac8e577b35ebdc4be8613baf1f41d.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 4": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/4b8d77de-9422-4a52-b98c-14e5116e4b80",
+  "added": [
+   "26/02/2022"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/b35a82835/120400640/b35a828359884ef8d69e1cb729dc3735.jpg",
+   "https://media.rightmove.co.uk/property-photo/3bf037614/120400640/3bf0376141fbe3d7b0b61f41d66c4ef3.jpg",
+   "https://media.rightmove.co.uk/property-photo/f0b092e8b/120400640/f0b092e8bfa45b923f24d44376d3a7e3.jpg",
+   "https://media.rightmove.co.uk/property-photo/fd76a5635/120400640/fd76a56350490a9f679ca36382ed6975.jpg",
+   "https://media.rightmove.co.uk/property-photo/3b31a83aa/120400640/3b31a83aa6f4358aa4e55782a13739ef.jpg",
+   "https://media.rightmove.co.uk/property-photo/0d35ff4a8/120400640/0d35ff4a845ed2d27a73c683c53f5e53.jpg",
+   "https://media.rightmove.co.uk/property-photo/9e01bd363/120400640/9e01bd363c4883b3c26d20c6bf74fa08.jpg",
+   "https://media.rightmove.co.uk/property-photo/d2094d60a/120400640/d2094d60af5e56d95e5819b28fa3b285.jpg",
+   "https://media.rightmove.co.uk/property-photo/76e07f793/120400640/76e07f7933a1f5c17df25fe9cc2b5b9d.jpg",
+   "https://media.rightmove.co.uk/property-photo/dbde88b5b/120400640/dbde88b5b9fc02b28db556bcabc08209.jpg",
+   "https://media.rightmove.co.uk/property-photo/34825af0d/120400640/34825af0d3ff07362fefa38b4404394c.jpg",
+   "https://media.rightmove.co.uk/property-photo/d6f08b6bb/120400640/d6f08b6bbf91f92a481b7a9fe4a7e7b6.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/c0b541b9d/120400640/c0b541b9de8e66ee1bf72558388478bc.png"
+  ],
+  "texts": []
+ },
+ "Flat 2": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/c2712c3d-c90c-462d-95bd-ec2a45008ffc",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/9e47df6d5/88906596/9e47df6d57b7edc7a8121b3831d70c7c.jpeg",
+   "https://media.rightmove.co.uk/property-photo/c678adfa9/88906596/c678adfa9e9f9f380bd69f03daddb585.jpeg",
+   "https://media.rightmove.co.uk/property-photo/9705d1bb5/88906596/9705d1bb56c5aee7053d15b338fec9c0.jpeg",
+   "https://media.rightmove.co.uk/property-photo/80a2c530a/88906596/80a2c530a5a378a031e5ced530b6aec9.jpeg",
+   "https://media.rightmove.co.uk/property-photo/97a10086e/88906596/97a10086e8f854e1a86340a5e6c34398.jpeg",
+   "https://media.rightmove.co.uk/property-photo/603b74aa8/88906596/603b74aa8e2551d7df2868b08b3842be.jpeg",
+   "https://media.rightmove.co.uk/property-photo/448360a5e/88906596/448360a5e049e9d54b9cef6e17ede8fe.jpeg",
+   "https://media.rightmove.co.uk/property-photo/91a5041c4/88906596/91a5041c4347c7618956e956f5b13ad8.jpeg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 16": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/56274975-a90d-4858-8587-efd704a3ef0f",
+  "added": [
+   "03/09/2015"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/e705d2fbe/42829490/e705d2fbe4734e49b8b90f25470a4c42.jpg",
+   "https://media.rightmove.co.uk/property-photo/8d7859756/42829490/8d785975629d1b4d4b57f62c7638bf04.jpg",
+   "https://media.rightmove.co.uk/property-photo/2386962aa/42829490/2386962aac21fe4d5cf7d6c06161f48b.jpg",
+   "https://media.rightmove.co.uk/property-photo/909a96353/42829490/909a96353b64a3a004041181685357fb.jpg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 19": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/2c4ed820-b402-4ee4-92e8-058784cdcc75",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/1abb8eb56/24118444/1abb8eb56c438229b82bc5597809b41a.jpg",
+   "https://media.rightmove.co.uk/property-photo/42d52d14b/24118444/42d52d14b4fef6bfb1812a0cc2f2b282.jpg",
+   "https://media.rightmove.co.uk/property-photo/4123a3035/24118444/4123a3035d685f04b8b871c6ee9e11c7.jpg",
+   "https://media.rightmove.co.uk/property-photo/3f23c9988/24118444/3f23c998893723e2a601f235cc637734.jpg",
+   "https://media.rightmove.co.uk/property-photo/b3021fc28/24118444/b3021fc289347893514f6634bdb4f1d1.jpg",
+   "https://media.rightmove.co.uk/property-photo/aed371656/24118444/aed371656de241374351803ca4e5b12d.jpg",
+   "https://media.rightmove.co.uk/property-photo/102369023/24118444/102369023a5cd6b96e8831935bfee90a.jpg",
+   "https://media.rightmove.co.uk/property-photo/00c438057/24118444/00c43805760da8fa358bc1a00716f5c3.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/464eece16/24118444/464eece168f48d10b44108f73ad2b7b0.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 1": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/f64ccd37-8471-4c4d-8ad1-b193131109b5",
+  "added": [
+   "31/07/2013"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/e705d2fbe/42760559/e705d2fbe4734e49b8b90f25470a4c42.jpg",
+   "https://media.rightmove.co.uk/property-photo/2386962aa/42760559/2386962aac21fe4d5cf7d6c06161f48b.jpg",
+   "https://media.rightmove.co.uk/property-photo/909a96353/42760559/909a96353b64a3a004041181685357fb.jpg",
+   "https://media.rightmove.co.uk/property-photo/8d7859756/42760559/8d785975629d1b4d4b57f62c7638bf04.jpg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 5": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/7af363c4-4d74-4740-ac7b-f303471c18d1",
+  "added": [],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/81883f660/89887299/81883f660be779b83dac90915f40ccd4.jpeg",
+   "https://media.rightmove.co.uk/property-photo/dc3184d13/89887299/dc3184d133eb76243691544230dad588.jpeg",
+   "https://media.rightmove.co.uk/property-photo/c3a61f912/89887299/c3a61f9121042566b7d6b506b53a48fc.jpeg",
+   "https://media.rightmove.co.uk/property-photo/464d85b45/89887299/464d85b45d8e81af1e8daf15047b0f7d.jpeg",
+   "https://media.rightmove.co.uk/property-photo/dbe8e8a88/89887299/dbe8e8a888be129f4fc535d6b34ea0f3.jpeg",
+   "https://media.rightmove.co.uk/property-photo/a3b4bb471/89887299/a3b4bb471f827bd8afbb450a350ea393.jpeg",
+   "https://media.rightmove.co.uk/property-photo/e666ffc13/89887299/e666ffc134b326e6928a568d3841128b.jpeg",
+   "https://media.rightmove.co.uk/property-photo/9f0b5e06a/89887299/9f0b5e06a09d4cfb07fd44756051a9dc.jpeg",
+   "https://media.rightmove.co.uk/property-photo/589082e8c/89887299/589082e8c37d9693f444ce1d23c894ef.jpeg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 13": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/1283c493-84d3-4f13-b470-c7861bf82f05",
+  "added": [
+   "30/09/2014"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/23dd18de6/46420594/23dd18de63292ae2ab74a1995ea45daa.jpg",
+   "https://media.rightmove.co.uk/property-photo/3f8b49b19/46420594/3f8b49b19fcefaf764e1aa4455edcae3.jpg",
+   "https://media.rightmove.co.uk/property-photo/64523cfe9/46420594/64523cfe929b28b0478266d5edc765e8.jpg",
+   "https://media.rightmove.co.uk/property-photo/4bddcd84d/46420594/4bddcd84d12962a7a1c6ea18951bf25b.jpg",
+   "https://media.rightmove.co.uk/property-photo/ebdd22c7a/46420594/ebdd22c7a78c9b151615858262677ef3.jpg",
+   "https://media.rightmove.co.uk/property-photo/aa2f6205a/46420594/aa2f6205a3154cc5073a8d1369653fdd.jpg",
+   "https://media.rightmove.co.uk/property-photo/432f2ec40/46420594/432f2ec405e828773b51b57cdc955fdf.jpg",
+   "https://media.rightmove.co.uk/property-photo/658e608fe/46420594/658e608fe3dbb270d9036582e1ac5301.jpg",
+   "https://media.rightmove.co.uk/property-photo/bdad04572/46420594/bdad04572d4d0819f977f2ceb2380749.jpg",
+   "https://media.rightmove.co.uk/property-photo/0b77983f3/46420594/0b77983f3e5011507e986bb2a8cbb716.jpg",
+   "https://media.rightmove.co.uk/property-photo/62ab4ac93/46420594/62ab4ac934012e419e86eeab3f6a6c80.png"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/acfd92021/46420594/acfd9202121c8033d6caa496753f94e1.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 8": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/f1eb5e26-ba74-4e0a-b777-efd8d32bf397",
+  "added": [
+   "14/12/2013"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/65cc297e9/42107845/65cc297e9f2c2f2cd28ffe7ad6378cc3.jpg",
+   "https://media.rightmove.co.uk/property-photo/406bb3582/42107845/406bb35822116fdae76a4c061d7a0129.jpg",
+   "https://media.rightmove.co.uk/property-photo/2eadb9a77/42107845/2eadb9a774d591426c49037e6dbd0d7c.jpg",
+   "https://media.rightmove.co.uk/property-photo/f442c448d/42107845/f442c448d73f35d59b8b680822967d89.jpg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 3": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/b6ea3d7d-d616-494e-8de5-3a9a5f345ed3",
+  "added": [
+   "06/05/2026"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/91a5041c4/88147182/91a5041c4347c7618956e956f5b13ad8.jpeg",
+   "https://media.rightmove.co.uk/property-photo/8380e88d4/88147182/8380e88d45ab058e599efa11ad049754.jpeg",
+   "https://media.rightmove.co.uk/property-photo/258b3ade2/88147182/258b3ade279b97adeea92dbb164bdd96.jpeg",
+   "https://media.rightmove.co.uk/property-photo/80a2c530a/88147182/80a2c530a5a378a031e5ced530b6aec9.jpeg",
+   "https://media.rightmove.co.uk/property-photo/0c33f71d5/88147182/0c33f71d5e5e37460865246306b2d645.jpeg",
+   "https://media.rightmove.co.uk/property-photo/1e4fef1ba/88147182/1e4fef1ba532877c4656a0566d2cf785.jpeg",
+   "https://media.rightmove.co.uk/property-photo/c3b7c98f4/88147182/c3b7c98f4d02afe8a651b4cd5911644f.jpeg",
+   "https://media.rightmove.co.uk/property-photo/603b74aa8/88147182/603b74aa8e2551d7df2868b08b3842be.jpeg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 14": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/575a32f5-b5c1-4cac-b374-5782a80d4e57",
+  "added": [
+   "28/06/2025"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/ada429399/163928270/ada429399efe7aab5166d1fe1eb35295.jpeg",
+   "https://media.rightmove.co.uk/property-photo/d93ca4ed5/163928270/d93ca4ed5866a415bd6dafb69adf70ba.jpeg",
+   "https://media.rightmove.co.uk/property-photo/b799a32b9/163928270/b799a32b92ddd024171cf91de058e355.jpeg",
+   "https://media.rightmove.co.uk/property-photo/94cd4f514/163928270/94cd4f5147582138df5dc579e56c7b89.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ee57a39f2/163928270/ee57a39f2b77dc3199f02bf39f54656e.jpeg",
+   "https://media.rightmove.co.uk/property-photo/c3a988e1a/163928270/c3a988e1af0b4fa817c70547ea7a5543.jpeg",
+   "https://media.rightmove.co.uk/property-photo/3a18399da/163928270/3a18399da23d835c959f811c8dc4d965.jpeg",
+   "https://media.rightmove.co.uk/property-photo/866acbecc/163928270/866acbeccaece242c742ebc548a6aee7.jpeg",
+   "https://media.rightmove.co.uk/property-photo/9a29a2e39/163928270/9a29a2e399bcbc9160b16cd7a153ad6b.jpeg",
+   "https://media.rightmove.co.uk/property-photo/46f40f3df/163928270/46f40f3df6c49d85904b7ea5ec04301d.jpeg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/5fcc72bc2/163928270/5fcc72bc2ccdd35b1a39646650d31188.jpeg"
+  ],
+  "texts": []
+ },
+ "Flat 7": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/91e9d47e-e52f-4741-a722-88f08a75a67f",
+  "added": [
+   "15/11/2022"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/02e2e3a8d/129078593/02e2e3a8db771988082f10a43360cffb.jpg",
+   "https://media.rightmove.co.uk/property-photo/706915ac6/129078593/706915ac6ef3828c3ecbf8fd82b0d235.jpg",
+   "https://media.rightmove.co.uk/property-photo/cf067297d/129078593/cf067297d36d6ddb3a273185db004830.jpg",
+   "https://media.rightmove.co.uk/property-photo/2c56118a5/129078593/2c56118a5f45d484cb5ab944c10fd81e.jpg",
+   "https://media.rightmove.co.uk/property-photo/0114527c1/129078593/0114527c135680ebf1f567e8a07bcb30.jpg",
+   "https://media.rightmove.co.uk/property-photo/fe7d46a37/129078593/fe7d46a371d95e460dee835125ff3e84.jpg",
+   "https://media.rightmove.co.uk/property-photo/1b5619220/129078593/1b56192205765729f5af3c91f226ac19.jpg",
+   "https://media.rightmove.co.uk/property-photo/27ab9a7c0/129078593/27ab9a7c074d27806d713716bb713144.jpg",
+   "https://media.rightmove.co.uk/property-photo/6f748fd6b/129078593/6f748fd6b797b9a684f52a28b37428b4.jpg",
+   "https://media.rightmove.co.uk/property-photo/608e9a0d5/129078593/608e9a0d5674386dc90998d7e6dbc5ec.jpg",
+   "https://media.rightmove.co.uk/property-photo/ef2e4c642/129078593/ef2e4c642113aca038c8b63bc8c9929f.jpg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/43a966763/129078593/43a966763820afe239e93674aabfa1d8.jpg"
+  ],
+  "texts": []
+ },
+ "Flat 12": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/87195985-0354-4e87-9b54-6f035fecf927",
+  "added": [
+   "05/08/2025"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/39696e14f/87250773/39696e14f185e9f351cee00f21fd54ae.jpeg",
+   "https://media.rightmove.co.uk/property-photo/13416a93e/87250773/13416a93ea9418b4b2867711a7defcb6.jpeg",
+   "https://media.rightmove.co.uk/property-photo/0f2d8117b/87250773/0f2d8117b6b3589974e13f4e6a7752db.jpeg",
+   "https://media.rightmove.co.uk/property-photo/75a3f2f78/87250773/75a3f2f7872a52814e9d4c11f0953a7b.jpeg",
+   "https://media.rightmove.co.uk/property-photo/e55156ef0/87250773/e55156ef059411ae382190ff8a33fcec.jpeg",
+   "https://media.rightmove.co.uk/property-photo/398aa73d4/87250773/398aa73d4a11da2eff021c00bec98938.jpeg",
+   "https://media.rightmove.co.uk/property-photo/8a71a5e9a/87250773/8a71a5e9a62861bb1fa1d27b1d4547f2.jpeg",
+   "https://media.rightmove.co.uk/property-photo/d805f9269/87250773/d805f926996411adcf97c60ff0af7ad6.jpeg",
+   "https://media.rightmove.co.uk/property-photo/79376452c/87250773/79376452ce7264280319d2412836e223.jpeg",
+   "https://media.rightmove.co.uk/property-photo/3debba4db/87250773/3debba4dbe7465af819e10ad370cd66c.jpeg",
+   "https://media.rightmove.co.uk/property-photo/424a24f15/87250773/424a24f158c9a38fe4dfe2035bb5ac86.jpeg",
+   "https://media.rightmove.co.uk/property-photo/784a4a002/87250773/784a4a002a3adcd88acdaf56b3eb44bb.jpeg",
+   "https://media.rightmove.co.uk/property-photo/b8cde2a1e/87250773/b8cde2a1eb7187e30f430b32c861741e.jpeg",
+   "https://media.rightmove.co.uk/property-photo/a51b3a80c/87250773/a51b3a80c6eedbc3343a3fc73581baec.jpeg",
+   "https://media.rightmove.co.uk/property-photo/b9fd53640/87250773/b9fd53640e6929683689e8786ee20248.jpeg",
+   "https://media.rightmove.co.uk/property-photo/db4a3ac42/87250773/db4a3ac42d9cfa539acf384be7194dfe.jpeg",
+   "https://media.rightmove.co.uk/property-photo/68f1c1d39/87250773/68f1c1d39a02f3352280bc8892fc00d0.jpeg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/40a0bf6f7/87250773/40a0bf6f7e1aff8552a1d8b581398b2d.jpeg"
+  ],
+  "texts": []
+ },
+ "Flat 10": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/d2d4bf2b-3127-4e08-a964-752f7d8ce66e",
+  "added": [
+   "11/02/2026"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/8502f727b/87616296/8502f727b8fae29fcd8ac76ec88e55cf.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ec687f5c5/87616296/ec687f5c5fa596a332c6ab3e4fa39fd1.jpeg",
+   "https://media.rightmove.co.uk/property-photo/786b7548d/87616296/786b7548dbc929597debf9df6ec54502.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ede2de701/87616296/ede2de7014d89fdb2cca824f1dd86df3.jpeg",
+   "https://media.rightmove.co.uk/property-photo/943de990c/87616296/943de990c126d92cdaeb05ce84d39b60.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7882a66a6/87616296/7882a66a6c8503266d49386f9715d275.jpeg",
+   "https://media.rightmove.co.uk/property-photo/3d1c61fd9/87616296/3d1c61fd92fd36bcd89d70fbf6fc6130.jpeg"
+  ],
+  "plans": [],
+  "texts": []
+ },
+ "Flat 11": {
+  "url": "https://www.rightmove.co.uk/house-prices/details/d53545f0-cd4e-4504-930d-ccde62024f59",
+  "added": [
+   "08/09/2026"
+  ],
+  "photos": [
+   "https://media.rightmove.co.uk/property-photo/178c132d8/92463069/178c132d8d2be69eb16999e456c038e0.jpeg",
+   "https://media.rightmove.co.uk/property-photo/ef9e66c20/92463069/ef9e66c20e43e4dc3551e10134617050.jpeg",
+   "https://media.rightmove.co.uk/property-photo/f0af4ac48/92463069/f0af4ac485015f0079f1336358239085.jpeg",
+   "https://media.rightmove.co.uk/property-photo/05c4ec1dc/92463069/05c4ec1dc8e3da4c8cfcb2b8d18fae2e.jpeg",
+   "https://media.rightmove.co.uk/property-photo/13bfb9e5b/92463069/13bfb9e5bba6a1f4cb1b6245bfc9e044.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7c0028bd5/92463069/7c0028bd529ce03f0809310a5f703bfc.jpeg",
+   "https://media.rightmove.co.uk/property-photo/7f071199f/92463069/7f071199f55d6636a19bbb0b6e7604f0.jpeg",
+   "https://media.rightmove.co.uk/property-photo/fe5ea34a8/92463069/fe5ea34a87fd060dc247711972a2159e.jpeg",
+   "https://media.rightmove.co.uk/property-photo/54d372c0a/92463069/54d372c0abaca4931a225b9fc8c8c594.jpeg",
+   "https://media.rightmove.co.uk/property-photo/23e76b63e/92463069/23e76b63e1ee0dc89705d19c1ba711d4.jpeg"
+  ],
+  "plans": [
+   "https://media.rightmove.co.uk/property-floorplan/57138302b/92463069/57138302b1bf2b16144a5c6979962636.jpeg"
+  ],
+  "texts": []
+ }
+}

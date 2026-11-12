@@ -1,0 +1,164 @@
+{
+ "source": "agents' floor plans on Rightmove's sold-price pages for EC1V 8BG (backend/scripts/block/listings.py fetch; images cached, git-ignored), read by eye on 2026-11-09",
+ "note": "floors as each agent labels them: some count the mezzanine as the first floor (so the penthouses are on 'fourth and fifth'), others use the brochure's names. Areas are the agents' (gross internal, RICS). matches: the brochure unit whose plan this is, by its shape (rooms, stair, chamfer, terraces), turned where noted.",
+ "plans": [
+  {
+   "address": "Flat 4",
+   "agent": "unnamed",
+   "gia_sqft": 547,
+   "floors": [
+    "Ground Floor",
+    "Mezzanine"
+   ],
+   "beds": 1,
+   "matches": "M3",
+   "how": "ground: reception with the kitchen, WC and stair; upper ('mezzanine', 177 sq ft): bedroom, bath and a void over the reception, as the brochure's M3"
+  },
+  {
+   "address": "Flat 6",
+   "agent": "Kinleith Folkard & Hayward (2024)",
+   "gia_sqft": 538,
+   "floors": [
+    "First Floor"
+   ],
+   "beds": 1,
+   "matches": "MZ2",
+   "how": "bedroom, bath, kitchen/reception round a small hall: the MZ2/F2/F6 type, turned 90 degrees"
+  },
+  {
+   "address": "Flat 7",
+   "agent": "Stirling Ackroyd",
+   "gia_sqft": 611,
+   "floors": [],
+   "beds": 1,
+   "matches": "MZ3",
+   "how": "bedroom with bath; kitchen/living with the kitchen in a wing: the MZ3/F3/F7 type"
+  },
+  {
+   "address": "Flat 9",
+   "agent": "ollyhewitt.co.uk",
+   "gia_sqft": 978,
+   "floors": [
+    "First Floor"
+   ],
+   "beds": 2,
+   "matches": "F1",
+   "how": "the chamfered corner, two bedrooms either side of the reception/kitchen, bath and shower by the entrance: the MZ1/F1/F5 type"
+  },
+  {
+   "address": "Flat 11",
+   "agent": "Victorstone (2020)",
+   "gia_sqft": 597.5,
+   "floors": [
+    "First Floor"
+   ],
+   "beds": 1,
+   "matches": "F3",
+   "how": "bedroom and bath beside a kitchen/reception with the kitchen in a wing: the MZ3/F3/F7 type"
+  },
+  {
+   "address": "Flat 12",
+   "agent": "Stirling Ackroyd",
+   "gia_sqft": 940,
+   "floors": [
+    "First Floor"
+   ],
+   "beds": 2,
+   "matches": "F4",
+   "how": "reception and kitchen across the front, two bedrooms, the entrance corridor down one side: the MZ4/F4/F8 type"
+  },
+  {
+   "address": "Flat 13",
+   "agent": "Inside Photography (Currell)",
+   "gia_sqft": 1014,
+   "floors": [
+    "Second Floor"
+   ],
+   "beds": 2,
+   "matches": "F5",
+   "how": "the chamfered corner reception, two bedrooms, kitchen and store: the MZ1/F1/F5 type"
+  },
+  {
+   "address": "Flat 14",
+   "agent": "Islington Properties (2024)",
+   "gia_sqft": 523,
+   "floors": [
+    "First Floor"
+   ],
+   "beds": 1,
+   "matches": "F6",
+   "how": "bath and bedroom above, kitchen and reception below, the door on the left: the MZ2/F2/F6 type drawn as the brochure draws it; labelled First Floor, which is wrong: the user says Flat 14 is on the 2nd floor (2026-11-09), where C-0001 puts F6"
+  },
+  {
+   "address": "Flat 15",
+   "agent": "Hurford Salvi Carr",
+   "gia_sqft": 598,
+   "floors": [
+    "Second Floor"
+   ],
+   "beds": 1,
+   "matches": "F7",
+   "how": "bedroom and shower room; reception/kitchen with the kitchen in a wing: the MZ3/F3/F7 type"
+  },
+  {
+   "address": "Flat 17",
+   "agent": "photoplan (2014)",
+   "gia_sqft": 1636,
+   "floors": [
+    "Third Floor",
+    "Fourth Floor"
+   ],
+   "beds": 3,
+   "matches": "F9",
+   "how": "three bedrooms with an ensuite in the chamfered corner below; reception, dining and kitchen under the chamfer above, a terrace wrapping two sides: F9"
+  },
+  {
+   "address": "Flat 18",
+   "agent": "ollyhewitt.co.uk (Savills, 2021)",
+   "gia_sqft": 1154,
+   "floors": [
+    "Fourth Floor",
+    "Fifth Floor"
+   ],
+   "beds": 2,
+   "matches": "F10",
+   "how": "the brochure's F10 turned 90 degrees: entrance corridor out of the block, two bedrooms on the front, the stair by the WC; kitchen/reception above with balconies front and back. 1154 sq ft against the brochure's 988"
+  },
+  {
+   "address": "Flat 19",
+   "agent": "photoplan (2009)",
+   "gia_sqft": 1072,
+   "floors": [
+    "Third Floor",
+    "Fourth Floor"
+   ],
+   "beds": 2,
+   "matches": "F11",
+   "how": "the brochure's F11: the stair in a wing beside the entrance, bathroom and shower room, two bedrooms; kitchen/reception above with the WC in the wing and a balcony along the side"
+  },
+  {
+   "address": "Flat 20",
+   "agent": "Countrywide",
+   "gia_sqft": 1594,
+   "floors": [
+    "Fourth Floor",
+    "Fifth Floor"
+   ],
+   "beds": 3,
+   "matches": "F12",
+   "how": "the brochure's F12 turned 180 degrees: the entrance and stair at one end, three bedrooms; reception/dining with terraces both sides above"
+  }
+ ],
+ "photos": [
+  {
+   "address": "Flat 17",
+   "photo": "photo-00",
+   "what": "the block from the street corner: yellow stock brick warehouse, the corner chamfered, a white two-storey base with tall transomed windows (the ground floor and mezzanine), three brick floors, the top floor set back behind the parapet"
+  },
+  {
+   "address": "Flat 17",
+   "photo": "photo-03",
+   "what": "the penthouse terrace, glass and steel balustrade, looking over the street"
+  }
+ ]
+}

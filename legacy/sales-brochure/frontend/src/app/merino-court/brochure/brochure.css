@@ -1,0 +1,74 @@
+/* Building book: screen + A4 print. The live 3D model can't print; print shows a still instead. */
+.brochure {
+  --ink: #1c1917;
+  --muted: #78716c;
+  --paper: #faf7f2;
+  --accent: #b4532a;
+  background: var(--paper);
+  color: var(--ink);
+}
+.brochure .display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+/* the Chinese book: a Chinese serif for the display face, a Chinese sans for the body; Latin falls back as before */
+.brochure .lang-zh .display {
+  font-family: var(--font-display), "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+}
+.brochure .lang-zh {
+  font-family: var(--font-sans), "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+.brochure .lang-zh .uppercase {
+  letter-spacing: 0.08em;
+}
+.brochure .only-print {
+  display: none;
+}
+
+@page {
+  size: A4;
+  margin: 12mm 12mm 14mm;
+}
+/* the stacking plan is wide and short: it gets a landscape sheet */
+@page landscape {
+  size: A4 landscape;
+  margin: 12mm 12mm 14mm;
+}
+.brochure .page-landscape {
+  page: landscape;
+}
+
+@media print {
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+  .brochure {
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .brochure .no-print {
+    display: none !important;
+  }
+  .brochure .only-print {
+    display: block !important;
+  }
+  .brochure .page {
+    break-after: page;
+    break-inside: avoid;
+    min-height: 0 !important;
+  }
+  .brochure .page:last-child {
+    break-after: auto;
+  }
+  .brochure .avoid-break {
+    break-inside: avoid;
+  }
+  .brochure section {
+    box-shadow: none !important;
+  }
+}

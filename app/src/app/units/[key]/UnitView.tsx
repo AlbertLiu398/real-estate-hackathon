@@ -39,7 +39,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
       <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="mb-2 flex items-center gap-2 text-[13px] text-[var(--muted)]">
-            <Link href="/" className="hover:text-[var(--ink)]">
+            <Link href="/merino-court" className="hover:text-[var(--ink)]">
               Merino Court
             </Link>
             <span>/</span>

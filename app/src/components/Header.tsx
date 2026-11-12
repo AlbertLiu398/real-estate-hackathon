@@ -19,7 +19,8 @@ export function Header() {
   const { t } = useLang();
   const path = usePathname();
   const nav = [
-    { href: "/", label: t("Development", "楼盘总览") },
+    { href: "/", label: t("Explore", "找房") },
+    { href: "/merino-court", label: "Merino Court" },
     { href: "/building", label: t("Building 3D", "楼宇 3D") },
     { href: "/ranking", label: t("Feng Shui ranking", "风水排名") },
     { href: "/compare", label: t("Compare", "对比") },
@@ -47,7 +48,7 @@ export function Header() {
           })}
         </nav>
         <div className="ml-auto flex items-center gap-3">
-          <span className="hidden text-[13px] text-[var(--muted)] lg:inline">Merino Court · EC1V</span>
+          <span className="hidden text-[13px] text-[var(--muted)] xl:inline">{t("London new homes, read for Feng Shui", "伦敦新房 · 风水解读")}</span>
           <LangToggle />
         </div>
       </div>

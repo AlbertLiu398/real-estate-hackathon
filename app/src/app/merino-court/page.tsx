@@ -34,12 +34,6 @@ export default function Home() {
               {t("every home, read from the brochure", "售楼书里的每一户，一目了然")}
             </span>
           </h1>
-          <p className="mt-6 max-w-[560px] text-[16px] leading-relaxed text-[var(--ink-2)]">
-            {t(
-              "FloorQi turned the developer's ten-page brochure into structured plans for all 22 homes, then scored every single-storey flat with a transparent Feng Shui engine. Every point is traced to a room, door or window.",
-              "FloorQi 将开发商十页的售楼书转化为 22 户的结构化户型数据，并用透明的风水规则引擎为每套平层公寓打分。每一分都可追溯到具体的房间、门或窗。"
-            )}
-          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/merino-court/ranking" className="rounded-full bg-[var(--ink)] px-5 py-2.5 text-[14px] text-[var(--paper)] hover:bg-[var(--ink-2)]">
               {t("See the Feng Shui ranking", "查看风水排名")}
@@ -137,12 +131,6 @@ export default function Home() {
             <UnitCard key={u.key} u={u} />
           ))}
         </div>
-        <p className="mt-6 max-w-[760px] text-[13px] leading-relaxed text-[var(--muted)]">
-          {t(
-            "Multi-storey homes (penthouses, mews houses, town house, live/work) have plans but no score yet: their floors aren't registered to each other, so the engine can't place the front door relative to the upper rooms.",
-            "多层户型（顶层复式、马厩屋、联排别墅、工作室住宅）已有户型图，但暂无评分：各层平面尚未对齐，引擎无法确定入户门与上层房间的相对位置。"
-          )}
-        </p>
       </section>
     </div>
   );

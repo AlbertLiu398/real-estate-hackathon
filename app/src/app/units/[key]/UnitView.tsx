@@ -33,7 +33,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
         items: fs.findings.map((x, i) => ({ x, i })).filter(({ x }) => (ruleLabel[x.rule_id]?.group ?? (x.method === "plan" ? "layout" : x.method === "environment" ? "environment" : "compass")) === g),
       }))
     : [];
-  const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态"), environment: t("Surroundings · from the building model", "周边环境 · 来自楼宇模型") };
+  const gName = { layout: t("Layout", "格局"), compass: t("Compass", "罗盘"), form: t("Form", "形态"), environment: t("Surroundings", "周边环境") };
 
   return (
     <div>
@@ -189,7 +189,6 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                 </div>
               </div>
 
-              <p className="px-1 text-[12.5px] text-[var(--muted)]">{t("Click a finding to locate it in the model", "点击一条评分，在模型里定位")}</p>
               <div className="card divide-y divide-[var(--line)]">
                 {groups.map(
                   ({ g, items }) =>
@@ -229,12 +228,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
           ) : (
             <div className="card p-5">
               <div className="eyebrow">{t("Feng Shui score", "风水评分")}</div>
-              <p className="mt-2 text-[14px] leading-relaxed text-[var(--ink-2)]">
-                {t(
-                  `${u.key} spans ${u.levels.length} floors. The surroundings model is here; the flat itself is not scored until its floors are registered to each other.`,
-                  `${u.key} 共 ${u.levels.length} 层。楼宇环境可以看，户型本身要等各层平面对齐之后才评分。`
-                )}
-              </p>
+              <div className="mt-2 font-serif text-[22px] text-[var(--muted)]">{t("Coming soon", "即将上线")}</div>
             </div>
           )}
 

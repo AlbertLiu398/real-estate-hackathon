@@ -58,8 +58,8 @@ export const developments = [
     storeysLabel: "LG + G + 5",
     epc: "B–E",
     address: "152–154 Lever Street, London EC1V 8BG",
-    blurb: "A warehouse conversion on the corner of Bath Street: apartments, duplex penthouses, mews houses, a town house and live/work studios.",
-    blurbZh: "位于 Bath Street 街角的仓库改建项目：公寓、复式顶层、马厩屋、联排别墅及工作室住宅。",
+    blurb: "Warehouse conversion on the corner of Bath Street.",
+    blurbZh: "Bath Street 街角的仓库改建。",
     image: "/renders/render-street.jpg",
     sources: "developer's brochure · OpenStreetMap · EA LiDAR · EPCs · HM Land Registry",
   },
@@ -81,8 +81,8 @@ export const developments = [
 for (const d of developments) {
   if (d.live) continue;
   d.address ??= `${d.area}, London ${d.postcode}`;
-  d.blurb ??= `Sample listing: ${d.homes} homes over ${d.storeys} storeys. ${d.tags.join(", ")}. Plans and Feng Shui scores will appear once its brochure is read.`;
-  d.blurbZh ??= `示例房源：共 ${d.homes} 户、${d.storeys} 层。售楼书读取后将显示户型与风水评分。`;
+  d.blurb ??= "";
+  d.blurbZh ??= "";
   d.epc ??= d.status === "completed" ? "B" : "A–B";
 }
 

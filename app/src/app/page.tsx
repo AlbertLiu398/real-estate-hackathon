@@ -73,12 +73,7 @@ export default function Home() {
               </>
             )}
           </h1>
-          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--ink-2)]">
-            {t(
-              "Each building rebuilt from its own documents (the developer's brochure, LiDAR, energy certificates and the Land Registry) into a 3D model, redrawn floor plans and an explainable Feng Shui score for every home, in English and Chinese.",
-              "每栋楼都从自身资料（开发商售楼书、LiDAR、能效证书与土地登记）重建为三维模型、重绘户型图，并为每套房给出可解释的风水评分，中英双语。"
-            )}
-          </p>
+          <p className="mt-5 text-[15px] text-[var(--ink-2)]">{t("Plans, 3D and a Feng Shui score for every home.", "每套房的户型、三维与风水评分。")}</p>
           <dl className="mt-6 flex gap-8">
             <Stat k={t("Buildings", "楼盘")} v={`${developments.length}`} />
             <Stat k={t("Homes", "户数")} v={homes.toLocaleString()} />
@@ -199,22 +194,14 @@ export default function Home() {
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-stone-200 text-[20px] text-stone-700">+</span>
             <div>
               <h2 className="font-serif text-[26px] font-semibold text-[var(--ink)]">{t("Add a building", "添加楼盘")}</h2>
-              <p className="mt-1 max-w-3xl text-[14px] leading-relaxed">
-                {t(
-                  "Drop in the developer's brochure: FloorQi reads every unit's floor plan into structured data, rebuilds the block in 3D and scores every home. Merino Court was built this way from a ten-page photographed brochure.",
-                  "上传开发商售楼书：FloorQi 会把每户户型读成结构化数据、重建楼宇三维模型并为每套房评分。美利奴阁就是从十页售楼书照片中这样生成的。"
-                )}
-              </p>
+              <p className="mt-1 text-[14px]">{t("Upload a sales brochure.", "上传售楼书即可。")}</p>
             </div>
           </div>
         </article>
       </section>
 
       <footer className="mt-12 border-t border-stone-200 pt-5 text-[11.5px] leading-relaxed text-stone-500">
-        {t(
-          "Footprints © OpenStreetMap contributors  · heights: Environment Agency LiDAR · energy certificates and sold prices: the EPC register and HM Land Registry (Open Government Licence) · plans redrawn · sample listings are illustrative only. For information only.",
-          "建筑轮廓 © OpenStreetMap 贡献者 · 高度：英国环境署 LiDAR · 能效证书与成交价：EPC 登记及英国土地登记处（开放政府许可）· 户型图为重绘 · 示例房源仅作演示。仅供参考。"
-        )}
+        © OpenStreetMap · EA LiDAR · EPC register · HM Land Registry · {t("sample listings are illustrative", "示例房源仅作演示")}
       </footer>
 
       {toast && <div className="fixed bottom-6 left-1/2 z-[1000] -translate-x-1/2 rounded-full bg-stone-900 px-5 py-2.5 text-[14px] text-white shadow-lg">{toast}</div>}
@@ -275,7 +262,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
         </p>
         <h2 className="mt-0.5 font-serif text-[38px] font-semibold leading-none">{zh ? d.nameZh : d.name}</h2>
         <p className="mt-1 text-[14px] text-stone-600">{d.address}</p>
-        <p className="mt-3 text-[14px] leading-relaxed text-stone-700">{zh ? d.blurbZh : d.blurb}</p>
+        {(zh ? d.blurbZh : d.blurb) && <p className="mt-3 text-[14px] text-stone-700">{zh ? d.blurbZh : d.blurb}</p>}
         <dl className="mt-4 grid grid-cols-4 gap-3 border-y border-stone-200 py-3">
           <Stat k={t("Homes", "户数")} v={`${d.homes}`} />
           <Stat k={t("Storeys", "层数")} v={d.storeysLabel ?? `${d.storeys}`} />

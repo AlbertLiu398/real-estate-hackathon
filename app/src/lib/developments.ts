@@ -17,7 +17,7 @@ export type Development = {
   tags: string[];
   avgScore: number | null;
   topGrade: string | null;
-  /** only Merino Court has real data; the rest are sample listings for the browse UI */
+  /** only Aldermoor Court has real data; the rest are sample listings for the browse UI */
   live: boolean;
   href?: string;
   palette: [string, string];
@@ -35,12 +35,12 @@ const avg = Math.round(scored.reduce((s, u) => s + u.fengshui!.score, 0) / score
 
 export const developments = [
   {
-    id: "merino-court",
-    name: "Merino Court",
-    nameZh: "美利奴阁",
+    id: "aldermoor-court",
+    name: "Aldermoor Court",
+    nameZh: "奥德摩阁",
     area: "Clerkenwell",
     areaZh: "克勒肯维尔",
-    postcode: "EC1V 8BG",
+    postcode: "EC1V",
     lat: 51.5278,
     lng: -0.0918,
     homes: units.length,
@@ -52,14 +52,14 @@ export const developments = [
     avgScore: avg,
     topGrade: scored[0].fengshui!.grade,
     live: true,
-    href: "/merino-court",
+    href: "/aldermoor-court",
     palette: ["#c9a678", "#ece6d9"],
     storeys: 6,
     storeysLabel: "LG + G + 5",
     epc: "B–E",
-    address: "152–154 Lever Street, London EC1V 8BG",
-    blurb: "Warehouse conversion on the corner of Bath Street.",
-    blurbZh: "Bath Street 街角的仓库改建。",
+    address: "Clerkenwell, London EC1V",
+    blurb: "Corner warehouse conversion.",
+    blurbZh: "街角仓库改建。",
     image: "/renders/render-street.jpg",
     sources: "developer's brochure · OpenStreetMap · EA LiDAR · EPCs · HM Land Registry",
   },

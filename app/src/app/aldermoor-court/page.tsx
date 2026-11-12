@@ -29,13 +29,13 @@ export default function Home() {
         <div>
           <div className="eyebrow mb-4">{t("Clerkenwell · London EC1V", "伦敦 EC1V · 克勒肯维尔")}</div>
           <h1 className="font-serif text-[46px] leading-[1.02] tracking-tight sm:text-[64px]">
-            Merino Court
+            Aldermoor Court
             <span className={`mt-2 block text-[var(--ink-2)] ${zh ? "" : "italic"}`} style={{ fontSize: "0.5em" }}>
               {t("every home, read from the brochure", "售楼书里的每一户，一目了然")}
             </span>
           </h1>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/merino-court/ranking" className="rounded-full bg-[var(--ink)] px-5 py-2.5 text-[14px] text-[var(--paper)] hover:bg-[var(--ink-2)]">
+            <Link href="/aldermoor-court/ranking" className="rounded-full bg-[var(--ink)] px-5 py-2.5 text-[14px] text-[var(--paper)] hover:bg-[var(--ink-2)]">
               {t("See the Feng Shui ranking", "查看风水排名")}
             </Link>
             <Link href={`/units/${top.key}`} className="rounded-full border hairline px-5 py-2.5 text-[14px] hover:bg-[var(--card)]">
@@ -60,7 +60,7 @@ export default function Home() {
       <section className="mb-14">
         <div className="mb-4 flex items-baseline justify-between">
           <h2 className="font-serif text-[26px]">{t("Four layouts, three floors each", "四种户型，各三层")}</h2>
-          <Link href="/merino-court/ranking" className="text-[14px] text-[var(--jade)] hover:underline">
+          <Link href="/aldermoor-court/ranking" className="text-[14px] text-[var(--jade)] hover:underline">
             {t("Full ranking", "完整排名")} →
           </Link>
         </div>

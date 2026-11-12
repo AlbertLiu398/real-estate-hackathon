@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { findingText, gbp, kindName, layoutOf, levelName, remedyText, ruleLabel, units, unitByKey, type Finding } from "@/lib/data";
 import { useLang } from "@/components/I18n";
-import { MerinoNav } from "@/components/MerinoNav";
+import { CourtNav } from "@/components/CourtNav";
 import { Delta, Grade, ScoreRing } from "@/components/bits";
 
 const Building3D = dynamic(() => import("@/components/Building3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading the building…</div> });
@@ -37,7 +37,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
 
   return (
     <div>
-      <MerinoNav unit={u.key} />
+      <CourtNav unit={u.key} />
       <div className="mb-5 mt-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="mb-2 text-[13px] text-[var(--muted)]">{kindName(u.kind, zh)}</div>

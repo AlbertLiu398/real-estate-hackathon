@@ -12,7 +12,7 @@ const sansSc = Noto_Sans_SC({ variable: "--font-noto-sans-sc", weight: ["400", "
 
 export const metadata: Metadata = {
   title: "FloorQi · London new homes",
-  description: "Every home at Merino Court, from the sales brochure: plans, 3D and an explainable Feng Shui score.",
+  description: "London new homes: plans, 3D and an explainable Feng Shui score for every home.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

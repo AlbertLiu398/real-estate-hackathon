@@ -10,3 +10,5 @@ build/
 .vercel
 # keep raw brochures / personal docs out of the repo unless deliberately added to data/samples
 *.pdf
+# legacy SalesBrochure code: kept locally, not in the repo
+legacy/

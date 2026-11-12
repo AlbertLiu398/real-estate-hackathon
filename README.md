@@ -2,7 +2,7 @@
 
 **Drop in a sales-brochure floorplan → get a walkable 3D model and an explainable Feng Shui score.**
 
-London new-build flats are marketed heavily to buyers from Hong Kong, Singapore and mainland China, and for many of them Feng Shui affects whether they buy. Today an agent can't answer "is this layout good Feng Shui?" without calling in a consultant. FloorQi reads the floorplan page of a brochure, turns it into structured data, rebuilds it in 3D, and scores it with a transparent rule engine. Every point lost or gained points back to a specific room, door or window, and the 3D view highlights it.
+London flats are marketed heavily to buyers from Hong Kong, Singapore and mainland China, and for many of them Feng Shui affects whether they buy. Today an agent can't answer "is this layout good Feng Shui?" without calling in a consultant. FloorQi reads the floorplan page of a brochure, turns it into structured data, rebuilds it in 3D, and scores it with a transparent rule engine. Every point lost or gained points back to a specific room, door or window, and the 3D view highlights it.
 
 ```
 Brochure PDF / floorplan image

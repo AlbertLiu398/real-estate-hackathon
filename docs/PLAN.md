@@ -98,11 +98,11 @@ Start at **80**, apply deltas, clamp to 0–100. Grades: A ≥ 85, B ≥ 75, C �
 | FS-LIVING-LIGHT | Living room has windows on 2 walls | ≥ 2 windows on different walls | +3 |
 | FS-FACING* | South/south-east-facing living room *(stretch, needs north_deg)* | bearing of main living window | +5 / −3 north |
 
-> **Engine note:** FS-FACING is replaced by the Courtyard (154 Goswell Road) compass model: Eight Mansions + Flying Star period 9 + form factors, ×4 points per raw point. See `docs/ENGINE.md` for the full model and where it differs from this table.
+> **Engine note:** FS-FACING is replaced by the compass model: Eight Mansions + Flying Star period 9 + aspect/light and form factors, calibrated on a reference London development, ×4 points per raw point. See `docs/ENGINE.md` for the full model and where it differs from this table.
 
 Each finding includes a **remedy**: a folding screen, a mirror *beside* (not facing) the door, keeping the bathroom door closed, plants, a rug to break up a corridor, lighting. This gives agents a positive talking point instead of only a negative score.
 
-Acceptance test: `data/samples/demo-2bed.json` must produce the findings listed in its `_expected_findings` field and its `_expected_score` (60: 58 from these rules, +2 from the Courtyard 3-aspect factor). Run `cd packages/engine && npm test`.
+Acceptance test: `data/samples/demo-2bed.json` must produce the findings listed in its `_expected_findings` field and its `_expected_score` (60: 58 from these rules, +2 from the compass-model 3-aspect factor). Run `cd packages/engine && npm test`.
 
 ## 7. Extraction prompt (draft)
 System prompt: *"You are a floorplan digitiser. Return ONLY JSON matching the schema."* Then give the model these steps:

@@ -32,8 +32,8 @@
     "FS-DOOR-CLASH: d_kitchen and d_bed2 face each other across the hall (0.5m offset)",
     "FS-DOOR-CLASH: d_living and d_master face each other across the hall (0.2m offset)",
     "FS-COMMAND: master bedroom sits in the far-right sector from the entrance (Relationships) => bonus",
-    "CY-ASPECT: glazing faces 3 directions (Courtyard form factor, +0.5 raw = +2 points)"
+    "CM-ASPECT: glazing faces 3 directions (compass-model aspect factor, +0.5 raw = +2 points)"
   ],
   "_expected_score": 60,
-  "_expected_score_note": "80 -10 -5 -8 -2 -2 +5 = 58 from the PLAN.md rules, +2 from the Courtyard 3-aspect factor = 60, grade D. north_deg is null, so the compass factors are skipped and the engine reports the score range over all orientations."
+  "_expected_score_note": "80 -10 -5 -8 -2 -2 +5 = 58 from the PLAN.md rules, +2 from the compass-model 3-aspect factor = 60, grade D. north_deg is null, so the compass factors are skipped and the engine reports the score range over all orientations."
 }

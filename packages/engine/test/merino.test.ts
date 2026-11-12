@@ -15,7 +15,7 @@ test("Merino Court: 22 units parsed, 12 single-storey flats scored with page-up 
   assert.equal(m.skipped.length, 10);
   for (const { plan } of m.scored) {
     const r = rate(plan, { noOrientation: true });
-    assert.equal(r.courtyard.compass, "applied", plan.id);
+    assert.equal(r.compass_model.compass, "applied", plan.id);
     assert.ok(r.score >= 0 && r.score <= 100);
   }
 });

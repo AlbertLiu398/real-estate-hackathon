@@ -5,7 +5,7 @@
 #
 # The source is the developer's sales brochure, MerinoCourt.pdf: ten photographed pages, with a key plan of every
 # floor and a plan of every unit with its gross area. There are no lease plans, so this building has its own frame;
-# the Courtyard's frame and its north rule (CLAUDE.md) do not apply here.
+# frames and north rules from other buildings do not apply here.
 #
 #   Pages     the brochure's pages as numbered in the PDF (1-10), read at their native resolution (pdfimages: about
 #             1800 x 2500 px a page). Every `box` and `seed` is in that page's native pixels (x right, y down).

@@ -1,10 +1,10 @@
-// FloorQi floorplan -> Courtyard feature vector (the equivalent of rank.py analyse()).
+// FloorQi floorplan -> compass-model feature vector.
 //
 // Frames: the schema is image-style (+x right, +y DOWN, origin top-left) and north_deg is the true bearing that
 // "up the page" points to. A plan vector (dx, dy) therefore has plan bearing atan2(dx, -dy) (0 = up, clockwise),
-// and true bearing = plan bearing + north_deg. (rank.py works in a +y = north frame: atan2(dx, dy).)
+// and true bearing = plan bearing + north_deg.
 import { mod } from "./compass.ts";
-import type { CourtyardFeatures } from "./courtyard.ts";
+import type { CompassModelFeatures } from "./compass-model.ts";
 import { minRotatedRectArea, polyArea } from "./geometry.ts";
 import type { FloorPlan, Opening, Room } from "./types.ts";
 
@@ -26,7 +26,7 @@ export function roundHalfEven(x: number): number {
 export interface Glazing { id: string; L: number; ob: number; x: number; y: number; roomId: string | null; view?: string }
 
 export interface Extracted {
-  features: CourtyardFeatures;      // bearings TRUE if north known, else plan-frame (north assumed 0)
+  features: CompassModelFeatures;      // bearings TRUE if north known, else plan-frame (north assumed 0)
   northKnown: boolean;
   north: number;
   centroid: [number, number];
@@ -64,7 +64,7 @@ export function extractFeatures(plan: FloorPlan, northOverride?: number | null):
   };
   const exterior = (o: Opening) => o.rooms.includes("outside") || o.rooms.some((id) => byId.get(id)?.type === "balcony");
 
-  // front door: the entrance; else the exterior door nearest a hallway (rank.py fallback)
+  // front door: the entrance; else the exterior door nearest a hallway
   let frontDoor = plan.openings.find((o) => o.type === "entrance") ?? null;
   const glazCand = plan.openings.filter((o) => o.type === "window" || o.type === "balcony_door" || (o.type === "door" && exterior(o)));
   if (!frontDoor) {

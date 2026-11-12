@@ -2,7 +2,7 @@
   "name": "@floorqi/engine",
   "version": "0.1.0",
   "private": true,
-  "description": "FloorQi feng shui rating engine: PLAN.md layout rules + the Courtyard (154 Goswell Road) Eight Mansions / Flying Star model",
+  "description": "FloorQi feng shui rating engine: PLAN.md layout rules + a compass model (Eight Mansions + Flying Star period 9 + aspect/light and form factors)",
   "type": "module",
   "main": "src/index.ts",
   "exports": { ".": "./src/index.ts" },

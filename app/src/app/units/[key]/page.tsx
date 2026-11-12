@@ -10,5 +10,5 @@ export default async function Page({ params }: { params: Promise<{ key: string }
   const { key } = await params;
   const u = unitByKey(key);
   if (!u) notFound();
-  return <UnitView unitKey={u.key} />;
+  return <UnitView key={u.key} unitKey={u.key} />;
 }

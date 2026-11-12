@@ -6,6 +6,7 @@ import { findingText, gbp, kindName, layoutOf, levelName, remedyText, ruleLabel,
 import { useLang } from "@/components/I18n";
 import { Delta, Grade, ScoreRing } from "@/components/bits";
 
+const Building3D = dynamic(() => import("@/components/Building3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading the building…</div> });
 const Plan3D = dynamic(() => import("@/components/Plan3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading 3D…</div> });
 
 export default function UnitView({ unitKey }: { unitKey: string }) {
@@ -13,6 +14,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
   const { zh, t } = useLang();
   const fs = u.fengshui;
   const [sel, setSel] = useState<number | null>(null);
+  const [scene, setScene] = useState<"home" | "building">(fs ? "home" : "building");
 
   const f: Finding | null = fs && sel !== null ? fs.findings[sel] : null;
   const highlight = f
@@ -25,12 +27,12 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
   const siblings = layoutOf(u) ? units.filter((x) => layoutOf(x) === layoutOf(u) && x.key !== u.key) : [];
 
   const groups = fs
-    ? (["layout", "compass", "form"] as const).map((g) => ({
+    ? (["layout", "compass", "form", "environment"] as const).map((g) => ({
         g,
-        items: fs.findings.map((x, i) => ({ x, i })).filter(({ x }) => (ruleLabel[x.rule_id]?.group ?? (x.method === "plan" ? "layout" : "compass")) === g),
+        items: fs.findings.map((x, i) => ({ x, i })).filter(({ x }) => (ruleLabel[x.rule_id]?.group ?? (x.method === "plan" ? "layout" : x.method === "environment" ? "environment" : "compass")) === g),
       }))
     : [];
-  const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态") };
+  const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态"), environment: t("Surroundings · from the building model", "周边环境 · 来自楼宇模型") };
 
   return (
     <div className="pt-6">
@@ -73,47 +75,63 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
       </div>
 
       <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
-        {fs ? (
-          <div className="card overflow-hidden lg:sticky lg:top-20">
-            <div className="relative h-[min(760px,calc(100vh-8.5rem))] min-h-[520px] bg-[#efe9dd]">
+        <div className="card overflow-hidden lg:sticky lg:top-20">
+          <div className="relative h-[min(760px,calc(100vh-8.5rem))] min-h-[520px] bg-[#efe9dd]">
+            {scene === "home" && fs ? (
               <Plan3D key={u.key} unit={u} highlight={highlight} zh={zh} />
-              <div className="pointer-events-none absolute left-3 top-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full bg-[var(--card)]/90 px-3 py-1.5 text-[12px] text-[var(--ink-2)] shadow-sm backdrop-blur">
-                <Legend c="#E9DFC9" l={t("Living", "客厅")} />
-                <Legend c="#E7D3B4" l={t("Kitchen", "厨房")} />
-                <Legend c="#D9E2D6" l={t("Bedroom", "卧室")} />
-                <Legend c="#D6E0E6" l={t("Bath", "卫浴")} />
-                <Legend c="#8fb8cf" l={t("Window", "窗")} />
-                <Legend c="var(--cinnabar)" l={t("Entrance", "入户门")} round />
-              </div>
-              {f && (
-                <div className="absolute inset-x-3 bottom-3 rounded-xl border hairline bg-[var(--card)]/95 p-3.5 text-[13.5px] shadow-lg backdrop-blur sm:inset-x-auto sm:left-3 sm:max-w-[440px]">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="font-medium">{findingText(f, zh)}</div>
-                    <span className="text-[15px]">
-                      <Delta v={f.delta} />
-                    </span>
-                  </div>
-                  {remedyText(f, zh) && (
-                    <div className="mt-1.5 text-[var(--ink-2)]">
-                      <span className="font-medium text-[var(--jade)]">{t("Remedy: ", "化解：")}</span>
-                      {remedyText(f, zh)}
-                    </div>
-                  )}
+            ) : (
+              <Building3D
+                level={u.levels[u.levels.length - 1]}
+                zh={zh}
+                focus={{
+                  unit: u.key,
+                  level: u.levels[u.levels.length - 1],
+                  rays: fs?.site?.rays,
+                  highlightRay: f?.rule_id === "ENV-MINGTANG" || f?.rule_id === "ENV-LUCHONG" ? "facing" : f?.rule_id === "ENV-KAOSHAN" ? "sitting" : null,
+                }}
+              />
+            )}
+            <div className="absolute left-3 top-3 z-10 flex max-w-[calc(100%-1.5rem)] flex-col items-start gap-2">
+              {fs && (
+                <div className="flex rounded-full bg-[var(--card)]/90 p-1 text-[12.5px] shadow-sm backdrop-blur">
+                  <button type="button" onClick={() => setScene("home")} className={`rounded-full px-3 py-1 ${scene === "home" ? "bg-[var(--ink)] text-[var(--paper)]" : "text-[var(--ink-2)]"}`}>
+                    {t("This home", "本户")}
+                  </button>
+                  <button type="button" onClick={() => setScene("building")} className={`rounded-full px-3 py-1 ${scene === "building" ? "bg-[var(--ink)] text-[var(--paper)]" : "text-[var(--ink-2)]"}`}>
+                    {t("In the building", "楼宇环境")}
+                  </button>
+                </div>
+              )}
+              {scene === "home" && (
+                <div className="pointer-events-none flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full bg-[var(--card)]/90 px-3 py-1.5 text-[12px] text-[var(--ink-2)] shadow-sm backdrop-blur">
+                  <Legend c="#E9DFC9" l={t("Living", "客厅")} />
+                  <Legend c="#E7D3B4" l={t("Kitchen", "厨房")} />
+                  <Legend c="#D9E2D6" l={t("Bedroom", "卧室")} />
+                  <Legend c="#D6E0E6" l={t("Bath", "卫浴")} />
+                  <Legend c="#8fb8cf" l={t("Window", "窗")} />
+                  <Legend c="var(--cinnabar)" l={t("Entrance", "入户门")} round />
                 </div>
               )}
             </div>
+            {f && (
+              <div className="absolute inset-x-3 bottom-3 rounded-xl border hairline bg-[var(--card)]/95 p-3.5 text-[13.5px] shadow-lg backdrop-blur sm:inset-x-auto sm:left-3 sm:max-w-[440px]">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="font-medium">{findingText(f, zh)}</div>
+                  <span className="text-[15px]">
+                    <Delta v={f.delta} />
+                  </span>
+                </div>
+                {remedyText(f, zh) && (
+                  <div className="mt-1.5 text-[var(--ink-2)]">
+                    <span className="font-medium text-[var(--jade)]">{t("Remedy: ", "化解：")}</span>
+                    {remedyText(f, zh)}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="card p-6">
-            <div className="eyebrow">{t("Feng Shui score", "风水评分")}</div>
-            <p className="mt-3 max-w-[46ch] text-[15px] leading-relaxed text-[var(--ink-2)]">
-              {t(
-                `${u.key} spans ${u.levels.length} floors. The model needs those floors registered to each other before the front door can be placed against the rooms above.`,
-                `${u.key} 共 ${u.levels.length} 层。各层平面对齐之后，才能把入户门和楼上的房间放进同一座模型。`
-              )}
-            </p>
-          </div>
-        )}
+        </div>
+
 
         <aside className="space-y-4">
           {fs ? (
@@ -135,7 +153,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                     <div className="mt-2 font-serif text-[15px] text-[var(--ink-2)]">{fs.compass.labels[0]}</div>
                   </div>
                 </div>
-                <div className="mt-5 grid grid-cols-3 gap-2 border-t hairline pt-4 text-center text-[12px] text-[var(--muted)]">
+                <div className="mt-5 grid grid-cols-4 gap-2 border-t hairline pt-4 text-center text-[12px] text-[var(--muted)]">
                   <div>
                     <div className="tabular text-[18px] text-[var(--ink)]">{fs.raw.base}</div>
                     {t("Base", "基础分")}
@@ -151,6 +169,12 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                       <Delta v={fs.raw.compass_points} />
                     </div>
                     {t("Compass ×4", "罗盘 ×4")}
+                  </div>
+                  <div>
+                    <div className="text-[18px]">
+                      <Delta v={fs.raw.environment ?? 0} />
+                    </div>
+                    {t("Surroundings", "环境")}
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-2 text-[12.5px]">
@@ -180,7 +204,10 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                           {items.map(({ x, i }) => (
                             <li key={i}>
                               <button
-                                onClick={() => setSel(sel === i ? null : i)}
+                                onClick={() => {
+                                  setSel(sel === i ? null : i);
+                                  if (x.method === "environment" && x.rule_id.startsWith("ENV")) setScene("building");
+                                }}
                                 className={`flex w-full items-start gap-3 rounded-lg px-2.5 py-2 text-left text-[13.5px] transition ${sel === i ? "bg-[var(--paper-2)]" : "hover:bg-[var(--paper)]"}`}
                               >
                                 <span
@@ -203,7 +230,17 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                 )}
               </div>
             </>
-          ) : null}
+          ) : (
+            <div className="card p-5">
+              <div className="eyebrow">{t("Feng Shui score", "风水评分")}</div>
+              <p className="mt-2 text-[14px] leading-relaxed text-[var(--ink-2)]">
+                {t(
+                  `${u.key} spans ${u.levels.length} floors. The surroundings model is here; the flat itself is not scored until its floors are registered to each other.`,
+                  `${u.key} 共 ${u.levels.length} 层。楼宇环境可以看，户型本身要等各层平面对齐之后才评分。`
+                )}
+              </p>
+            </div>
+          )}
 
           <Facts />
         </aside>

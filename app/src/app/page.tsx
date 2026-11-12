@@ -86,7 +86,7 @@ export default function Home() {
             <Stat k={t("Languages", "语言")} v="EN · 中文" />
           </dl>
         </div>
-        <div className="relative h-[340px] overflow-hidden rounded-xl ring-1 ring-stone-200 md:h-[400px]">
+        <div className="relative isolate z-0 h-[340px] overflow-hidden rounded-xl ring-1 ring-stone-200 md:h-[400px]">
           <ExploreMap items={list} active={active} onHover={setActive} onSelect={toCard} zh={zh} />
           <div className="pointer-events-none absolute left-3 top-3 z-[500] flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-[11.5px] shadow-sm ring-1 ring-stone-200">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-[var(--cinnabar)]" />
@@ -98,7 +98,7 @@ export default function Home() {
       </header>
 
       {/* search and filters */}
-      <section className="sticky top-16 z-20 -mx-4 mb-6 border-y hairline bg-[var(--paper)]/95 px-4 py-3 backdrop-blur sm:-mx-8 sm:px-8">
+      <section className="sticky top-16 z-30 -mx-4 mb-6 border-y hairline bg-[var(--paper)]/95 px-4 py-3 backdrop-blur sm:-mx-8 sm:px-8">
         <div className="flex flex-wrap items-center gap-2">
           <div className="relative min-w-[260px] flex-1">
             <svg className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[var(--muted)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -299,7 +299,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
               <Link href={d.href} className="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-700">
                 {t("Explore homes", "查看房源")} ↗
               </Link>
-              <Link href="/ranking" className="rounded-full px-3 py-2 text-sm text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100">
+              <Link href="/merino-court/ranking" className="rounded-full px-3 py-2 text-sm text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100">
                 {t("Feng Shui ranking", "风水排名")}
               </Link>
             </>
@@ -311,11 +311,8 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
         </div>
         {d.live && (
           <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1.5 pt-4 text-[13px]">
-            <Link href="/building" className="text-stone-600 hover:text-stone-900">
+            <Link href="/merino-court/building" className="text-stone-600 hover:text-stone-900">
               ◫ {t("3D model", "三维模型")}
-            </Link>
-            <Link href="/brochure" className="text-stone-600 hover:text-stone-900">
-              ▤ {t("Sales brochure", "售楼书")}
             </Link>
             <Link href="/compare" className="text-stone-600 hover:text-stone-900">
               ⇆ {t("Compare homes", "对比房源")}

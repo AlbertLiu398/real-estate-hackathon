@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { findingText, gbp, kindName, layoutOf, levelName, remedyText, ruleLabel, units, unitByKey, type Finding } from "@/lib/data";
 import { useLang } from "@/components/I18n";
+import { MerinoNav } from "@/components/MerinoNav";
 import { Delta, Grade, ScoreRing } from "@/components/bits";
 
 const Building3D = dynamic(() => import("@/components/Building3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading the building…</div> });
@@ -35,16 +36,11 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
   const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态"), environment: t("Surroundings · from the building model", "周边环境 · 来自楼宇模型") };
 
   return (
-    <div className="pt-6">
-      <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <MerinoNav unit={u.key} />
+      <div className="mb-5 mt-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <div className="mb-2 flex items-center gap-2 text-[13px] text-[var(--muted)]">
-            <Link href="/merino-court" className="hover:text-[var(--ink)]">
-              Merino Court
-            </Link>
-            <span>/</span>
-            <span>{kindName(u.kind, zh)}</span>
-          </div>
+          <div className="mb-2 text-[13px] text-[var(--muted)]">{kindName(u.kind, zh)}</div>
           <h1 className="font-serif text-[40px] leading-none tracking-tight sm:text-[48px]">
             {u.key}
             <span className="ml-3 text-[22px] text-[var(--ink-2)] sm:text-[26px]">{zh ? kindName(u.kind, true) : u.name}</span>

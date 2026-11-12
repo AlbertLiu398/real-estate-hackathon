@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f5f1e8;
+  --paper-2: #ece6d8;
+  --card: #fbf9f4;
+  --ink: #1d2b36;
+  --ink-2: #3c4a54;
+  --muted: #7a7f80;
+  --line: #d9d1c0;
+  --jade: #2e6b58;
+  --jade-2: #5d8f6f;
+  --gold: #b48a3c;
+  --cinnabar: #b5412c;
+  --cinnabar-soft: #f1d8cf;
+  --jade-soft: #d9e7dd;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), var(--font-noto-sans-sc), system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), var(--font-noto-serif-sc), Georgia, serif;
+}
+
+html { background: var(--paper); }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.tabular { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.hairline { border-color: var(--line); }
+.plan-svg svg { width: 100%; height: 100%; }
+::selection { background: var(--jade-soft); }

@@ -1,5 +1,5 @@
-// Compass maths for the Courtyard (154 Goswell Road) feng shui method, ported 1:1 from
-// Courtyard_风水敏感性/rank.py (lines 30-70). Bearings are true-north degrees, clockwise.
+// Compass maths for the compass model (Eight Mansions + Xuan Kong Flying Star).
+// Bearings are true-north degrees, clockwise.
 
 export const MOUNT = "子癸丑艮寅甲卯乙辰巽巳丙午丁未坤申庚酉辛戌乾亥壬"; // 24 mountains, 子 centred on 0°
 export const PALS = ["坎", "艮", "震", "巽", "离", "坤", "兑", "乾"] as const; // palaces centred on 0,45,...,315
@@ -47,7 +47,7 @@ export interface Chart {
   water: Record<string, number>;    // 向星 by palace
 }
 
-/** Xuan Kong Flying Star chart for a sitting bearing (rank.py chart()). */
+/** Xuan Kong Flying Star chart for a sitting bearing. */
 export function chart(sitB: number, period = 9): Chart {
   const yun = fly(period, true);
   const si = mountIdx(sitB), fi = mountIdx(mod(sitB + 180, 360));
@@ -84,5 +84,5 @@ export function bazhai(house: string): Record<string, string> {
   return res;
 }
 
-/** rank.py bearing(): 0 = +y (north), clockwise, for a north-up (+y = north) frame. */
+/** Bearing: 0 = +y (north), clockwise, for a north-up (+y = north) frame. */
 export const bearingNorthUp = (dx: number, dy: number): number => mod((Math.atan2(dx, dy) * 180) / Math.PI, 360);

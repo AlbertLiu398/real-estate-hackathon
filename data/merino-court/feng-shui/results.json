@@ -8,11 +8,11 @@
   "raw": {
    "base": 80,
    "plan": -7,
-   "courtyard_used": 4,
-   "courtyard_points": 16,
+   "compass_used": 4,
+   "compass_points": 16,
    "total_unclamped": 89
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3.5,
    "score100": 76.9,
    "compass": "applied",
@@ -76,8 +76,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -94,8 +94,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -110,8 +110,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -126,8 +126,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -142,8 +142,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -159,8 +159,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -176,8 +176,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -323,11 +323,11 @@
   "raw": {
    "base": 80,
    "plan": -7,
-   "courtyard_used": 4,
-   "courtyard_points": 16,
+   "compass_used": 4,
+   "compass_points": 16,
    "total_unclamped": 89
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3.5,
    "score100": 76.9,
    "compass": "applied",
@@ -391,8 +391,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -409,8 +409,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -425,8 +425,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -441,8 +441,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -457,8 +457,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -474,8 +474,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -491,8 +491,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -638,11 +638,11 @@
   "raw": {
    "base": 80,
    "plan": -7,
-   "courtyard_used": 4,
-   "courtyard_points": 16,
+   "compass_used": 4,
+   "compass_points": 16,
    "total_unclamped": 89
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3.5,
    "score100": 76.9,
    "compass": "applied",
@@ -706,8 +706,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -724,8 +724,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -740,8 +740,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -756,8 +756,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -772,8 +772,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -789,8 +789,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -806,8 +806,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -953,11 +953,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3.5,
-   "courtyard_points": 14,
+   "compass_used": 3.5,
+   "compass_points": 14,
    "total_unclamped": 82
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3,
    "score100": 74.4,
    "compass": "applied",
@@ -1056,8 +1056,8 @@
     "title": "Living/Dining has windows on 3 walls"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -1074,8 +1074,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -1090,8 +1090,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1106,8 +1106,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1123,8 +1123,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1140,8 +1140,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-XK-DOOR9",
-    "method": "courtyard",
+    "rule_id": "CM-XK-DOOR9",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1156,8 +1156,8 @@
     "title_zh": "旺星到门"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1177,8 +1177,8 @@
     "title_zh": "3面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -1324,11 +1324,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3.5,
-   "courtyard_points": 14,
+   "compass_used": 3.5,
+   "compass_points": 14,
    "total_unclamped": 82
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3,
    "score100": 74.4,
    "compass": "applied",
@@ -1427,8 +1427,8 @@
     "title": "Living/Dining has windows on 3 walls"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -1445,8 +1445,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -1461,8 +1461,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1477,8 +1477,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1494,8 +1494,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1511,8 +1511,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-XK-DOOR9",
-    "method": "courtyard",
+    "rule_id": "CM-XK-DOOR9",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1527,8 +1527,8 @@
     "title_zh": "旺星到门"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1548,8 +1548,8 @@
     "title_zh": "3面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -1695,11 +1695,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3.5,
-   "courtyard_points": 14,
+   "compass_used": 3.5,
+   "compass_points": 14,
    "total_unclamped": 82
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 3,
    "score100": 74.4,
    "compass": "applied",
@@ -1798,8 +1798,8 @@
     "title": "Living/Dining has windows on 3 walls"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -1816,8 +1816,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -1832,8 +1832,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1848,8 +1848,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -1865,8 +1865,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1882,8 +1882,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-XK-DOOR9",
-    "method": "courtyard",
+    "rule_id": "CM-XK-DOOR9",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1898,8 +1898,8 @@
     "title_zh": "旺星到门"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -1919,8 +1919,8 @@
     "title_zh": "3面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -2066,11 +2066,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3,
-   "courtyard_points": 12,
+   "compass_used": 3,
+   "compass_points": 12,
    "total_unclamped": 80
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 2.5,
    "score100": 71.8,
    "compass": "applied",
@@ -2119,8 +2119,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -2137,8 +2137,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2153,8 +2153,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -2169,8 +2169,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -2185,8 +2185,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2202,8 +2202,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -2219,8 +2219,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -2366,11 +2366,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3,
-   "courtyard_points": 12,
+   "compass_used": 3,
+   "compass_points": 12,
    "total_unclamped": 80
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 2.5,
    "score100": 71.8,
    "compass": "applied",
@@ -2419,8 +2419,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -2437,8 +2437,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2453,8 +2453,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -2469,8 +2469,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -2485,8 +2485,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2502,8 +2502,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -2519,8 +2519,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -2666,11 +2666,11 @@
   "raw": {
    "base": 80,
    "plan": -12,
-   "courtyard_used": 3,
-   "courtyard_points": 12,
+   "compass_used": 3,
+   "compass_points": 12,
    "total_unclamped": 80
   },
-  "courtyard": {
+  "compass_model": {
    "raw": 2.5,
    "score100": 71.8,
    "compass": "applied",
@@ -2719,8 +2719,8 @@
     "title": "Kitchen has no window"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": 8,
     "raw": 2,
     "severity": "info",
@@ -2737,8 +2737,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2753,8 +2753,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": -2,
     "raw": -0.5,
     "severity": "minor",
@@ -2769,8 +2769,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -2785,8 +2785,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -2802,8 +2802,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-ASPECT",
-    "method": "courtyard",
+    "rule_id": "CM-ASPECT",
+    "method": "compass",
     "delta": -4,
     "raw": -1,
     "severity": "minor",
@@ -2819,8 +2819,8 @@
     "title_zh": "单面采光"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -0.5,
     "severity": "info",
@@ -2966,11 +2966,11 @@
   "raw": {
    "base": 80,
    "plan": -26,
-   "courtyard_used": 0.5,
-   "courtyard_points": 2,
+   "compass_used": 0.5,
+   "compass_points": 2,
    "total_unclamped": 56
   },
-  "courtyard": {
+  "compass_model": {
    "raw": -0.5,
    "score100": 56.4,
    "compass": "applied",
@@ -3036,8 +3036,8 @@
     "title": "Shower Room sits in the centre (Health) sector (100% of the room)"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": -8,
     "raw": -2,
     "severity": "major",
@@ -3054,8 +3054,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3070,8 +3070,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -3086,8 +3086,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 0,
     "raw": 0,
     "severity": "info",
@@ -3103,8 +3103,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3120,8 +3120,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -1,
     "severity": "info",
@@ -3267,11 +3267,11 @@
   "raw": {
    "base": 80,
    "plan": -26,
-   "courtyard_used": 0.5,
-   "courtyard_points": 2,
+   "compass_used": 0.5,
+   "compass_points": 2,
    "total_unclamped": 56
   },
-  "courtyard": {
+  "compass_model": {
    "raw": -0.5,
    "score100": 56.4,
    "compass": "applied",
@@ -3337,8 +3337,8 @@
     "title": "Shower Room sits in the centre (Health) sector (100% of the room)"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": -8,
     "raw": -2,
     "severity": "major",
@@ -3355,8 +3355,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3371,8 +3371,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -3387,8 +3387,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 0,
     "raw": 0,
     "severity": "info",
@@ -3404,8 +3404,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3421,8 +3421,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -1,
     "severity": "info",
@@ -3568,11 +3568,11 @@
   "raw": {
    "base": 80,
    "plan": -26,
-   "courtyard_used": 0.5,
-   "courtyard_points": 2,
+   "compass_used": 0.5,
+   "compass_points": 2,
    "total_unclamped": 56
   },
-  "courtyard": {
+  "compass_model": {
    "raw": -0.5,
    "score100": 56.4,
    "compass": "applied",
@@ -3638,8 +3638,8 @@
     "title": "Shower Room sits in the centre (Health) sector (100% of the room)"
    },
    {
-    "rule_id": "CY-BZ-DOOR",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-DOOR",
+    "method": "compass",
     "delta": -8,
     "raw": -2,
     "severity": "major",
@@ -3656,8 +3656,8 @@
     "title_zh": "八宅 front door"
    },
    {
-    "rule_id": "CY-BZ-MASTER",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-MASTER",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3672,8 +3672,8 @@
     "title_zh": "八宅 main bedroom"
    },
    {
-    "rule_id": "CY-BZ-HOB",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-HOB",
+    "method": "compass",
     "delta": 2,
     "raw": 0.5,
     "severity": "info",
@@ -3688,8 +3688,8 @@
     "title_zh": "八宅 hob/stove"
    },
    {
-    "rule_id": "CY-BZ-WC",
-    "method": "courtyard",
+    "rule_id": "CM-BZ-WC",
+    "method": "compass",
     "delta": 0,
     "raw": 0,
     "severity": "info",
@@ -3705,8 +3705,8 @@
     "title_zh": "八宅 WC"
    },
    {
-    "rule_id": "CY-XK-PATTERN",
-    "method": "courtyard",
+    "rule_id": "CM-XK-PATTERN",
+    "method": "compass",
     "delta": 4,
     "raw": 1,
     "severity": "info",
@@ -3722,8 +3722,8 @@
     "title_zh": "玄空9运"
    },
    {
-    "rule_id": "CY-SHAPE",
-    "method": "courtyard",
+    "rule_id": "CM-SHAPE",
+    "method": "compass",
     "delta": 0,
     "raw": -1,
     "severity": "info",

@@ -36,4 +36,3 @@ cp .env.example .env.local   # add your LLM key(s); never commit .env*
 - `data/samples/demo-2bed.json`: hand-labelled test floor plan with expected findings
 - `data/merino-court/`: Merino Court source data (listings, building model, IFC, floor plan SVGs); see its README
 - `data/merino-court/feng-shui/`: engine output for Merino Court (ranking, results, converted floor plans)
-- `data/courtyard/`: Courtyard (154 Goswell Road) feature vectors and the rank.py reference scores used to validate the engine

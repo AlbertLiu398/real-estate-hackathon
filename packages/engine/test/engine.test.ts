@@ -13,7 +13,7 @@ test("demo-2bed: score and findings match the hand-labelled expectations", () =>
   assert.deepEqual(ids, expected);
   assert.equal(r.score, demo._expected_score);
   assert.equal(r.grade, "D");
-  assert.equal(r.courtyard.compass, "skipped");
+  assert.equal(r.compass_model.compass, "skipped");
   assert.ok("range" in r.orientation && r.orientation.range);
 });
 
@@ -21,7 +21,7 @@ test("every point is traceable: findings sum to the score", () => {
   const r = rate(demo, { northDeg: 0 });
   const sum = 80 + r.findings.reduce((s, f) => s + f.delta, 0);
   assert.equal(r.score, Math.max(0, Math.min(100, Math.round(sum))));
-  for (const f of r.findings) assert.ok(f.title && (f.room_ids.length || f.opening_ids.length || f.rule_id === "CY-ASPECT" || f.rule_id.startsWith("CY-XK")), f.rule_id);
+  for (const f of r.findings) assert.ok(f.title && (f.room_ids.length || f.opening_ids.length || f.rule_id === "CM-ASPECT" || f.rule_id.startsWith("CM-XK")), f.rule_id);
 });
 
 test("+y-down flip: a window on the top wall faces 'up the page' = north_deg", () => {
@@ -33,16 +33,16 @@ test("+y-down flip: a window on the top wall faces 'up the page' = north_deg", (
   }
 });
 
-test("rotating the plan's north rotates the compass result like sens.py's shift()", () => {
+test("rotating the plan's north rotates the compass result consistently", () => {
   const a = rate(demo, { northDeg: 0 }), b = rate({ ...demo, north_deg: 0 });
   assert.equal(a.score, b.score);
-  assert.deepEqual(a.courtyard.labels, ["离宅 午山子向 双星会向"]);
+  assert.deepEqual(a.compass_model.labels, ["离宅 午山子向 双星会向"]);
 });
 
 test("no windows: no crash, compass skipped, dark rooms flagged", () => {
   const p: FloorPlan = { ...demo, north_deg: 0, openings: demo.openings.filter((o) => o.type !== "window") };
   const r = rate(p);
-  assert.equal(r.courtyard.compass, "skipped");
+  assert.equal(r.compass_model.compass, "skipped");
   assert.ok(r.flags.some((f) => f.startsWith("NO_GLAZING")));
   assert.equal(r.findings.filter((f) => f.rule_id === "FS-DARK-ROOM").length, 4);
 });

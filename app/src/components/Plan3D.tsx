@@ -45,7 +45,7 @@ export default function Plan3D({
   const hiO = new Set(highlight?.openings ?? []);
 
   return (
-    <Canvas shadows camera={{ position: [span * 0.35, span * 1.15, span * 0.85], fov: 38 }} dpr={[1, 2]}>
+    <Canvas shadows camera={{ position: [span * 0.5, span * 1.6, span * 1.2], fov: 36 }} dpr={[1, 2]}>
       <color attach="background" args={["#efe9dd"]} />
       <fog attach="fog" args={["#efe9dd", span * 2.2, span * 4]} />
       <hemisphereLight args={["#ffffff", "#d9cfbd", 0.9]} />

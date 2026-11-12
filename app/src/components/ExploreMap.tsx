@@ -12,7 +12,7 @@ type Props = {
   zh: boolean;
 };
 
-/** numbered pins, as on the legacy landing page (legacy/sales-brochure/frontend/src/app/globals.css .property-pin) */
+/** numbered pins, as on the earlier SalesBrochure landing page */
 const pin = (d: Development, n: number, on: boolean, zh: boolean) => {
   const bg = on ? "#b4532a" : d.live ? "#b5412c" : "#1c1917";
   const label = on ? `<span style="position:absolute;left:34px;top:50%;transform:translateY(-50%);white-space:nowrap;padding:3px 9px;border-radius:999px;background:#fff;color:#1c1917;font:600 12px Inter,system-ui,sans-serif;box-shadow:0 2px 8px rgb(0 0 0/.18)">${zh ? d.nameZh : d.name}${d.avgScore ? ` · ${d.avgScore}` : ""}</span>` : "";

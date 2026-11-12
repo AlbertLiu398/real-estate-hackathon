@@ -4,7 +4,7 @@ import "./globals.css";
 import { I18nProvider } from "@/components/I18n";
 import { Header } from "@/components/Header";
 
-// display face from the legacy SalesBrochure app (legacy/sales-brochure)
+// display face from the earlier SalesBrochure app
 const fraunces = Cormorant_Garamond({ variable: "--font-fraunces", subsets: ["latin"], weight: ["500", "600", "700"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const serifSc = Noto_Serif_SC({ variable: "--font-noto-serif-sc", weight: ["500", "700"], preload: false });

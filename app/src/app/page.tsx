@@ -1,5 +1,5 @@
 "use client";
-// Home page, after the legacy SalesBrochure landing page (legacy/sales-brochure/frontend/src/app/page.tsx):
+// Home page, after the earlier SalesBrochure landing page:
 // hero with numbers and a map of numbered pins, then one card per building. Adds search, filters and sample listings.
 import dynamic from "next/dynamic";
 import Link from "next/link";

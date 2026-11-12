@@ -2,6 +2,18 @@ import raw from "@/data/merino.json";
 
 export type Room = { id: string; type: string; label: string; x: number; y: number; w: number; h: number };
 export type Opening = { id: string; type: "window" | "door" | "entrance" | "balcony_door"; x: number; y: number; axis: "h" | "v"; width: number; rooms: string[] };
+/** A traced wall footprint, in metres, not closed (the last edge joins back to the first). */
+export type WallRing = [number, number][];
+/** A door leaf (hinge → closed tip), a window (glazing line) or the entrance. `t` is thickness in metres. */
+export type Leaf = {
+  id: string;
+  kind: "door" | "window" | "entrance";
+  a: [number, number];
+  b: [number, number];
+  t: number;
+  /** Entrance only: direction into the flat, used to seat the door in the wall. */
+  dir?: "up" | "down" | "left" | "right";
+};
 export type Finding = {
   rule_id: string;
   method: "plan" | "compass";
@@ -45,7 +57,14 @@ export type Unit = {
   listing: { url: string; plans: string[] } | null;
   agentPlan: { agent: string; sqft: number; how: string } | null;
   fengshui: FengShui | null;
-  floorplan: { outline: [number, number][]; rooms: Room[]; openings: Opening[]; north_deg: number } | null;
+  floorplan: {
+    outline: [number, number][];
+    rooms: Room[];
+    openings: Opening[];
+    north_deg: number;
+    walls: WallRing[];
+    leaves: Leaf[];
+  } | null;
 };
 
 export const building = raw.building;

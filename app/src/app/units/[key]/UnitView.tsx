@@ -4,38 +4,25 @@ import Link from "next/link";
 import { useState } from "react";
 import { findingText, gbp, kindName, layoutOf, levelName, remedyText, ruleLabel, units, unitByKey, type Finding } from "@/lib/data";
 import { useLang } from "@/components/I18n";
-import { PlanMap } from "@/components/PlanMap";
 import { Delta, Grade, ScoreRing } from "@/components/bits";
 
 const Plan3D = dynamic(() => import("@/components/Plan3D"), { ssr: false, loading: () => <div className="grid h-full place-items-center text-[13px] text-[var(--muted)]">Loading 3D…</div> });
-
-type View = "map" | "3d" | "plan" | "source";
 
 export default function UnitView({ unitKey }: { unitKey: string }) {
   const u = unitByKey(unitKey)!;
   const { zh, t } = useLang();
   const fs = u.fengshui;
-  const [view, setView] = useState<View>(fs ? "map" : "plan");
   const [sel, setSel] = useState<number | null>(null);
-  const [floor, setFloor] = useState(0);
-  const [page, setPage] = useState(0);
-  const [bagua, setBagua] = useState(true);
 
   const f: Finding | null = fs && sel !== null ? fs.findings[sel] : null;
   const highlight = f
-    ? { rooms: f.room_ids, openings: f.opening_ids, tone: (f.delta > 0 ? "good" : f.delta < 0 ? "bad" : "neutral") as "good" | "bad" | "neutral", cell: f.evidence?.cell as string | undefined }
+    ? { rooms: f.room_ids, openings: f.opening_ids, tone: (f.delta > 0 ? "good" : f.delta < 0 ? "bad" : "neutral") as "good" | "bad" | "neutral" }
     : null;
 
   const idx = units.findIndex((x) => x.key === u.key);
   const prev = units[(idx - 1 + units.length) % units.length];
   const next = units[(idx + 1) % units.length];
   const siblings = layoutOf(u) ? units.filter((x) => layoutOf(x) === layoutOf(u) && x.key !== u.key) : [];
-
-  const views: { id: View; label: string }[] = [
-    ...(fs ? [{ id: "map" as View, label: t("Feng Shui map", "风水图") }, { id: "3d" as View, label: "3D" }] : []),
-    { id: "plan", label: t("Floor plan", "户型图") },
-    { id: "source", label: t("Brochure page", "售楼书原页") },
-  ];
 
   const groups = fs
     ? (["layout", "compass", "form"] as const).map((g) => ({
@@ -46,9 +33,8 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
   const gName = { layout: t("Layout · Black Hat Bagua", "格局 · 八卦"), compass: t("Compass · Eight Mansions & Flying Star", "罗盘 · 八宅与玄空飞星"), form: t("Form", "形态") };
 
   return (
-    <div className="pt-8">
-      {/* header */}
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+    <div className="pt-6">
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="mb-2 flex items-center gap-2 text-[13px] text-[var(--muted)]">
             <Link href="/" className="hover:text-[var(--ink)]">
@@ -86,94 +72,49 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.55fr)_minmax(340px,1fr)]">
-        {/* viewer */}
-        <div className="card overflow-hidden">
-          <div className="flex flex-wrap items-center gap-1 border-b hairline px-3 py-2">
-            {views.map((v) => (
-              <button
-                key={v.id}
-                onClick={() => setView(v.id)}
-                className={`rounded-full px-3.5 py-1.5 text-[13.5px] transition ${view === v.id ? "bg-[var(--ink)] text-[var(--paper)]" : "text-[var(--ink-2)] hover:bg-[var(--paper-2)]"}`}
-              >
-                {v.label}
-              </button>
-            ))}
-            <div className="ml-auto flex items-center gap-1 text-[12.5px]">
-              {view === "map" && (
-                <label className="flex cursor-pointer items-center gap-1.5 px-2 text-[var(--ink-2)]">
-                  <input type="checkbox" checked={bagua} onChange={(e) => setBagua(e.target.checked)} className="accent-[var(--jade)]" />
-                  {t("Bagua grid", "八卦九宫")}
-                </label>
-              )}
-              {view === "plan" &&
-                u.plans.length > 1 &&
-                u.plans.map((p, i) => (
-                  <button key={p} onClick={() => setFloor(i)} className={`rounded-full px-2.5 py-1 ${floor === i ? "bg-[var(--paper-2)]" : "text-[var(--muted)]"}`}>
-                    {levelName(u.levels[i], zh)}
-                  </button>
-                ))}
-              {view === "source" &&
-                u.pages.length > 1 &&
-                u.pages.map((p, i) => (
-                  <button key={p} onClick={() => setPage(i)} className={`rounded-full px-2.5 py-1 ${page === i ? "bg-[var(--paper-2)]" : "text-[var(--muted)]"}`}>
-                    p.{p}
-                  </button>
-                ))}
-            </div>
-          </div>
-          <div className="relative h-[520px] bg-white sm:h-[620px]">
-            {view === "map" && fs && (
-              <div className="h-full p-4">
-                <PlanMap unit={u} highlight={highlight} showBagua={bagua} />
-              </div>
-            )}
-            {view === "3d" && fs && <Plan3D unit={u} highlight={highlight} zh={zh} />}
-            {view === "plan" && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/plans/${zh ? "zh/" : ""}${u.plans[floor]}.svg`} alt={`${u.key} floor plan`} className="h-full w-full object-contain p-6" />
-            )}
-            {view === "source" && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/brochure/p-${String(u.pages[page]).padStart(2, "0")}.jpg`} alt={`Brochure page ${u.pages[page]}`} className="h-full w-full object-contain bg-[var(--paper-2)]" />
-            )}
-            {(view === "map" || view === "3d") && f && (
-              <div className="absolute inset-x-3 bottom-3 rounded-xl border hairline bg-[var(--card)]/95 p-3.5 text-[13.5px] shadow-lg backdrop-blur sm:inset-x-auto sm:left-3 sm:max-w-[440px]">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="font-medium">{findingText(f, zh)}</div>
-                  <span className="text-[15px]">
-                    <Delta v={f.delta} />
-                  </span>
-                </div>
-                {remedyText(f, zh) && (
-                  <div className="mt-1.5 text-[var(--ink-2)]">
-                    <span className="font-medium text-[var(--jade)]">{t("Remedy: ", "化解：")}</span>
-                    {remedyText(f, zh)}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t hairline px-4 py-2.5 text-[12px] text-[var(--muted)]">
-            {view === "source" ? (
-              <span>{t(`Source: MerinoCourt.pdf, page ${u.pages[page]} (photographed brochure)`, `来源：MerinoCourt.pdf 第 ${u.pages[page]} 页（售楼书照片）`)}</span>
-            ) : view === "plan" ? (
-              <span>{t("Redrawn from the brochure to scale, in one consistent style for every home", "按售楼书等比例重绘，所有户型统一样式")}</span>
-            ) : (
-              <>
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
+        {fs ? (
+          <div className="card overflow-hidden lg:sticky lg:top-20">
+            <div className="relative h-[min(760px,calc(100vh-8.5rem))] min-h-[520px] bg-[#efe9dd]">
+              <Plan3D key={u.key} unit={u} highlight={highlight} zh={zh} />
+              <div className="pointer-events-none absolute left-3 top-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full bg-[var(--card)]/90 px-3 py-1.5 text-[12px] text-[var(--ink-2)] shadow-sm backdrop-blur">
                 <Legend c="#E9DFC9" l={t("Living", "客厅")} />
                 <Legend c="#E7D3B4" l={t("Kitchen", "厨房")} />
                 <Legend c="#D9E2D6" l={t("Bedroom", "卧室")} />
                 <Legend c="#D6E0E6" l={t("Bath", "卫浴")} />
                 <Legend c="#8fb8cf" l={t("Window", "窗")} />
                 <Legend c="var(--cinnabar)" l={t("Entrance", "入户门")} round />
-                <span className="ml-auto">{t("Click a finding to see it on the plan", "点击条目可在图中定位")}</span>
-              </>
-            )}
+              </div>
+              {f && (
+                <div className="absolute inset-x-3 bottom-3 rounded-xl border hairline bg-[var(--card)]/95 p-3.5 text-[13.5px] shadow-lg backdrop-blur sm:inset-x-auto sm:left-3 sm:max-w-[440px]">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="font-medium">{findingText(f, zh)}</div>
+                    <span className="text-[15px]">
+                      <Delta v={f.delta} />
+                    </span>
+                  </div>
+                  {remedyText(f, zh) && (
+                    <div className="mt-1.5 text-[var(--ink-2)]">
+                      <span className="font-medium text-[var(--jade)]">{t("Remedy: ", "化解：")}</span>
+                      {remedyText(f, zh)}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="card p-6">
+            <div className="eyebrow">{t("Feng Shui score", "风水评分")}</div>
+            <p className="mt-3 max-w-[46ch] text-[15px] leading-relaxed text-[var(--ink-2)]">
+              {t(
+                `${u.key} spans ${u.levels.length} floors. The model needs those floors registered to each other before the front door can be placed against the rooms above.`,
+                `${u.key} 共 ${u.levels.length} 层。各层平面对齐之后，才能把入户门和楼上的房间放进同一座模型。`
+              )}
+            </p>
+          </div>
+        )}
 
-        {/* score */}
         <aside className="space-y-4">
           {fs ? (
             <>
@@ -228,6 +169,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                 </div>
               </div>
 
+              <p className="px-1 text-[12.5px] text-[var(--muted)]">{t("Click a finding to locate it in the model", "点击一条评分，在模型里定位")}</p>
               <div className="card divide-y divide-[var(--line)]">
                 {groups.map(
                   ({ g, items }) =>
@@ -261,17 +203,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                 )}
               </div>
             </>
-          ) : (
-            <div className="card p-5">
-              <div className="eyebrow">{t("Feng Shui score", "风水评分")}</div>
-              <p className="mt-2 text-[14px] leading-relaxed text-[var(--ink-2)]">
-                {t(
-                  `Not scored yet. ${u.key} spans ${u.levels.length} floors, and the engine needs the floors registered to each other before it can relate the front door to the rooms upstairs.`,
-                  `暂未评分。${u.key} 共 ${u.levels.length} 层，需先将各层平面对齐，引擎才能判断入户门与楼上房间的关系。`
-                )}
-              </p>
-            </div>
-          )}
+          ) : null}
 
           <Facts />
         </aside>

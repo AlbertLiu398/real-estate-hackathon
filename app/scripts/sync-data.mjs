@@ -38,6 +38,20 @@ const units = [
 const extraPages = { H1: [8], F9: [3, 4] };
 
 const results = Object.fromEntries(read("feng-shui/results.json").map((r) => [r.unit, r]));
+const plansJson = read("building/plans.json");
+
+const metres = (pt, s) => [+(pt[0] * s).toFixed(3), +(pt[1] * s).toFixed(3)];
+/** Drop tracing jitter shorter than 2.5 cm. Rings stay open; the 3D mesh closes them. */
+function cleanRing(pts) {
+  const out = [];
+  for (const p of pts) {
+    const q = out[out.length - 1];
+    if (q && Math.hypot(p[0] - q[0], p[1] - q[1]) < 0.025) continue;
+    out.push(p);
+  }
+  if (out.length > 2 && Math.hypot(out[0][0] - out[out.length - 1][0], out[0][1] - out[out.length - 1][1]) < 0.025) out.pop();
+  return out.length >= 3 ? out : null;
+}
 const epc = read("listings/epc_certs.json");
 const sales = read("listings/sales.json").sales;
 const listings = read("listings/rightmove_listings.json");
@@ -58,7 +72,40 @@ for (const u of units) {
   if (r) {
     const fp = read(`feng-shui/${u.key}.floorplan.json`);
     u.fengshui = { score: r.score, grade: r.grade, raw: r.raw, compass: r.compass_model, findings: r.findings, bagua: r.bagua, orientation: r.orientation, flags: r.flags };
-    u.floorplan = { outline: fp.outline, rooms: fp.rooms, openings: fp.openings, north_deg: fp.north_deg };
+    const planKey = fp.source?.plan;
+    const src = planKey ? plansJson.plans[planKey] : null;
+    const scale = planKey ? plansJson.scales_m_per_px[planKey] : null;
+    const walls = [];
+    const leaves = [];
+    if (src && scale) {
+      for (const comp of src.walls) {
+        const ring = cleanRing(comp[0].map((p) => metres(p, scale)));
+        if (ring) walls.push(ring);
+      }
+      src.windows.forEach((w, i) => {
+        const t = Math.min(0.24, Math.max(0.12, w.t * scale));
+        leaves.push({ id: `w${i}`, kind: "window", a: metres(w.a, scale), b: metres(w.b, scale), t: +t.toFixed(3) });
+      });
+      // Index matches the engine adapter (`d${i}`), including leaves it skips, so findings still cite the same id.
+      src.doors.forEach((d, i) => {
+        leaves.push({ id: `d${i}`, kind: "door", a: metres(d.hinge, scale), b: metres(d.close, scale), t: 0.04 });
+      });
+      if (src.entrance) {
+        const [ex, ey, dir] = src.entrance;
+        const x = ex * scale;
+        const y = ey * scale;
+        const along = dir === "up" || dir === "down" ? [1, 0] : [0, 1];
+        leaves.push({
+          id: "entry",
+          kind: "entrance",
+          a: [+(x - along[0] * 0.45).toFixed(3), +(y - along[1] * 0.45).toFixed(3)],
+          b: [+(x + along[0] * 0.45).toFixed(3), +(y + along[1] * 0.45).toFixed(3)],
+          t: 0.04,
+          dir,
+        });
+      }
+    }
+    u.floorplan = { outline: fp.outline, rooms: fp.rooms, openings: fp.openings, north_deg: fp.north_deg, walls, leaves };
   } else {
     u.fengshui = null;
     u.floorplan = null;

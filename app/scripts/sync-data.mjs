@@ -115,7 +115,7 @@ for (const u of units) {
 fs.mkdirSync(path.join(out, "src/data"), { recursive: true });
 fs.writeFileSync(
   path.join(out, "src/data/merino.json"),
-  JSON.stringify({ building: { name: "Merino Court", address: "152–154 Lever Street, London EC1V 8BG", area: "Clerkenwell / Old Street", northDeg: 80.5 }, units })
+  JSON.stringify({ building: { name: "Aldermoor Court", address: "Clerkenwell, London EC1V", area: "Clerkenwell / Old Street", northDeg: 80.5 }, units })
 );
 
 // the building's 3D scene (block, neighbours, roads, trees, per-floor cutaways), for the whole-building view

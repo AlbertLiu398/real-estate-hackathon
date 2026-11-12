@@ -9,17 +9,9 @@ export default function Ranking() {
   const { zh, t } = useLang();
   const unscored = units.filter((u) => !u.fengshui);
   return (
-    <div className="pt-10">
-      <div className="eyebrow mb-3">{t("FloorQi engine · deterministic, explainable", "FloorQi 引擎 · 确定性、可解释")}</div>
-      <h1 className="font-serif text-[42px] leading-tight tracking-tight">{t("Feng Shui ranking", "风水排名")}</h1>
-      <p className="mt-3 max-w-[720px] text-[15px] leading-relaxed text-[var(--ink-2)]">
-        {t(
-          "Score = 80 + layout rules (Black Hat Bagua, doors, light) + 4 × the compass model (Eight Mansions, Flying Star period 9, form, garden/street outlook) + the surroundings measured on the 3D building model (open space in front, backing behind, roads aimed at the flat). Same inputs, same score; every point links to its evidence.",
-          "评分 = 80 + 格局规则（八卦、门、采光）+ 4 × 罗盘模型（八宅、玄空九运、形态、花园/街景）+ 基于楼宇三维模型测得的周边环境（明堂、靠山、路冲）。输入相同则分数相同，每一分都有依据。"
-        )}
-      </p>
+    <div className="pt-5">
 
-      <div className="card mt-8 overflow-hidden">
+      <div className="card overflow-hidden">
         <div className="hidden grid-cols-[48px_110px_1fr_140px_100px] gap-4 border-b hairline px-5 py-3 text-[12px] uppercase tracking-[0.12em] text-[var(--muted)] md:grid">
           <span>#</span>
           <span>{t("Plan", "户型")}</span>
@@ -62,7 +54,6 @@ export default function Ranking() {
       </div>
 
       <h2 className="mt-12 font-serif text-[24px]">{t("Not scored yet", "暂未评分")}</h2>
-      <p className="mt-1 text-[14px] text-[var(--muted)]">{t("Multi-storey homes: floors not registered to each other yet.", "多层户型：各层平面尚未对齐。")}</p>
       <div className="mt-4 flex flex-wrap gap-2">
         {unscored.map((u) => (
           <Link key={u.key} href={`/units/${u.key}`} className="card px-4 py-2 text-[14px] hover:bg-white">

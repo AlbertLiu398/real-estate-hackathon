@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { developments, priceLabel, statusLabel, type Development } from "@/lib/developments";
-import { kindName, units } from "@/lib/data";
+import { kindName, scored, units } from "@/lib/data";
 import { useLang } from "@/components/I18n";
 import { Grade } from "@/components/bits";
 
@@ -50,15 +50,25 @@ export default function Home() {
   };
   const toCard = (d: Development) => document.getElementById(`dev-${d.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
 
+  const quick = [
+    { en: "Clerkenwell", zh: "克勒肯维尔", on: query === "clerkenwell", apply: () => setQ(query === "clerkenwell" ? "" : "Clerkenwell") },
+    { en: "River views", zh: "河景", on: query === "river", apply: () => setQ(query === "river" ? "" : "river") },
+    { en: "Garden", zh: "花园", on: query === "garden", apply: () => setQ(query === "garden" ? "" : "garden") },
+    { en: "Feng Shui 85+", zh: "风水 85+", on: minScore === 85, apply: () => setMinScore(minScore === 85 ? 0 : 85) },
+    { en: "2 beds", zh: "两卧", on: beds === 2, apply: () => setBeds(beds === 2 ? 0 : 2) },
+    { en: "Ready now", zh: "现房", on: status === "completed", apply: () => setStatus(status === "completed" ? "all" : "completed") },
+  ];
+  const top = scored.filter((u, i, a) => a.findIndex((x) => x.fengshui!.score === u.fengshui!.score && x.beds === u.beds) === i).slice(0, 6);
+
   const chip = "rounded-full bg-white px-3 py-1.5 text-[13px] ring-1 ring-stone-200 outline-none focus:ring-stone-400";
 
   return (
     <div>
-      {/* hero: words and numbers on the left, the map on the right */}
-      <header className="grid gap-8 pb-8 pt-12 md:grid-cols-[1fr_1.1fr] md:items-end">
+      {/* hero: search on the left, the map on the right */}
+      <header className="grid gap-8 pb-10 pt-10 md:grid-cols-[1fr_1.1fr] md:items-center">
         <div>
           <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--muted)]">FloorQi · Neighbour View</p>
-          <h1 className="mt-3 font-serif text-[56px] font-semibold leading-[0.95] tracking-tight md:text-[72px]">
+          <h1 className="mt-3 font-serif text-[52px] font-semibold leading-[0.95] tracking-tight md:text-[66px]">
             {zh ? (
               <>
                 每一栋楼，
@@ -73,48 +83,22 @@ export default function Home() {
               </>
             )}
           </h1>
-          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--ink-2)]">
-            {t(
-              "Each building rebuilt from its own documents (the developer's brochure, LiDAR, energy certificates and the Land Registry) into a 3D model, redrawn floor plans and an explainable Feng Shui score for every home, in English and Chinese.",
-              "每栋楼都从自身资料（开发商售楼书、LiDAR、能效证书与土地登记）重建为三维模型、重绘户型图，并为每套房给出可解释的风水评分，中英双语。"
-            )}
-          </p>
-          <dl className="mt-6 flex gap-8">
-            <Stat k={t("Buildings", "楼盘")} v={`${developments.length}`} />
-            <Stat k={t("Homes", "户数")} v={homes.toLocaleString()} />
-            <Stat k={t("Scored live", "已评分")} v={`${units.filter((u) => u.fengshui).length}`} />
-            <Stat k={t("Languages", "语言")} v="EN · 中文" />
-          </dl>
-        </div>
-        <div className="relative isolate z-0 h-[340px] overflow-hidden rounded-xl ring-1 ring-stone-200 md:h-[400px]">
-          <ExploreMap items={list} active={active} onHover={setActive} onSelect={toCard} zh={zh} />
-          <div className="pointer-events-none absolute left-3 top-3 z-[500] flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-[11.5px] shadow-sm ring-1 ring-stone-200">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-[var(--cinnabar)]" />
-            {t("Live", "已上线")}
-            <span className="ml-1.5 inline-block h-2.5 w-2.5 rounded-full bg-stone-900" />
-            {t("Sample", "示例")}
-          </div>
-        </div>
-      </header>
-
-      {/* search and filters */}
-      <section className="sticky top-16 z-30 -mx-4 mb-6 border-y hairline bg-[var(--paper)]/95 px-4 py-3 backdrop-blur sm:-mx-8 sm:px-8">
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="relative min-w-[260px] flex-1">
-            <svg className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[var(--muted)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <p className="mt-4 text-[15px] text-[var(--ink-2)]">{t("Plans, 3D and a Feng Shui score for every home.", "每套房的户型、三维与风水评分。")}</p>
+          <div className="relative mt-7 max-w-[560px]">
+            <svg className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-[var(--muted)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="7" />
               <path d="m20 20-3.5-3.5" />
             </svg>
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder={t("Search area, postcode, building or home (Clerkenwell, EC1V, F4…)", "搜索区域、邮编、楼盘或户号（克勒肯维尔、EC1V、F4…）")}
-              className="w-full rounded-full bg-white py-2.5 pl-10 pr-4 text-[14px] ring-1 ring-stone-200 outline-none focus:ring-stone-400"
+              placeholder={t("Area, postcode, building or home", "区域、邮编、楼盘或户号")}
+              className="w-full rounded-full bg-white py-4 pl-12 pr-5 text-[15px] shadow-[0_10px_30px_-18px_rgba(29,43,54,.4)] ring-1 ring-stone-200 outline-none focus:ring-stone-400"
               aria-label={t("Search", "搜索")}
             />
             {unitHits.length > 0 && (
               <div className="absolute inset-x-0 top-full z-30 mt-2 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-stone-200">
-                <div className="px-4 pt-3 text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">{t("Homes at Merino Court", "美利奴阁房源")}</div>
+                <div className="px-4 pt-3 text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">{t("Homes at Aldermoor Court", "奥德摩阁房源")}</div>
                 {unitHits.map((u) => (
                   <Link key={u.key} href={`/units/${u.key}`} className="flex items-center gap-3 px-4 py-2.5 text-[14px] hover:bg-stone-50">
                     <span className="w-10 font-serif text-[17px] font-semibold">{u.key}</span>
@@ -128,6 +112,70 @@ export default function Home() {
               </div>
             )}
           </div>
+          <div className="mt-3 flex max-w-[560px] flex-wrap gap-1.5">
+            {quick.map((c) => (
+              <button
+                key={c.en}
+                onClick={c.apply}
+                className={`rounded-full px-3 py-1 text-[12.5px] ring-1 transition ${c.on ? "bg-stone-900 text-white ring-stone-900" : "bg-white/70 text-[var(--ink-2)] ring-stone-200 hover:bg-white"}`}
+              >
+                {zh ? c.zh : c.en}
+              </button>
+            ))}
+          </div>
+          <dl className="mt-7 flex gap-8 border-t hairline pt-5">
+            <Stat k={t("Buildings", "楼盘")} v={`${developments.length}`} />
+            <Stat k={t("Homes", "户数")} v={homes.toLocaleString()} />
+            <Stat k={t("Scored live", "已评分")} v={`${units.filter((u) => u.fengshui).length}`} />
+            <Stat k={t("Languages", "语言")} v="EN · 中文" />
+          </dl>
+        </div>
+        <div className="relative isolate z-0 h-[360px] overflow-hidden rounded-xl ring-1 ring-stone-200 md:h-[480px]">
+          <ExploreMap items={list} active={active} onHover={setActive} onSelect={toCard} zh={zh} />
+          <div className="pointer-events-none absolute left-3 top-3 z-[500] flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-[11.5px] shadow-sm ring-1 ring-stone-200">
+            <span className="inline-block h-2.5 w-2.5 rounded-full bg-[var(--cinnabar)]" />
+            {t("Live", "已上线")}
+            <span className="ml-1.5 inline-block h-2.5 w-2.5 rounded-full bg-stone-900" />
+            {t("Sample", "示例")}
+          </div>
+        </div>
+      </header>
+
+      {/* top-rated homes, from the live building */}
+      {!filtered && (
+        <section className="mb-10">
+          <div className="mb-3 flex items-baseline justify-between">
+            <h2 className="font-serif text-[28px] font-semibold">{t("Top Feng Shui homes", "风水最佳房源")}</h2>
+            <Link href="/aldermoor-court/ranking" className="text-[13px] text-[var(--jade)] hover:underline">
+              {t("All", "全部")} →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {top.map((u) => (
+              <Link key={u.key} href={`/units/${u.key}`} className="group overflow-hidden rounded-xl bg-white ring-1 ring-stone-200 transition hover:shadow-md">
+                <div className="relative aspect-[4/3] bg-white">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={`/plans/${zh ? "zh/" : ""}${u.plans[0]}.svg`} alt="" className="absolute inset-0 h-full w-full object-contain p-3 transition group-hover:scale-[1.03]" />
+                  <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-white/95 py-0.5 pl-2 pr-0.5 text-[12px] ring-1 ring-stone-200">
+                    <span className="tabular font-medium">{u.fengshui!.score}</span>
+                    <Grade grade={u.fengshui!.grade} />
+                  </span>
+                </div>
+                <div className="border-t border-stone-100 px-3 py-2">
+                  <div className="font-serif text-[18px] font-semibold leading-none">{u.key}</div>
+                  <div className="mt-1 text-[12px] text-[var(--muted)]">
+                    {u.beds} {t("bed", "卧")} · {u.m2.toFixed(0)} m² · Aldermoor
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* filters */}
+      <section className="sticky top-16 z-30 -mx-4 mb-6 border-y hairline bg-[var(--paper)]/95 px-4 py-3 backdrop-blur sm:-mx-8 sm:px-8">
+        <div className="flex flex-wrap items-center gap-2">
           <select value={status} onChange={(e) => setStatus(e.target.value as typeof status)} className={chip} aria-label="Status">
             <option value="all">{t("Any status", "全部状态")}</option>
             <option value="completed">{statusLabel("completed", zh)}</option>
@@ -199,22 +247,14 @@ export default function Home() {
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-stone-200 text-[20px] text-stone-700">+</span>
             <div>
               <h2 className="font-serif text-[26px] font-semibold text-[var(--ink)]">{t("Add a building", "添加楼盘")}</h2>
-              <p className="mt-1 max-w-3xl text-[14px] leading-relaxed">
-                {t(
-                  "Drop in the developer's brochure: FloorQi reads every unit's floor plan into structured data, rebuilds the block in 3D and scores every home. Merino Court was built this way from a ten-page photographed brochure.",
-                  "上传开发商售楼书：FloorQi 会把每户户型读成结构化数据、重建楼宇三维模型并为每套房评分。美利奴阁就是从十页售楼书照片中这样生成的。"
-                )}
-              </p>
+              <p className="mt-1 text-[14px]">{t("Upload a sales brochure.", "上传售楼书即可。")}</p>
             </div>
           </div>
         </article>
       </section>
 
       <footer className="mt-12 border-t border-stone-200 pt-5 text-[11.5px] leading-relaxed text-stone-500">
-        {t(
-          "Footprints © OpenStreetMap contributors  · heights: Environment Agency LiDAR · energy certificates and sold prices: the EPC register and HM Land Registry (Open Government Licence) · plans redrawn · sample listings are illustrative only. For information only.",
-          "建筑轮廓 © OpenStreetMap 贡献者 · 高度：英国环境署 LiDAR · 能效证书与成交价：EPC 登记及英国土地登记处（开放政府许可）· 户型图为重绘 · 示例房源仅作演示。仅供参考。"
-        )}
+        © OpenStreetMap · EA LiDAR · EPC register · HM Land Registry · {t("sample listings are illustrative", "示例房源仅作演示")}
       </footer>
 
       {toast && <div className="fixed bottom-6 left-1/2 z-[1000] -translate-x-1/2 rounded-full bg-stone-900 px-5 py-2.5 text-[14px] text-white shadow-lg">{toast}</div>}
@@ -247,7 +287,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
       </span>
       {d.avgScore !== null && (
         <span className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-white/95 py-0.5 pl-3 pr-1 text-[12px] ring-1 ring-stone-200">
-          {t("Feng Shui", "风水")} <span className="font-serif text-[17px] font-semibold tabular">{d.avgScore}</span>
+          {t("Feng Shui", "风水")} <span className="tabular text-[13px] font-semibold">{d.avgScore}</span>
           {d.topGrade && <Grade grade={d.topGrade} />}
         </span>
       )}
@@ -275,7 +315,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
         </p>
         <h2 className="mt-0.5 font-serif text-[38px] font-semibold leading-none">{zh ? d.nameZh : d.name}</h2>
         <p className="mt-1 text-[14px] text-stone-600">{d.address}</p>
-        <p className="mt-3 text-[14px] leading-relaxed text-stone-700">{zh ? d.blurbZh : d.blurb}</p>
+        {(zh ? d.blurbZh : d.blurb) && <p className="mt-3 text-[14px] text-stone-700">{zh ? d.blurbZh : d.blurb}</p>}
         <dl className="mt-4 grid grid-cols-4 gap-3 border-y border-stone-200 py-3">
           <Stat k={t("Homes", "户数")} v={`${d.homes}`} />
           <Stat k={t("Storeys", "层数")} v={d.storeysLabel ?? `${d.storeys}`} />
@@ -299,7 +339,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
               <Link href={d.href} className="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:bg-stone-700">
                 {t("Explore homes", "查看房源")} ↗
               </Link>
-              <Link href="/merino-court/ranking" className="rounded-full px-3 py-2 text-sm text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100">
+              <Link href="/aldermoor-court/ranking" className="rounded-full px-3 py-2 text-sm text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100">
                 {t("Feng Shui ranking", "风水排名")}
               </Link>
             </>
@@ -311,7 +351,7 @@ function Card({ d, n, on, onHover, onSoon }: { d: Development; n: number; on: bo
         </div>
         {d.live && (
           <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1.5 pt-4 text-[13px]">
-            <Link href="/merino-court/building" className="text-stone-600 hover:text-stone-900">
+            <Link href="/aldermoor-court/building" className="text-stone-600 hover:text-stone-900">
               ◫ {t("3D model", "三维模型")}
             </Link>
             <Link href="/compare" className="text-stone-600 hover:text-stone-900">

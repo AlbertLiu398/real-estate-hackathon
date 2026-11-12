@@ -51,3 +51,6 @@ select {
   padding-right: 36px !important;
   cursor: pointer;
 }
+
+/* Cormorant's default figures are old-style (the 4 drops below the line); numbers sit on the line everywhere */
+.font-serif, .tabular { font-variant-numeric: lining-nums tabular-nums; }

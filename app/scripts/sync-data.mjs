@@ -37,7 +37,7 @@ const units = [
 ];
 const extraPages = { H1: [8], F9: [3, 4] };
 
-const results = Object.fromEntries(read("feng-shui/results.json").map((r) => [r.unit, r]));
+const results = Object.fromEntries(read("feng-shui/results-site.json").map((r) => [r.unit, r]));
 const epc = read("listings/epc_certs.json");
 const sales = read("listings/sales.json").sales;
 const listings = read("listings/rightmove_listings.json");
@@ -57,7 +57,7 @@ for (const u of units) {
   const r = results[u.key];
   if (r) {
     const fp = read(`feng-shui/${u.key}.floorplan.json`);
-    u.fengshui = { score: r.score, grade: r.grade, raw: r.raw, compass: r.compass_model, findings: r.findings, bagua: r.bagua, orientation: r.orientation, flags: r.flags };
+    u.fengshui = { score: r.score, grade: r.grade, raw: r.raw, compass: r.compass_model, findings: r.findings, bagua: r.bagua, orientation: r.orientation, flags: r.flags, site: r.site };
     u.floorplan = { outline: fp.outline, rooms: fp.rooms, openings: fp.openings, north_deg: fp.north_deg };
   } else {
     u.fengshui = null;
@@ -70,6 +70,9 @@ fs.writeFileSync(
   path.join(out, "src/data/merino.json"),
   JSON.stringify({ building: { name: "Merino Court", address: "152–154 Lever Street, London EC1V 8BG", area: "Clerkenwell / Old Street", northDeg: 80.5 }, units })
 );
+
+// the building's 3D scene (block, neighbours, roads, trees, per-floor cutaways), for the whole-building view
+fs.copyFileSync(path.join(data, "building/ifc/render/scene.json"), path.join(out, "public/scene.json"));
 
 for (const sub of ["", "zh"]) {
   const src = path.join(data, "plans", sub);

@@ -4,7 +4,7 @@ export type Room = { id: string; type: string; label: string; x: number; y: numb
 export type Opening = { id: string; type: "window" | "door" | "entrance" | "balcony_door"; x: number; y: number; axis: "h" | "v"; width: number; rooms: string[] };
 export type Finding = {
   rule_id: string;
-  method: "plan" | "compass";
+  method: "plan" | "compass" | "environment";
   delta: number;
   raw?: number;
   severity: "info" | "minor" | "major";
@@ -20,12 +20,20 @@ export type Bagua = { row: string; col: string; area: string; rect: [number, num
 export type FengShui = {
   score: number;
   grade: string;
-  raw: { base: number; plan: number; compass_used: number; compass_points: number; total_unclamped: number };
+  raw: { base: number; plan: number; compass_used: number; compass_points: number; environment?: number; total_unclamped: number };
   compass: { raw: number; score100: number; facing: number; sitting: number; house: string[]; labels: string[]; notes: string[] };
   findings: Finding[];
   bagua: Bagua[];
   orientation: { north_deg: number; tolerance_deg?: { minus_deg: number; plus_deg: number } };
   flags: string[];
+  site?: {
+    level: number;
+    eye_z: number;
+    centre: [number, number];
+    views: Record<string, string>;
+    before: number;
+    rays: Record<"facing" | "sitting", { from: [number, number]; to: [number, number]; bearing: number; hit: null | { dist: number; h: number; kind: string } }>;
+  };
 };
 export type Unit = {
   key: string;
@@ -95,7 +103,7 @@ export const lifeAreaZh: Record<string, string> = {
 };
 
 /** short labels for each rule, both languages */
-export const ruleLabel: Record<string, { en: string; zh: string; group: "layout" | "compass" | "form" }> = {
+export const ruleLabel: Record<string, { en: string; zh: string; group: "layout" | "compass" | "form" | "environment" }> = {
   "FS-MISSING-CORNER": { en: "Missing Bagua sector", zh: "八卦缺角", group: "layout" },
   "FS-CENTRE-TOILET": { en: "Bathroom in the centre", zh: "厕所居中宫", group: "layout" },
   "FS-DOOR-TOILET": { en: "Entrance sees toilet", zh: "开门见厕", group: "layout" },
@@ -119,9 +127,18 @@ export const ruleLabel: Record<string, { en: string; zh: string; group: "layout"
   "CM-SHAPE": { en: "Outline shape", zh: "户型方正", group: "form" },
   "CM-WC-CENTRE": { en: "WC near the centre", zh: "厕近中宫", group: "form" },
   "CM-GROUND": { en: "Ground floor", zh: "底层", group: "form" },
+  "CM-VIEW-GARDEN": { en: "Garden outlook", zh: "望花园", group: "environment" },
+  "CM-VIEW-STREET": { en: "Street outlook", zh: "临街", group: "environment" },
+  "CM-VIEW-PLAY": { en: "Playground outlook", zh: "望游乐场", group: "environment" },
+  "ENV-MINGTANG": { en: "Ming Tang (space in front)", zh: "明堂", group: "environment" },
+  "ENV-KAOSHAN": { en: "Backing (Kao Shan)", zh: "靠山", group: "environment" },
+  "ENV-LUCHONG": { en: "Road arrow (Lu Chong)", zh: "路冲", group: "environment" },
 };
 
 const remedyZh: Record<string, string> = {
+  "ENV-MINGTANG": "保持向首明亮：浅色窗帘，以镜面拓展视野，朝向墙面避免深色。",
+  "ENV-KAOSHAN": "沙发与床头靠实墙；房间后部放高大绿植或书柜。",
+  "ENV-LUCHONG": "以绿植或屏风化解，窗帘半掩；传统做法为悬挂凸面八卦镜。",
   "FS-MISSING-CORNER": "补角：在缺角相邻的墙面挂镜，或在角落摆放绿植、灯饰。",
   "FS-DARK-ROOM": "使用明亮的全光谱照明，以镜面反射光线，摆放耐阴绿植。",
   "FS-CENTRE-TOILET": "保持卫生间门常闭、马桶盖放下；室内用大地色系并放一盆绿植。",
@@ -146,6 +163,16 @@ export function findingText(f: Finding, zh: boolean) {
       return "客餐厅多面开窗，采光充足";
     case "FS-CENTRE-TOILET":
       return "卫浴位于中宫（健康位）";
+    case "ENV-MINGTANG":
+      return ev.clear_m === ">80" ? "前方 80 米内无高于本户的建筑，明堂开阔" : Number(ev.clear_m) < 15 ? `前方 ${ev.clear_m} 米有 ${ev.building_h_m} 米高建筑，形成压迫` : `前方明堂深 ${ev.clear_m} 米`;
+    case "ENV-KAOSHAN":
+      return ev.backing_m === 0 ? "背后为本楼主体，坐实有靠" : typeof ev.backing_h_m === "number" ? `背后 ${ev.backing_m} 米有 ${ev.backing_h_m} 米高建筑作靠山` : "背后 40 米内无高于本户的建筑";
+    case "ENV-LUCHONG":
+      return `街道正对向首，距离 ${ev.road_m} 米`;
+    case "CM-VIEW-GARDEN":
+      return "部分窗户朝向公共花园";
+    case "CM-VIEW-STREET":
+      return "窗户临街";
     default: {
       const m = f.title.match(/; (.+?) -> /);
       const chart = f.title.match(/: (\S+宅 \S+ \S+?) ->/);

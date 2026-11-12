@@ -23,7 +23,7 @@ export interface FloorPlan {
 
 export interface Finding {
   rule_id: string;
-  method: "plan" | "compass";   // PLAN.md catalogue or the compass model
+  method: "plan" | "compass" | "environment";   // PLAN.md catalogue, the compass model, or the site (environment.ts)
   delta: number;                   // points on the 0-100 scale
   raw?: number;                    // compass-model raw points (before x4)
   severity: "info" | "minor" | "major";

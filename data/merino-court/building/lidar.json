@@ -1,0 +1,16 @@
+{
+ "source": "Environment Agency LiDAR composite DSM/DTM 1 m (OGL v3), via OSTN15",
+ "bbox_bng": [
+  532380,
+  182640,
+  532550,
+  182790
+ ],
+ "street_aod_m": 18.28,
+ "wing_roof": {
+  "median": 18.13,
+  "p10": 14.41,
+  "p90": 18.17,
+  "cells": 281
+ }
+}

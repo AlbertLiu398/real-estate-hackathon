@@ -30,7 +30,7 @@ body {
 }
 .tabular { font-variant-numeric: tabular-nums; }
 .eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; isolation: isolate; }
 .hairline { border-color: var(--line); }
 .plan-svg svg { width: 100%; height: 100%; }
 ::selection { background: var(--jade-soft); }
@@ -39,3 +39,15 @@ body {
 .quiet-tiles { filter: grayscale(1) sepia(0.12) brightness(1.06) contrast(0.88); }
 /* Tailwind's preflight (img max-width/height:auto) breaks Leaflet tiles */
 .leaflet-container img { max-width: none !important; max-height: none !important; }
+
+/* one chevron for every dropdown, with room for it: native arrows sat on the rounded edge */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a7f80' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 36px !important;
+  cursor: pointer;
+}

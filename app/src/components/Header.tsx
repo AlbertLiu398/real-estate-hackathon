@@ -20,14 +20,10 @@ export function Header() {
   const path = usePathname();
   const nav = [
     { href: "/", label: t("Explore", "找房") },
-    { href: "/merino-court", label: "Merino Court" },
-    { href: "/building", label: t("Building 3D", "楼宇 3D") },
-    { href: "/ranking", label: t("Feng Shui ranking", "风水排名") },
     { href: "/compare", label: t("Compare", "对比") },
-    { href: "/brochure", label: t("Brochure", "售楼书") },
   ];
   return (
-    <header className="sticky top-0 z-30 border-b hairline bg-[var(--paper)]/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b hairline bg-[var(--paper)]/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center gap-6 px-4 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5">
           <Seal />

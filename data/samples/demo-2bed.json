@@ -1,0 +1,35 @@
+{
+  "id": "demo-2bed",
+  "source": { "file": "hand-annotated", "page": 1 },
+  "units": "m",
+  "north_deg": null,
+  "outline": [[0, 0], [9, 0], [9, 4.5], [7.2, 4.5], [7.2, 8], [0, 8]],
+  "rooms": [
+    { "id": "living",  "type": "living",         "label": "Living Room",    "dims_text": "5.00m x 3.50m", "x": 0,   "y": 0,   "w": 3.5, "h": 5.0 },
+    { "id": "kitchen", "type": "kitchen",        "label": "Kitchen",        "dims_text": "3.50m x 3.00m", "x": 0,   "y": 5.0, "w": 3.5, "h": 3.0 },
+    { "id": "hall",    "type": "hallway",        "label": "Hall",           "x": 3.5, "y": 2.0, "w": 1.5, "h": 6.0 },
+    { "id": "bath",    "type": "bathroom",       "label": "Bathroom",       "dims_text": "2.00m x 1.50m", "x": 3.5, "y": 0,   "w": 1.5, "h": 2.0 },
+    { "id": "master",  "type": "master_bedroom", "label": "Principal Bedroom", "dims_text": "4.50m x 4.00m", "x": 5.0, "y": 0, "w": 4.0, "h": 4.5 },
+    { "id": "bed2",    "type": "bedroom",        "label": "Bedroom 2",      "dims_text": "3.50m x 2.20m", "x": 5.0, "y": 4.5, "w": 2.2, "h": 3.5 }
+  ],
+  "openings": [
+    { "id": "d_entry",   "type": "entrance", "x": 4.25, "y": 8.0, "axis": "h", "width": 0.9, "rooms": ["hall", "outside"] },
+    { "id": "d_bath",    "type": "door",     "x": 4.25, "y": 2.0, "axis": "h", "width": 0.8, "rooms": ["hall", "bath"] },
+    { "id": "d_living",  "type": "door",     "x": 3.5,  "y": 3.0, "axis": "v", "width": 0.9, "rooms": ["hall", "living"] },
+    { "id": "d_kitchen", "type": "door",     "x": 3.5,  "y": 6.5, "axis": "v", "width": 0.8, "rooms": ["hall", "kitchen"] },
+    { "id": "d_master",  "type": "door",     "x": 5.0,  "y": 3.2, "axis": "v", "width": 0.8, "rooms": ["hall", "master"] },
+    { "id": "d_bed2",    "type": "door",     "x": 5.0,  "y": 6.0, "axis": "v", "width": 0.8, "rooms": ["hall", "bed2"] },
+    { "id": "w_living",  "type": "window",   "x": 1.75, "y": 0,   "axis": "h", "width": 1.8, "rooms": ["living", "outside"] },
+    { "id": "w_kitchen", "type": "window",   "x": 0,    "y": 6.5, "axis": "v", "width": 1.2, "rooms": ["kitchen", "outside"] },
+    { "id": "w_master",  "type": "window",   "x": 7.0,  "y": 0,   "axis": "h", "width": 1.8, "rooms": ["master", "outside"] },
+    { "id": "w_master2", "type": "window",   "x": 9.0,  "y": 2.2, "axis": "v", "width": 1.2, "rooms": ["master", "outside"] },
+    { "id": "w_bed2",    "type": "window",   "x": 7.2,  "y": 6.25,"axis": "v", "width": 1.2, "rooms": ["bed2", "outside"] }
+  ],
+  "_expected_findings": [
+    "FS-DOOR-TOILET: entrance d_entry looks 6.0m straight down the hall into bathroom door d_bath",
+    "FS-CORRIDOR: hall is 6.0m x 1.5m (aspect 4.0)",
+    "FS-MISSING-CORNER: entrance-right Bagua sector (Helpful People & Travel) only ~40% filled because of the notch at x>7.2, y>4.5",
+    "FS-DOOR-CLASH: d_kitchen and d_bed2 face each other across the hall (0.5m offset)",
+    "FS-COMMAND: master bedroom sits in the far-right sector from the entrance (Relationships) => bonus"
+  ]
+}

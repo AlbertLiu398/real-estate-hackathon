@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.vercel
+# keep raw brochures / personal docs out of the repo unless deliberately added to data/samples
+*.pdf

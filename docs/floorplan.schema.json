@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "floorqi/floorplan.schema.json",
+  "title": "FloorQi Floorplan",
+  "description": "Contract between extraction, 3D and scoring. Coordinates are metres; origin is the top-left of the plan image; +x is right, +y is down (image convention). Rooms are axis-aligned rectangles; we can extend to polygons later.",
+  "type": "object",
+  "required": ["id", "units", "outline", "rooms", "openings"],
+  "properties": {
+    "id": { "type": "string" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "file": { "type": "string" },
+        "page": { "type": "integer" },
+        "image_px": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2, "description": "[width, height] of the source image, used to overlay boxes on it" },
+        "px_per_m": { "type": "number", "description": "Scale derived from printed room dimensions" }
+      }
+    },
+    "units": { "const": "m" },
+    "north_deg": {
+      "type": ["number", "null"],
+      "description": "Compass bearing that 'up' on the plan points to (0 = up is north, 90 = up is east). null if the plan has no north arrow; the UI can ask the user."
+    },
+    "outline": {
+      "type": "array",
+      "description": "Apartment footprint polygon, clockwise, [[x,y],...]. Used for the Bagua grid and missing-corner checks.",
+      "items": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+      "minItems": 4
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "x", "y", "w", "h"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "enum": ["living", "kitchen", "living_kitchen", "dining", "master_bedroom", "bedroom", "bathroom", "ensuite", "wc", "hallway", "study", "storage", "utility", "balcony", "other"]
+          },
+          "label": { "type": "string", "description": "Text as printed, e.g. 'Bedroom 2'" },
+          "dims_text": { "type": "string", "description": "Printed dimensions, verbatim, e.g. \"3.45m x 2.80m (11'4\" x 9'2\")\"" },
+          "x": { "type": "number" },
+          "y": { "type": "number" },
+          "w": { "type": "number" },
+          "h": { "type": "number" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "openings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "x", "y", "axis", "width", "rooms"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["entrance", "door", "window", "balcony_door"] },
+          "x": { "type": "number", "description": "Centre of the opening" },
+          "y": { "type": "number" },
+          "axis": { "enum": ["h", "v"], "description": "Orientation of the wall the opening sits in: h = horizontal wall, v = vertical wall" },
+          "width": { "type": "number" },
+          "rooms": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Room ids on either side. Use 'outside' for the exterior or common corridor."
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    }
+  }
+}

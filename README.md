@@ -25,6 +25,7 @@ Brochure PDF / floorplan image
 - [`docs/PLAN.md`](docs/PLAN.md): scope, architecture, rules, team split, timeline, demo script
 - [`docs/floorplan.schema.json`](docs/floorplan.schema.json): data contract shared by all workstreams
 - [`data/samples/demo-2bed.json`](data/samples/demo-2bed.json): hand-annotated sample, used as a test fixture and demo fallback
+- [`docs/ENGINE.md`](docs/ENGINE.md): the rating engine (`packages/engine`): scoring model, 0-100 mapping, how to run, limitations
 
 ## Setup
 ```bash
@@ -34,3 +35,5 @@ cp .env.example .env.local   # add your LLM key(s); never commit .env*
 ## Data
 - `data/samples/demo-2bed.json`: hand-labelled test floor plan with expected findings
 - `data/merino-court/`: Merino Court source data (listings, building model, IFC, floor plan SVGs); see its README
+- `data/merino-court/feng-shui/`: engine output for Merino Court (ranking, results, converted floor plans)
+- `data/courtyard/`: Courtyard (154 Goswell Road) feature vectors and the rank.py reference scores used to validate the engine

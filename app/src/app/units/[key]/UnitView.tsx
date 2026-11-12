@@ -191,7 +191,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                         )}
                       </span>
                     </div>
-                    <div className="mt-2 font-serif text-[15px] text-[var(--ink-2)]">{fs.courtyard.labels[0]}</div>
+                    <div className="mt-2 font-serif text-[15px] text-[var(--ink-2)]">{fs.compass.labels[0]}</div>
                   </div>
                 </div>
                 <div className="mt-5 grid grid-cols-3 gap-2 border-t hairline pt-4 text-center text-[12px] text-[var(--muted)]">
@@ -207,7 +207,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                   </div>
                   <div>
                     <div className="text-[18px]">
-                      <Delta v={fs.raw.courtyard_points} />
+                      <Delta v={fs.raw.compass_points} />
                     </div>
                     {t("Compass ×4", "罗盘 ×4")}
                   </div>
@@ -216,7 +216,7 @@ export default function UnitView({ unitKey }: { unitKey: string }) {
                   <div className="rounded-lg bg-[var(--paper)] px-3 py-2">
                     <div className="text-[var(--muted)]">{t("Facing", "朝向")}</div>
                     <div className="tabular">
-                      {fs.courtyard.facing}° · {compass(fs.courtyard.facing, zh)}
+                      {fs.compass.facing}° · {compass(fs.compass.facing, zh)}
                     </div>
                   </div>
                   <div className="rounded-lg bg-[var(--paper)] px-3 py-2">

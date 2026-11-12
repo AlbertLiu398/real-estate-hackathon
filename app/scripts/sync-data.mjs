@@ -57,7 +57,7 @@ for (const u of units) {
   const r = results[u.key];
   if (r) {
     const fp = read(`feng-shui/${u.key}.floorplan.json`);
-    u.fengshui = { score: r.score, grade: r.grade, raw: r.raw, courtyard: r.courtyard, findings: r.findings, bagua: r.bagua, orientation: r.orientation, flags: r.flags };
+    u.fengshui = { score: r.score, grade: r.grade, raw: r.raw, compass: r.compass_model, findings: r.findings, bagua: r.bagua, orientation: r.orientation, flags: r.flags };
     u.floorplan = { outline: fp.outline, rooms: fp.rooms, openings: fp.openings, north_deg: fp.north_deg };
   } else {
     u.fengshui = null;

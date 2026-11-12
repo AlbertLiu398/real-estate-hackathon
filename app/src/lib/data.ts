@@ -4,7 +4,7 @@ export type Room = { id: string; type: string; label: string; x: number; y: numb
 export type Opening = { id: string; type: "window" | "door" | "entrance" | "balcony_door"; x: number; y: number; axis: "h" | "v"; width: number; rooms: string[] };
 export type Finding = {
   rule_id: string;
-  method: "plan" | "courtyard";
+  method: "plan" | "compass";
   delta: number;
   raw?: number;
   severity: "info" | "minor" | "major";
@@ -20,8 +20,8 @@ export type Bagua = { row: string; col: string; area: string; rect: [number, num
 export type FengShui = {
   score: number;
   grade: string;
-  raw: { base: number; plan: number; courtyard_used: number; courtyard_points: number; total_unclamped: number };
-  courtyard: { raw: number; score100: number; facing: number; sitting: number; house: string[]; labels: string[]; notes: string[] };
+  raw: { base: number; plan: number; compass_used: number; compass_points: number; total_unclamped: number };
+  compass: { raw: number; score100: number; facing: number; sitting: number; house: string[]; labels: string[]; notes: string[] };
   findings: Finding[];
   bagua: Bagua[];
   orientation: { north_deg: number; tolerance_deg?: { minus_deg: number; plus_deg: number } };
@@ -108,17 +108,17 @@ export const ruleLabel: Record<string, { en: string; zh: string; group: "layout"
   "FS-MING-TANG": { en: "Bright entrance hall", zh: "明堂", group: "layout" },
   "FS-COMMAND": { en: "Main bedroom in command", zh: "主卧居吉位", group: "layout" },
   "FS-LIVING-LIGHT": { en: "Light-filled living room", zh: "客厅采光佳", group: "layout" },
-  "CY-BZ-DOOR": { en: "Front door sector", zh: "八宅·大门", group: "compass" },
-  "CY-BZ-MASTER": { en: "Main bedroom sector", zh: "八宅·主卧", group: "compass" },
-  "CY-BZ-HOB": { en: "Hob sector", zh: "八宅·灶位", group: "compass" },
-  "CY-BZ-WC": { en: "WC sector", zh: "八宅·厕位", group: "compass" },
-  "CY-XK-PATTERN": { en: "Flying Star chart", zh: "玄空飞星格局", group: "compass" },
-  "CY-XK-DOOR9": { en: "Period-9 star at the door", zh: "旺星到门", group: "compass" },
-  "CY-RIDE": { en: "Sitting on a palace line", zh: "骑线空亡", group: "compass" },
-  "CY-ASPECT": { en: "Aspect (light directions)", zh: "采光面", group: "form" },
-  "CY-SHAPE": { en: "Outline shape", zh: "户型方正", group: "form" },
-  "CY-WC-CENTRE": { en: "WC near the centre", zh: "厕近中宫", group: "form" },
-  "CY-GROUND": { en: "Ground floor", zh: "底层", group: "form" },
+  "CM-BZ-DOOR": { en: "Front door sector", zh: "八宅·大门", group: "compass" },
+  "CM-BZ-MASTER": { en: "Main bedroom sector", zh: "八宅·主卧", group: "compass" },
+  "CM-BZ-HOB": { en: "Hob sector", zh: "八宅·灶位", group: "compass" },
+  "CM-BZ-WC": { en: "WC sector", zh: "八宅·厕位", group: "compass" },
+  "CM-XK-PATTERN": { en: "Flying Star chart", zh: "玄空飞星格局", group: "compass" },
+  "CM-XK-DOOR9": { en: "Period-9 star at the door", zh: "旺星到门", group: "compass" },
+  "CM-RIDE": { en: "Sitting on a palace line", zh: "骑线空亡", group: "compass" },
+  "CM-ASPECT": { en: "Aspect (light directions)", zh: "采光面", group: "form" },
+  "CM-SHAPE": { en: "Outline shape", zh: "户型方正", group: "form" },
+  "CM-WC-CENTRE": { en: "WC near the centre", zh: "厕近中宫", group: "form" },
+  "CM-GROUND": { en: "Ground floor", zh: "底层", group: "form" },
 };
 
 const remedyZh: Record<string, string> = {

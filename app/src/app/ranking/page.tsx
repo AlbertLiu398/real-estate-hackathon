@@ -51,7 +51,7 @@ export default function Ranking() {
                   ))}
                 </div>
               </div>
-              <span className="hidden font-serif text-[13px] text-[var(--ink-2)] md:block">{fs.courtyard.labels[0]}</span>
+              <span className="hidden font-serif text-[13px] text-[var(--ink-2)] md:block">{fs.compass.labels[0]}</span>
               <span className="flex items-center justify-end gap-2">
                 <span className="font-serif text-[28px] tabular">{fs.score}</span>
                 <Grade grade={fs.grade} />

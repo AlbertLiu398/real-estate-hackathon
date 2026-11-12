@@ -3,15 +3,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LangToggle, useLang } from "./I18n";
 
+/** FloorQi mark: a floor plan (outer wall, one inner wall, open corner) whose tail turns it into a Q. */
 export function Seal({ size = 30 }: { size?: number }) {
   return (
-    <span
-      className="inline-grid place-items-center rounded-[7px] font-serif font-bold text-[var(--paper)]"
-      style={{ width: size, height: size, background: "var(--cinnabar)", fontSize: size * 0.55, lineHeight: 1 }}
-      aria-hidden
-    >
-      气
-    </span>
+    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden className="shrink-0">
+      <rect width="32" height="32" rx="8" fill="var(--cinnabar)" />
+      <g fill="none" stroke="var(--paper)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 24H8V8h16v8" />
+        <path d="M16 8v7" />
+        <path d="M18 18l6.5 6.5" />
+      </g>
+    </svg>
   );
 }
 
